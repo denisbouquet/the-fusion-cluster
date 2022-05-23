@@ -1,14 +1,15 @@
 <footer class="main @@class">
 	@@if (newsletter === 'true') {
-	<section class="mod-newsletter">
-		<div class="container">
-			<div class="lines">
+	<section class="container">
+		<div class="lines">
+			<div class="top-line"></div>
+			<div class="mod-newsletter">
 				<h2 class="h1"><span>Unlimited power.</span><span>Unlimited potential.</span></h2>
 				<p>Keep up-to-date and get exclusive insight into the ever-evolving world of fusion and the cluster.</p>
-				
+					
+				@@include('newsletter-form.html')
 
-
-				<i class="star star--2">
+				<i class="star star--1">
 					<svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M31.9958 32.042L31.9609 32.0864V32.0293H32.0307V32.0769L31.9958 32.042Z" fill="#FF8DF5"/>
 						<path d="M34.7568 38.6733V63.9916H29.2324V38.6607L31.9946 35.9111L34.7568 38.6733Z" fill="#FF8DF5"/>
@@ -55,6 +56,7 @@
 	}
 	<section class="container">
 		<div class="lines">	
+			<div class="top-line"></div>
 			<nav>
 				<div class="col-footer">
 					<div>
@@ -82,14 +84,15 @@
 						<h4>Contact</h4>
 						<ul>
 							<li><a href="hello@thefusioncluster.com">hello@thefusioncluster.com</a></li>
-							<li><a href="hello@thefusioncluster.com">Linkedin</a></li>
-							<li><a href="hello@thefusioncluster.com">Twitter</a></li>
+							<li><a href="hello@thefusioncluster.com" target="_blank">Linkedin</a></li>
+							<li><a href="hello@thefusioncluster.com" target="_blank">Twitter</a></li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</div>
-		<div class="lines lines--bottom">	
+		<div class="lines lines--bottom">
+			<div class="top-line"></div>	
 			<div class="legal">
 				<div class="copyright">
 					The Fusion Cluster ®

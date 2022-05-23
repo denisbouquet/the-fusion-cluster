@@ -21,6 +21,23 @@
 
 .lines {
     position: relative;
+    .top-line {
+        &:before {
+            content: "";
+            height: 1px;
+            position: absolute;
+            z-index: 5;
+            background-color: $darkgrey;
+            top: 0;
+            left: 0;
+            right: 0;
+            @include bp-tablet {
+                left: 20px;
+                right: 20px;
+            }
+        }
+    }
+
     &:before, &:after {
         display: none;
         content: "";

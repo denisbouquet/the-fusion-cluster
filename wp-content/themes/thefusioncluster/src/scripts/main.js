@@ -145,6 +145,18 @@ var isMobile = false; //initiate as false
                 }
             });
 
+            $('.mf-label-animate').find('input, textarea').on('input, change', function (e) {
+                $(e.currentTarget).attr('data-empty', !e.currentTarget.value);
+
+                // check valid email and show button
+                if( validateEmail(e.currentTarget.value) && e.currentTarget.value.length > 3) {
+                    $('.trigger-submit').addClass('is-visible');
+                }
+                else {
+                    $('.trigger-submit').removeClass('is-visible');
+                }
+            });
+
 			
 		},
 
