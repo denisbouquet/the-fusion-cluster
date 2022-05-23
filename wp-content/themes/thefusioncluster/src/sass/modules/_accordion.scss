@@ -1,0 +1,87 @@
+.mod-accordion {
+	margin-bottom: 14px;
+	
+	.mod-accordion__toggle {
+		cursor: pointer;
+		position: relative;
+		margin-left: 40px;
+		@include bp-tablet {
+			margin-left: 65px;
+		}
+
+		.icon {
+			position: absolute;
+			top: 0;
+			width: 28px;
+			height: 28px;
+			transform: rotate(-90deg);		
+			will-change: transform;
+			transition: transform 0.3s ease;
+			left: -40px;
+			@include bp-tablet {
+				left: -65px;
+			}
+		}
+		h3 {
+			font-size: 18px;
+			padding-bottom: 16px;
+			border-bottom: 2px solid $silver;
+			color: $darkblue;
+		}
+		svg {
+			path {
+				stroke: $darkblue;
+			}
+		}
+		&:hover {
+			color: $gold;
+			svg {
+				path {
+					stroke: $gold;
+				}
+			}
+		}
+
+	}
+	
+	.mod-accordion__content {
+		transition: max-height 0.3s ease-in-out;
+		max-height: 0px;
+		overflow: hidden;
+		padding-left: 40px;
+		@include bp-tablet {
+			padding-left: 65px;
+		}
+		> div {
+			padding: 15px 0;
+		}
+		li {
+			display: block;
+			margin-bottom: 20px;
+			@include bp-xl {
+				margin-bottom: 32px;
+			}
+		}
+		a {
+			color: $darkblue;
+		}
+
+	}
+	&.is-open {
+		h3 {
+			border-color: $gold;
+			color: $gold;
+		}
+		.mod-accordion__content {
+			// max-height: 1000px;
+		}
+		.icon {
+			transform: rotate(0deg);		
+		}
+		svg {
+			path {
+				stroke: $gold;
+			}
+		}
+	}
+}

@@ -1,0 +1,253 @@
+// TEAM
+.mod-our-funds {
+    position: relative;
+    padding-top: 67px;
+    padding-bottom: 56px;
+    @include bp-tablet {
+        padding-bottom: 72px;
+    }
+    @include bp-desktop {
+        background-color: $lilac;
+    }
+    @include bp-xl {
+        padding-top: 105px;
+        padding-bottom: 105px;
+    }
+
+    &__title {
+        @extend .h2;
+        color: $darkblue;
+        font-weight: $weight-bold;
+        @include bp-tablet {
+            text-align: left;
+        }
+        @include bp-desktop {
+            margin-bottom: 50px;
+        }
+    }
+    &__inner {
+        background-color: #fff;
+        @include bp-desktop {
+            padding: 30px;
+            // margin: 0 30px;
+        }
+    }
+}
+.block-funds {
+    position: relative;
+    @include bp-desktop {
+        .block-fund__icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .block-fund__description {
+            max-height: 0;
+            overflow: hidden;
+        }
+        .block-fund.is-open {
+            .block-fund__icon {
+                display: flex;
+            }
+            .block-fund__title {
+                color: $gold;
+            }
+            .block-fund__copy {
+                position: relative;
+                margin-bottom: 20px;
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: -30px;
+                    bottom: 0;
+                    border-left: 5px solid $gold;
+                }
+            }
+            .block-fund__description {
+                // transition: all 0.3s ease;
+                max-height: 300px;
+                width: 50%;
+                overflow: hidden;
+            }
+        }
+    }
+}
+.block-fund {
+    margin-bottom: 40px;
+    @include bp-tablet {
+        display: flex;
+    }
+    @include bp-desktop {
+        margin-bottom: 20px;
+    }
+    &__icon {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        flex-shrink: 0;
+        lottie-player {
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+    }
+    &__copy {
+        @include bp-tablet {
+            margin-left: 30px;
+        }
+        @include bp-desktop {
+            margin-left: 0;
+        }
+    }
+    &__title {
+        color: $gold;
+        font-weight: $weight-bold;
+        @include font-size(28px);
+        margin-bottom: 20px;
+        @include bp-desktop {
+            color: $blue;
+        }
+        &:hover {
+            @include bp-desktop {
+                color: $gold;
+                cursor: pointer;
+            }
+        }
+    }
+    &__description {
+        color: $darkblue;
+        p {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+
+
+// INVESTMENT
+.mod-investment {
+    position: relative;
+    padding-top: 67px;
+    // background: transparent url('../media/images/pattern/white-transparent.svg') right top repeat;
+    background-color: $silver;
+
+
+    &__title {
+        text-align: center;
+        @extend .h2;
+        font-weight: $weight-bold;
+        margin-bottom: 50px;
+        color: $darkblue;
+        @include bp-tablet {
+            text-align: left;
+        }
+    }
+    // &__copy {
+    //     text-align: center;
+    //     margin-bottom: 36px;
+    //     max-width: 537px; 
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+}
+.mod-investment__articles {
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1070px;
+    @include bp-tablet {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.block-investment {
+    background: $darkerblue;
+    box-shadow: 0px 4px 75px -28px rgba(38, 46, 91, 0.25);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100vw - 30px);
+    padding: 30px;
+    position: relative;
+    @include bp-tablet {
+        width: calc(50% - 30px);
+        display: flex;
+        // min-height: 240px;
+    }
+    &:nth-child(2n+2) {
+        @include bp-tablet {
+            top: 70px;
+        }
+    }
+    &:nth-child(3n+1) {
+        background: $darkerblue;
+        @include bp-tablet {
+            background: $white;
+        }
+        .block-investment__copy {
+            @include bp-tablet {
+                color: $darkblue;
+            }
+        }
+    }
+    &:nth-child(3n+2) {
+        background: $blue;
+        @include bp-tablet {
+            background: $darkerblue;
+        }
+    }
+    &:nth-child(3n+3) {
+        background: $white;
+        .block-investment__copy {
+            color: $darkblue;
+            @include bp-tablet {
+                color: $white;
+            }
+        }
+        @include bp-tablet {
+            background: $blue;
+        }
+    }
+
+    &__media {
+        @include bp-tablet {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            top: 50%;
+            margin-top: -44px;
+        }
+        img, lottie-player {
+            display: block;
+            width: 88px;
+            margin-bottom: 10px;
+        }
+    }
+    &__copy {
+        color: $white;
+        position: relative;
+        @include bp-tablet {
+            padding: 0 0 0 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2, h3, h4 {
+            font-family: $font-copy;
+            @include font-size(28px);
+            font-weight: $weight-bold;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

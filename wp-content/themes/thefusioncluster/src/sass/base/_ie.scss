@@ -1,0 +1,11 @@
+.ie8 {
+	input, select {
+		padding: 0;
+	}
+}
+
+.ie {
+	button, input, textarea, select, hr {
+		border: 0;
+	}
+}

@@ -1,0 +1,279 @@
+.scrollbar {
+    ::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: $silver;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: $gold;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: $darkblue;
+    }
+}
+
+.lazyload {
+	position: relative;
+	background-color: $orange;
+	transition: background-color .3s ease-in;
+    [data-src] {
+		transition: opacity .3s ease-in;
+    	opacity: 0;
+    	will-change: opacity;
+    }
+   	.content {
+   		position: absolute;
+   		top: 0;
+   		left: 0;
+   		right: 0;
+   		bottom: 0;
+   	}
+    &.loaded {
+    	background-color: transparent;
+    	transition-delay: .3s;
+    	[data-src] {
+			opacity: 1;
+		}
+		.loader {
+			visibility: hidden;
+			animation-iteration-count: 1;
+		}
+    }
+    .icon-fill-color {
+    	fill: black;
+    	// &.hide {
+    	// 	display: none;
+    	// }
+    }
+    .loader {
+    	position: absolute;
+    	top: 50%;
+    	left: 50%;
+    	width: 24px;
+    	height: 36px;
+    	display: block;
+    	margin-left: -12px;
+    	margin-top: -16px;
+    	z-index: 1;
+    	@include animation('pulse 1s infinite alternate');
+		pointer-events: none;
+    }
+}
+@include keyframes(pulse) {
+  	0% { opacity: 0; }
+  	100% { opacity: 0.5; }
+}
+
+
+.mod-maxw {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.posr { position: relative; }
+.hidden { display: none; }
+
+.pace-done {
+	.icon_scroll, .hero {
+		&:after, &:before {
+			transition-delay: 2s;
+			opacity: 1;
+			@extend .transi;
+			@include animation('slide-down 900ms 3 2s forwards');
+		}
+	}
+}
+@include keyframes(slide-down) {
+  0% { transform: translateY(-5px) rotate(135deg); opacity: 0; }
+  100% { transform: translateY(0px) rotate(135deg);  opacity: 1; }
+}
+
+
+.transi { transition: all 500ms cubic-bezier(0.025, 0.030, 0.000, 1.000); transition-timing-function: cubic-bezier(0.025, 0.030, 0.000, 1.000);  }
+.transi-superfast { transition: all 150ms cubic-bezier(0.025, 0.030, 0.000, 1.000); transition-timing-function: cubic-bezier(0.025, 0.030, 0.000, 1.000);  }
+.transi-fast { transition: all 250ms cubic-bezier(0.025, 0.030, 0.000, 1.000); transition-timing-function: cubic-bezier(0.025, 0.030, 0.000, 1.000);  }
+.transi-slow { transition: all 750ms cubic-bezier(0.025, 0.030, 0.000, 1.000); transition-timing-function: cubic-bezier(0.025, 0.030, 0.000, 1.000);  }
+.flip { transform: scaleX(-1); }
+.uppercase { text-transform: uppercase; }
+.underline { border-bottom: 2px solid #000; padding-bottom: 0px; }
+.text-center { text-align: center; }
+.pos-r { position: relative; }
+.txt-center { text-align: center; }
+.txt-right { text-align: right; }
+.c-white { color: $white; }
+
+
+
+.cp-overlay {
+	&--40 {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0,0,0,0.4);
+		z-index: 1;
+	}
+}
+
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+}
+
+.clear {
+	clear: both;
+	overflow: hidden;
+}
+
+.container-t {
+	display: table;
+	width: 100%;
+	height: 100%;
+
+	.center-t {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.show-mobile-only {
+	display: block;
+	@include bp-tablet {
+		display: none;
+	}
+}
+.show-desktop-only {
+	display: none;
+	@include bp-tablet {
+		display: block;
+	}
+}
+
+.copy {
+	p {
+		margin-bottom: 1em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.reveal[data-percent="0%"]:before {   width: 0%; opacity: 0; }
+.reveal[data-percent="1%"]:before {   width: 1%; opacity: 0.01; }
+.reveal[data-percent="2%"]:before {   width: 2%; opacity: 0.02; }
+.reveal[data-percent="3%"]:before {   width: 3%; opacity: 0.03; }
+.reveal[data-percent="4%"]:before {   width: 4%; opacity: 0.04; }
+.reveal[data-percent="5%"]:before {   width: 5%; opacity: 0.05; }
+.reveal[data-percent="6%"]:before {   width: 6%; opacity: 0.06; }
+.reveal[data-percent="7%"]:before {   width: 7%; opacity: 0.07; }
+.reveal[data-percent="8%"]:before {   width: 8%; opacity: 0.08; }
+.reveal[data-percent="9%"]:before {   width: 9%; opacity: 0.09; }
+.reveal[data-percent="10%"]:before {  width: 10%; opacity: 0.10; }
+.reveal[data-percent="11%"]:before {  width: 11%; opacity: 0.11; }
+.reveal[data-percent="12%"]:before {  width: 12%; opacity: 0.12; }
+.reveal[data-percent="13%"]:before {  width: 13%; opacity: 0.13; }
+.reveal[data-percent="14%"]:before {  width: 14%; opacity: 0.14; }
+.reveal[data-percent="15%"]:before {  width: 15%; opacity: 0.15; }
+.reveal[data-percent="16%"]:before {  width: 16%; opacity: 0.16; }
+.reveal[data-percent="17%"]:before {  width: 17%; opacity: 0.17; }
+.reveal[data-percent="18%"]:before {  width: 18%; opacity: 0.18; }
+.reveal[data-percent="19%"]:before {  width: 19%; opacity: 0.19; }
+.reveal[data-percent="20%"]:before {  width: 20%; opacity: 0.20; }
+.reveal[data-percent="21%"]:before {  width: 21%; opacity: 0.21; }
+.reveal[data-percent="22%"]:before {  width: 22%; opacity: 0.22; }
+.reveal[data-percent="23%"]:before {  width: 23%; opacity: 0.23; }
+.reveal[data-percent="24%"]:before {  width: 24%; opacity: 0.24; }
+.reveal[data-percent="25%"]:before {  width: 25%; opacity: 0.25; }
+.reveal[data-percent="26%"]:before {  width: 26%; opacity: 0.26; }
+.reveal[data-percent="27%"]:before {  width: 27%; opacity: 0.27; }
+.reveal[data-percent="28%"]:before {  width: 28%; opacity: 0.28; }
+.reveal[data-percent="29%"]:before {  width: 29%; opacity: 0.29; }
+.reveal[data-percent="30%"]:before {  width: 30%; opacity: 0.30; }
+.reveal[data-percent="31%"]:before {  width: 31%; opacity: 0.31; }
+.reveal[data-percent="32%"]:before {  width: 32%; opacity: 0.32; }
+.reveal[data-percent="33%"]:before {  width: 33%; opacity: 0.33; }
+.reveal[data-percent="34%"]:before {  width: 34%; opacity: 0.34; }
+.reveal[data-percent="35%"]:before {  width: 35%; opacity: 0.35; }
+.reveal[data-percent="36%"]:before {  width: 36%; opacity: 0.36; }
+.reveal[data-percent="37%"]:before {  width: 37%; opacity: 0.37; }
+.reveal[data-percent="38%"]:before {  width: 38%; opacity: 0.38; }
+.reveal[data-percent="39%"]:before {  width: 39%; opacity: 0.39; }
+.reveal[data-percent="40%"]:before {  width: 40%; opacity: 0.40; }
+.reveal[data-percent="41%"]:before {  width: 41%; opacity: 0.41; }
+.reveal[data-percent="42%"]:before {  width: 42%; opacity: 0.42; }
+.reveal[data-percent="43%"]:before {  width: 43%; opacity: 0.43; }
+.reveal[data-percent="44%"]:before {  width: 44%; opacity: 0.44; }
+.reveal[data-percent="45%"]:before {  width: 45%; opacity: 0.45; }
+.reveal[data-percent="46%"]:before {  width: 46%; opacity: 0.46; }
+.reveal[data-percent="47%"]:before {  width: 47%; opacity: 0.47; }
+.reveal[data-percent="48%"]:before {  width: 48%; opacity: 0.48; }
+.reveal[data-percent="49%"]:before {  width: 49%; opacity: 0.49; }
+.reveal[data-percent="50%"]:before {  width: 50%; opacity: 0.50; }
+.reveal[data-percent="51%"]:before {  width: 51%; opacity: 0.51; }
+.reveal[data-percent="52%"]:before {  width: 52%; opacity: 0.52; }
+.reveal[data-percent="53%"]:before {  width: 53%; opacity: 0.53; }
+.reveal[data-percent="54%"]:before {  width: 54%; opacity: 0.54; }
+.reveal[data-percent="55%"]:before {  width: 55%; opacity: 0.55; }
+.reveal[data-percent="56%"]:before {  width: 56%; opacity: 0.56; }
+.reveal[data-percent="57%"]:before {  width: 57%; opacity: 0.57; }
+.reveal[data-percent="58%"]:before {  width: 58%; opacity: 0.58; }
+.reveal[data-percent="59%"]:before {  width: 59%; opacity: 0.59; }
+.reveal[data-percent="60%"]:before {  width: 60%; opacity: 0.60; }
+.reveal[data-percent="61%"]:before {  width: 61%; opacity: 0.61; }
+.reveal[data-percent="62%"]:before {  width: 62%; opacity: 0.62; }
+.reveal[data-percent="63%"]:before {  width: 63%; opacity: 0.63; }
+.reveal[data-percent="64%"]:before {  width: 64%; opacity: 0.64; }
+.reveal[data-percent="65%"]:before {  width: 65%; opacity: 0.65; }
+.reveal[data-percent="66%"]:before {  width: 66%; opacity: 0.66; }
+.reveal[data-percent="67%"]:before {  width: 67%; opacity: 0.67; }
+.reveal[data-percent="68%"]:before {  width: 68%; opacity: 0.68; }
+.reveal[data-percent="69%"]:before {  width: 69%; opacity: 0.69; }
+.reveal[data-percent="70%"]:before {  width: 70%; opacity: 0.70; }
+.reveal[data-percent="71%"]:before {  width: 71%; opacity: 0.71; }
+.reveal[data-percent="72%"]:before {  width: 72%; opacity: 0.72; }
+.reveal[data-percent="73%"]:before {  width: 73%; opacity: 0.73; }
+.reveal[data-percent="74%"]:before {  width: 74%; opacity: 0.74; }
+.reveal[data-percent="75%"]:before {  width: 75%; opacity: 0.75; }
+.reveal[data-percent="76%"]:before {  width: 76%; opacity: 0.76; }
+.reveal[data-percent="77%"]:before {  width: 77%; opacity: 0.77; }
+.reveal[data-percent="78%"]:before {  width: 78%; opacity: 0.78; }
+.reveal[data-percent="79%"]:before {  width: 79%; opacity: 0.79; }
+.reveal[data-percent="80%"]:before {  width: 80%; opacity: 0.80; }
+.reveal[data-percent="81%"]:before {  width: 81%; opacity: 0.81; }
+.reveal[data-percent="82%"]:before {  width: 82%; opacity: 0.82; }
+.reveal[data-percent="83%"]:before {  width: 83%; opacity: 0.83; }
+.reveal[data-percent="84%"]:before {  width: 84%; opacity: 0.84; }
+.reveal[data-percent="85%"]:before {  width: 85%; opacity: 0.85; }
+.reveal[data-percent="86%"]:before {  width: 86%; opacity: 0.86; }
+.reveal[data-percent="87%"]:before {  width: 87%; opacity: 0.87; }
+.reveal[data-percent="88%"]:before {  width: 88%; opacity: 0.88; }
+.reveal[data-percent="89%"]:before {  width: 89%; opacity: 0.89; }
+.reveal[data-percent="90%"]:before {  width: 90%; opacity: 0.90; }
+.reveal[data-percent="91%"]:before {  width: 91%; opacity: 0.91; }
+.reveal[data-percent="92%"]:before {  width: 92%; opacity: 0.92; }
+.reveal[data-percent="93%"]:before {  width: 93%; opacity: 0.93; }
+.reveal[data-percent="94%"]:before {  width: 94%; opacity: 0.94; }
+.reveal[data-percent="95%"]:before {  width: 95%; opacity: 0.95; }
+.reveal[data-percent="96%"]:before {  width: 96%; opacity: 0.96; }
+.reveal[data-percent="97%"]:before {  width: 97%; opacity: 0.97; }
+.reveal[data-percent="98%"]:before {  width: 98%; opacity: 0.98; }
+.reveal[data-percent="99%"]:before {  width: 99%; opacity: 0.99; }
+.reveal[data-percent="100%"]:before { width: 100%; opacity: 1; }

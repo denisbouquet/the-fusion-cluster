@@ -1,0 +1,13 @@
+.policy-section {
+    margin-bottom: 70px;
+    padding-top: 40px;
+    @include bp-tablet {
+        padding-top: 130px;
+    }
+    + .policy-section {
+        padding-top: 0;
+    }
+    .h2 {
+        margin-bottom: 35px;
+    }
+}

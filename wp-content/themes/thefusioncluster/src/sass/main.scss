@@ -1,0 +1,129 @@
+// In `sass/main.scss`
+// @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+// global
+@import 'base/variables';
+@import 'base/mixin';
+@import 'base/fonts';
+@import 'base/grid';
+@import 'base/animations';
+@import 'base/ie';
+@import 'base/text';
+@import 'base/fonts';
+@import 'base/print';
+@import 'base/commun';
+
+
+@import 'vendor/sanitize';
+@import 'vendor/slick';
+@import 'vendor/wp';
+@import 'vendor/pace';
+@import 'vendor/burger';
+@import 'vendor/select2';
+// @import 'vendor/magnific-popup';
+
+
+
+
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/menu';
+@import 'modules/hero';
+
+// modules
+// @import 'modules/cookie';
+@import 'modules/cta';
+// @import 'modules/form';
+@import 'modules/accordion';
+@import 'modules/hero';
+@import 'modules/card';
+
+// pages
+@import 'pages/homepage';
+@import 'pages/about';
+@import 'pages/asset-management';
+@import 'pages/weath-advisory';
+@import 'pages/funds';
+@import 'pages/team';
+@import 'pages/library';
+@import 'pages/contact';
+@import 'pages/policies';
+@import 'pages/generic';
+
+html, body { height: 100%; margin: 0; padding: 0; text-align: center; }
+
+/* ==========================================================================
+	 Author's custom styles
+	 ========================================================================== */
+#page {
+	padding: 0;
+	margin: 0 auto;
+	min-height: 100%;
+	font-family: $font-copy;
+	font-weight: 300;
+	color: $copy-color;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	height: 100%;
+	background-color: $white;
+}
+
+h1,h2,h3,h4 {
+	font-family: $font-title;
+	font-weight: 400;
+	line-height: 110%;
+}
+a {
+	outline: 0;
+	color: $black;
+}
+hr {
+	border:0;
+	margin: 25px 0;
+	border-top: 1px solid #000;
+}
+p {
+	margin: 0;
+}
+img {
+	height: auto;
+	max-width: 100%;
+}
+sup {
+	position: relative;
+	top: -0.25em;
+	font-size: 70%;
+}
+strong {
+	font-weight: normal;
+}
+p {
+	strong, b {
+		font-family: $font-bold;
+	}
+}
+figure, ul, li {
+	margin: 0;
+	padding: 0;
+}
+body {
+	@extend .transi-fast;
+	&.noscroll {
+		overflow: hidden;
+	}
+}
+
+main {
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+	min-height: 100%;
+
+	&.site-404 {
+		min-height: 600px;
+	}
+}

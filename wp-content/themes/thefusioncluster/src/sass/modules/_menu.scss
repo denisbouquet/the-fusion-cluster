@@ -1,0 +1,108 @@
+.main-menu {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    &.is-active {
+        pointer-events: auto;
+        opacity: 1;
+        .main-menu__overlay {
+
+        }
+
+        .main-menu__inner {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    &__overlay {
+        background-color: rgba(0,0,0,0.3);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &__inner {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 120px;
+        padding-bottom: 50px;
+        height: 100%;
+        max-height: 100%;
+        overflow: auto;
+        @include bp-tablet {
+            margin-right: 0;
+            width: 430px;
+            margin-left: auto;
+        }
+    }
+    p {
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: left;
+    }
+    li {
+        margin-bottom: 15px;
+        padding: 0 48px;
+        @include bp-tablet {
+            padding: 0 78px;
+        }
+        &.current, &.current_page_item, &.current-page-ancestor {
+            a { 
+                color: $gold;
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    a {
+        font-size: 24px;
+        line-height: 1.5;
+        color: $blue;
+        font-weight: $weight-bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-decoration: none;
+        position: relative;
+        @include bp-tablet {
+            font-size: 20px;
+        }
+        &:before {
+            position: absolute;
+            top: 0;
+            left: -32px;
+            content: url(../media/images/logo-symbol.svg);
+            width: 20px;
+            height: 20px;
+            display: block;
+            opacity: 0;
+        }
+        &:hover {
+            text-decoration: none;
+            color: $gold;
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+}

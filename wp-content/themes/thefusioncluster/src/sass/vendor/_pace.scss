@@ -1,0 +1,62 @@
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace.pace-inactive .pace-progress {
+  display: none;
+}
+
+.scrollify-initialized, .pace-super-remove {
+  .pace {
+    display: none !important;
+  }
+}
+
+.pace .pace-progress {
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.pace .pace-progress:before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -36px;
+    content: "";
+    background: url(#{$image-path}/page-loaderx10.gif);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 48px;
+    height: 72px;
+}
+
+// .pace .pace-progress:after {
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   content: attr(data-progress-text);
+//   font-family: $font-title;
+//   font-size: 15vw;
+//   line-height: 50vh;
+//   color: rgba(255,255,255, 0.02);
+// }

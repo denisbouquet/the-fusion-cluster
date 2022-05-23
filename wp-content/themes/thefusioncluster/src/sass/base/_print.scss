@@ -1,0 +1,21 @@
+@media print {
+	/* Print CSS rules go here */
+	/* Note: You need a separate @media screen group for other rules */
+	
+	// hide some elements
+	header.main,
+	footer.main {
+		display: none !important;
+	}
+
+	.container {
+		padding: 0 !important;
+	}
+	section, article {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	* {
+		color: $black !important;
+	}
+}

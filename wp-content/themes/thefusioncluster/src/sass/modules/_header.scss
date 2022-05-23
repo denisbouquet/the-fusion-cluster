@@ -1,0 +1,87 @@
+header.main {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 500;
+	width: 100%;
+	text-align: center;
+	// @extend .transi;
+	// transitions-delay: 0.2s;
+	// transition: background-color 0.3s ease;
+
+	padding-top: 24px;
+	height: 72px;
+	font-family: $font-reg;
+	font-weight: $weight-medium;
+	background-color: $darkerblue;
+
+	&.green {
+		background-color: $teal;
+	}
+	.logo {
+		width: 178px;
+	}
+
+
+	nav {
+		padding-right: 30px;
+		position: relative;
+		text-align: left;
+		padding-left: 15px;
+		@include bp-xs {
+			padding-left: 30px;
+		}
+		a {
+			color: $white;
+			text-decoration: none;
+			position: relative;
+			&:hover {
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0;
+					width: calc(100% - 3px);
+					height: 1px;
+					background-color: #fff;
+					top: 100%;
+				}
+			}
+		}
+		
+	}
+
+	.toggleMenu {
+		position: absolute;
+		width: 60px;
+		height: 55px;
+		z-index: 1;
+		will-change: transform;
+		transition: transform 300ms;
+		top: 10px;
+		outline: none;
+		right: 0px;
+		@include bp-xs {
+			right: 15px;
+		}
+		@include bp-tablet {
+			right: 20px;
+		}
+	}
+}
+/**
+ * Note: I have omitted any vendor-prefixes for clarity.
+ * Adding them is left as an exercise for the reader.
+ */
+.headroom {
+	will-change: transform;
+	transition: transform 250ms ease, background-color 0s ease;
+}
+.headroom--pinned {
+	transform: translateY(0%);
+}
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+

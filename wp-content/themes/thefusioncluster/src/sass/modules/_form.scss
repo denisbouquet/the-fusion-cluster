@@ -1,0 +1,129 @@
+.mod-form {
+	.label, .mb {
+		margin-bottom: 1.5em;
+	}
+
+	.success {
+		color: $green;
+		padding: 1em 0;
+	}
+	.errorterms {
+		color: red;
+	}
+
+	label {
+		display: block;
+	}
+	input, select {
+		border-radius: 0;
+		width: 100%;
+		display: block;
+		line-height: 59px;
+		border: 2px solid $black;
+		padding-left: 23px;
+		padding-right: 23px;
+		&.hidden {
+			display: none;
+		}
+		&:focus {
+			outline: 0;
+			border-color: $gold;
+		}
+	}
+	select {
+		height: 59px;
+	}
+	input[type="submit"] {
+		cursor: pointer;
+		&:hover {
+			background-color: $black;
+			color: $white;
+		}
+	}
+	a {
+		&:hover {
+			color: inherit;
+		}
+	}
+	.form-checkbox {
+		margin-bottom: 0;
+		label, input {
+			display: inline-block;
+			width: auto;
+		}
+
+		// input {
+		// 	&:before {
+		// 		content: "l";
+		// 		border: 2px solid $black;
+		// 	}
+		// }
+
+		+.form-checkbox {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.check_box_group {
+		position: relative;
+		padding: 0;
+		input[type="checkbox"] {
+			display: none;
+
+			// style span within the label
+			& + label span {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				cursor: pointer;
+				margin-bottom: 0.75em;
+				line-height: 1.2;
+				clear: both;
+				padding-left: 40px;
+				
+				// the background box
+				&:before {
+					position: absolute;
+					content: " ";
+					border: 2px solid $black;
+					background: transparent;
+					width: 26px;
+					height: 26px;
+					left: 0;
+					margin-top: -2px;
+				}
+				
+				// the check/tick
+				&:after {
+					position: absolute;
+					content: " ";
+					width: 26px;
+					height: 26px;
+					left: 0;
+					margin-top: -2px;
+				}
+			}
+			
+			// style :checked input span
+			&:checked + label span {
+				&:before {
+					content: "︎︎ ";
+					color: $black;
+					background: transparent;
+					text-align: center;
+					border: 2px solid $black;
+				}
+				&:after {
+					margin-top: 3px;
+					left: 10px;
+					width: 6px;
+					height: 12px;
+					transform: rotate(45deg);
+					border: solid $black;
+					border-width: 0 2px 2px 0;
+				}
+			}
+		}
+	}
+}

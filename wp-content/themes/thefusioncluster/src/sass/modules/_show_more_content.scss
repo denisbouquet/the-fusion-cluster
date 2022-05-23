@@ -1,0 +1,16 @@
+.show_more_content {
+	.collapse-content {
+		overflow: hidden;
+		max-height: 0;
+		transition: all 1s ease;
+	}
+	&.is-open {
+		.collapse-content {
+			max-height: 1000px;
+		}
+		.toggle-more-content {
+			display: none !important;
+		}
+	}
+
+}

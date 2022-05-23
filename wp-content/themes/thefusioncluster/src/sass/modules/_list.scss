@@ -1,0 +1,54 @@
+.bg-black, .bg-purple, .bg-green, .bg-orange, .bg-oak, .bg-gold {
+	.mod-list, li .mod-list--toggle { 
+		border-color: $white;
+	}
+}
+
+.mod-list {
+	margin-bottom: 54px;
+	border-bottom: 2px solid $black;
+	padding-top: 48px;
+	@include media-breakpoint-up(md) {
+		// padding-top: 72px;
+	}
+	@include bp-xxl {
+		padding-top: 84px;
+	}
+	li {
+		display: block;
+		article {
+			> div > div {
+				overflow: hidden;
+				padding: 1em 1.5em;
+			}
+		}
+		.mod-text .wysiwyg {
+			margin-bottom: 0;
+		}
+		.mod-list--line {
+			position: relative;
+			border-top: 2px solid $black;
+			line-height: 46px;
+			font-family: $font-bold;
+			padding-bottom: 14px;
+			@include media-breakpoint-up(md) {
+				line-height: 60px;
+			}
+			p {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+	&--double {
+		li .mod-list--line {
+			padding-top: 10px;
+			line-height: 150%;
+			padding-bottom: 10px;
+			@include media-breakpoint-up(md) {
+				line-height: 163%;
+				padding-bottom: 14px;
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+// override bootstrap
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	@include bp-xs {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@include bp-tablet {
+		max-width: 880px;
+	}
+	@include bp-xl {
+		max-width: 1100px;
+	}
+}
+
+.container-from-tablet {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0;
+	padding-right: 0;
+	@include bp-large {
+		padding-left: 30px;
+		padding-right: 30px;
+		max-width: 880px;
+	}
+	@include bp-xl {
+		max-width: 1100px;
+	}
+}
+
+// .container-full {
+// 	padding-left: 15px;
+// 	padding-right: 15px;
+// }

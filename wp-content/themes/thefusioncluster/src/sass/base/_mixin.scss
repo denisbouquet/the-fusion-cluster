@@ -1,0 +1,144 @@
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+@mixin transition($args) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+@mixin background-image($name, $size:false){
+		background-image: url(#{$image-path}/#{$name}.svg);
+		@if($size){
+				background-size: $size;
+		}
+		.no-svg &{
+				background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+
+				@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+					background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+				}
+		}
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}  
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}  
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};      
+}
+
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.visuallyhidden {
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+
+@mixin bp-xxs {
+	@media only screen and (min-width: 325px) {
+		@content;
+	}
+}
+
+@mixin bp-xs {
+	@media only screen and (min-width: 375px) {
+		@content;
+	}
+}
+
+@mixin bp-s {
+	@media only screen and (min-width: 430px) {
+		@content;
+	}
+}
+
+@mixin bp-tablet {
+  @media only screen and (min-width: 767px) {
+    @content;
+  }
+}
+@mixin bp-large {
+  @media only screen and (min-width: 900px) {
+    @content;
+  }
+}
+@mixin bp-desktop {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin bp-xl {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin bp-xxl {
+  @media only screen and (min-width: 1800px) {
+    @content;
+  }
+}
+
+/// Mixin printing a linear-gradient
+/// as well as a plain color fallback
+/// and the `-webkit-` prefixed declaration
+/// @access public
+/// @param {Keyword | Angle} $direction - Linear gradient direction
+/// @param {Arglist} $color-stops - List of color-stops composing the gradient
+@mixin linear-gradient($direction, $color-stops...) {
+	background: nth(nth($color-stops, 1), 1);
+	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+	background: linear-gradient($direction, $color-stops);
+}

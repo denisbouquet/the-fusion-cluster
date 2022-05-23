@@ -1,0 +1,406 @@
+// TEAM
+.mod-about-intro {
+    position: relative;
+    padding-top: 67px;
+    padding-bottom: 56px;
+    @include bp-tablet {
+        padding-bottom: 72px;
+    }
+    @include bp-xl {
+        padding-bottom: 150px;
+    }
+
+    &__title {
+        text-align: center;
+        @extend .h2;
+        color: $darkblue;
+        @include bp-xl {
+            margin-bottom: 32px;
+        }
+    }
+    &__copy {
+        text-align: center;
+        max-width: 705px; 
+        margin-left: auto;
+        margin-right: auto;
+        color: $darkblue;
+        margin-bottom: 36px;
+        margin-bottom: 60px;
+        @include bp-desktop {
+            margin-bottom: 90px;
+        }
+        @include bp-xl {
+            margin-bottom: 146px;
+        }
+    }
+
+    // second part
+    &__sections {
+        @include bp-large {
+            display: flex;
+            width: 100%;
+        }
+    }
+    &__image {
+        width: 100%;
+        @include bp-large {
+            width: 50%;
+        }
+        img {
+            display: block;
+            width: 100%;
+            @include bp-large {
+                width: calc(100% - 60px);
+                margin-right: 60px;
+                max-width: 610px;
+                margin-left: auto;
+            }
+            @include bp-xl {
+                width: calc(100% - 96px);
+                margin-right: 96px;
+            }
+        }
+    }
+    &__bullets {
+        color: $darkblue;
+        @extend .container;
+        padding-top: 50px;
+        @include bp-large {
+            padding: 0;
+            padding-right: 30px;
+            width: 50%;
+            max-width: 570px;
+        }
+        @include bp-desktop {
+            padding-right: 0;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2, h3, h4 {
+            font-family: $font-copy;
+            @include font-size(20px);
+            font-weight: $weight-medium;
+            padding-top: 50px;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+
+
+
+// GROUP OVERVIEW
+.mod-group-overview {
+    position: relative;
+    padding-top: 67px;
+    background: transparent url('../media/images/pattern/white-transparent.png') right top repeat;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 373px;
+        width: 100%;
+        background: $silver;
+    }
+
+    &__title {
+        text-align: center;
+        @extend .h2;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 1;
+        color: $darkblue;
+    }
+    // &__copy {
+    //     text-align: center;
+    //     margin-bottom: 36px;
+    //     max-width: 537px; 
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+}
+.mod-group-overview__articles {
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    @include bp-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 540px;
+    }
+    @include bp-xl {
+        max-width: 1070px;
+    }
+}
+.block-overview {
+    background: $darkerblue;
+    box-shadow: 0px 4px 75px -28px rgba(38, 46, 91, 0.25);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    max-width: 240px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    min-height: 236px;
+    @include bp-xl {
+        max-width: calc(25% - 30px);
+    }
+
+    &__media {
+        padding-top: 35px;
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 17px;
+        }
+    }
+    &__copy {
+        text-align: center;
+        padding: 20px;
+        color: $white;
+        position: relative;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+// ETHOS
+.mod-ethos {
+    position: relative;
+    background: transparent url('../media/images/pattern/white-transparent.png') right 555px repeat;
+    @include bp-tablet {
+        padding-top: 67px;
+    }
+
+
+    &__title {
+        text-align: center;
+        @extend .h2;
+        margin-bottom: 50px;
+        color: $darkblue;
+    }
+    // &__copy {
+    //     text-align: center;
+    //     margin-bottom: 36px;
+    //     max-width: 537px; 
+    //     margin-left: auto;
+    //     margin-right: auto;
+    // }
+}
+.mod-ethos__articles {
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1070px;
+    @include bp-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+}
+.block-ethos {
+    background: $darkerblue;
+    box-shadow: 0px 4px 75px -28px rgba(38, 46, 91, 0.25);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100vw - 30px);
+    padding: 30px;
+    position: relative;
+    @include bp-tablet {
+        width: calc(50% - 30px);
+        // max-width: 510px;
+        display: flex;
+    }
+    &:nth-child(2n+2) {
+        @include bp-tablet {
+            top: 70px;
+        }
+    }
+    &:nth-child(3n+1) {
+        background: $darkblue;
+    }
+    &:nth-child(3n+2) {
+        background: $blue;
+    }
+    &:nth-child(3n+3) {
+        background: $darkerblue;
+    }
+
+    &__media {
+        @include bp-tablet {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        img, lottie-player {
+            display: block;
+            width: 88px;
+            margin-bottom: 10px;
+        }
+    }
+    &__copy {
+        color: $white;
+        position: relative;
+        @include bp-tablet {
+            padding: 0 0 0 90px;
+        }
+        h2, h3, h4 {
+            font-family: $font-copy;
+            @include font-size(28px);
+            font-weight: $weight-bold;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+// TEAM CEO
+.mod-about-ceo {
+    h2 {
+        color: $darkblue;
+    }
+    &__inner {
+        position: relative;
+        .slide-about-ceo {
+            position: relative;
+            margin: 0 2px;
+            @include bp-desktop {
+                margin: 0;
+            }
+        }
+        .slick-dots {
+            bottom: 0;
+        }
+    }
+    &__photo {
+        position: relative;
+        z-index: 1;
+        >div {
+            position: relative;
+        }
+        @include bp-tablet {
+            width: 80%;
+            max-width: 350px;
+            // max-width: 475px;
+        }
+        @include bp-desktop {
+            width: 100%;
+        }
+        img {
+            // width: 100%;
+            display: block;
+        }
+    }
+    &__portrait {
+        width: 100%;
+        display: block;
+    }
+    &__signetlogo {
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        top: 100%;
+        right: 32px;
+        margin-top: -24px;
+        z-index: 2;
+        @include bp-tablet {
+            top: 32px;
+            left: 100%;
+            margin-left: -24px;
+        }
+    }
+    &__description {
+        background-color: $darkblue;
+        color: $silver;
+        margin-bottom: 44px;
+        position: relative;
+        padding: 30px 20px;
+        @include bp-tablet {
+            top: -44px;
+            margin-bottom: 0;
+            margin-left: 20%;
+            z-index: 4;
+        }
+        @include bp-desktop {
+            max-width: 485px; 
+            margin-bottom: 20px;
+            margin-left: 310px;
+        }
+        p {
+            strong, b {
+                font-weight: $weight-extrabold;
+            } 
+        }
+    }
+    &__name {
+        h3 {
+            color: $darkblue;
+            font-weight: $weight-extrabold;
+            @include font-size(24px);
+            text-transform: uppercase;
+        }
+        p {
+            color: $blue;
+            margin-bottom: 20px;
+        }
+    }
+    &__bio {
+        margin-bottom: 60px;
+        p {
+            color: $darkblue;
+        }
+        @include bp-desktop {
+            max-height: 285px; 
+            overflow: auto;
+        }
+        @extend .scrollbar;
+    }
+    &__cta {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        a {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &__info {
+        @include bp-desktop {
+            position: absolute;
+            top: 0;
+            left: 410px;
+            max-width: 50%;
+        }
+    }
+    .slick-prev, .slick-next { 
+        top: 50px;
+        z-index: 2;
+    }
+    .slick-prev {
+        left: auto;
+        right: 60px;
+    }
+    .slick-next {
+        right: 10px;
+    }
+}
