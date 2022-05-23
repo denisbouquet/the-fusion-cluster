@@ -77,7 +77,7 @@ header.main {
 			left: 0px;
 			transform: translateY(-50%);
 			@include bp-s {
-				left: 20px;
+				left: $padding-s;
 			}
 			@include bp-desktop {
 				left: 50%;
@@ -110,8 +110,8 @@ header.main {
 		@include bp-xs {
 			// right: 15px;
 		}
-		@include bp-tablet {
-			right: 20px;
+		@include bp-s {
+			right: $padding-s;
 		}
 	}
 }

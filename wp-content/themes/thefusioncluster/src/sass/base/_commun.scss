@@ -21,6 +21,7 @@
 
 .lines {
     position: relative;
+    overflow: hidden;
     .top-line {
         &:before {
             content: "";
@@ -31,7 +32,7 @@
             top: 0;
             left: 0;
             right: 0;
-            @include bp-tablet {
+            @include bp-s {
                 left: 20px;
                 right: 20px;
             }
