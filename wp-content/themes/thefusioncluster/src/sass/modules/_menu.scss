@@ -37,7 +37,7 @@
         transition: transform 0.3s ease;
         position: relative;
         z-index: 2;
-        background-color: #fff;
+        background-color: $black;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -52,23 +52,12 @@
             margin-left: auto;
         }
     }
-    p {
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 16px;
-        text-align: left;
-    }
     li {
         margin-bottom: 15px;
-        padding: 0 48px;
-        @include bp-tablet {
-            padding: 0 78px;
-        }
+        padding: 0 55px;
         &.current, &.current_page_item, &.current-page-ancestor {
             a { 
-                color: $gold;
+                color: $accent;
                 &:before {
                     opacity: 1;
                 }
@@ -76,12 +65,8 @@
         }
     }
     a {
-        font-size: 24px;
         line-height: 1.5;
-        color: $blue;
-        font-weight: $weight-bold;
-        letter-spacing: 2px;
-        text-transform: uppercase;
+        color: $white;
         text-decoration: none;
         position: relative;
         @include bp-tablet {
@@ -99,7 +84,7 @@
         }
         &:hover {
             text-decoration: none;
-            color: $gold;
+            color: $accent;
             &:before {
                 opacity: 1;
             }

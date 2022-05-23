@@ -1,20 +1,22 @@
 // variables
-$font-title: 'Nunito', sans-serif;
-$font-copy: 'Nunito Sans', sans-serif;
-$font-reg: 'Nunito Sans', sans-serif;
-$font-bold: 'Nunito Sans', sans-serif;
+$font-title: 'Space Grotesk', sans-serif;
+$font-copy: 'Inter', sans-serif;
+$font-reg: 'Inter', sans-serif;
+$font-bold: 'Inter', sans-serif;
 
 
 $weight-light: 300;
 $weight-reg: 400;
 $weight-medium: 500;
-$weight-bold: 600;
+$weight-bold: 700;
 $weight-extrabold: 700;
 
 $letter-spacing: 1.97px;
 
 $bg-color: #fff;
 $copy-color: #000000;
+
+
 
 $black-100: #000;
 $white: #FFFFFF;
@@ -37,7 +39,20 @@ $purple: #770031;
 $orange: #FF4800;
 $navy: #000451;
 $sky: #80B0FF;
-// $oak: #994A24; // removed
+
+
+
+$black: #000;
+$darkgrey: #767676;
+$grey: #dbdbdb;
+$lightgrey: #f6f6f6;
+$white: #fff;
+$fusionpink: #FF8DF5;
+$accent: $fusionpink;
+$pink50: #ffc6fa;
+$pink20: #FFE8FD;
+$pink10: #fff4fe;
+
 
 $image-path: '../images' !default;
 $fallback-extension: 'png' !default;

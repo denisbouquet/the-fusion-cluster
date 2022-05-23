@@ -1,20 +1,50 @@
 .mod-hero {
     width: 100%;
-    height: 100%;
-    background-color: $darkblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // height: 130%;
+    background-color: $black;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
     position: relative;
+    margin-top: 75px;
+    border-top: 1px solid $darkgrey;
+    .container {
+        &:before, &:after {
+            content: "";
+            width: 16px;
+            height: 28px;
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            display: block;
+            background-color: $black;
+        }
+        &:after {
+            left: auto;
+            right: -8px;
+        }
+    }
     &__media {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        position: relative;
         width: 100%;
         height: 100%;
-        img, video {
+        >div {
+            width: 100%;
+            height: 100%;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             display: block;
             width: 100%;
             height: 100%;
@@ -30,6 +60,7 @@
         height: 30px;
         transform: translateX(-50%);
         opacity: 0;
+        z-index: 3;
         @include bp-tablet {
             width: 40px;
             height: 40px;
@@ -66,45 +97,22 @@
         color: $white;
         // padding-left: 15px;
         // padding-right: 15px;
-        padding-top: 72px;
+        padding-top: 190px;
 
         h1 {
             line-height: 1.26;
             letter-spacing: 4px;
             text-transform: uppercase;
             color: $silver;
-            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 35px;
             font-size: 5vw;
             opacity: 0;
             transform: translateY(50px);
-            @include bp-xxs {
-                font-size: 6vw;
-            }
-            @include bp-tablet {
-                font-size: 40px;
-            }
-            @include bp-xl {
-                font-size: 50px;
-            }
-            @include bp-xxl {
-                font-size: 70px;
-                max-width: 740px;
-            }
-
-            &:after {
-                margin-top: 30px;
-                content: "";
-                width: 60px;
-                border-radius: 2px;
+            @extend .h1;
+            span {
                 display: block;
-                margin-left: auto;
-                margin-right: auto;
-                border-top: 2px solid $gold;
-                opacity: 0;
-                transform: translateY(50px);
             }
         }
         p {
@@ -164,41 +172,6 @@
             opacity: 1;
             transition: all 0.5s ease;
             transition-delay: 0.5s;
-        }
-    }
-
-    
-    &--subpage {
-        overflow: hidden;
-        height: 300px;
-        @include bp-tablet {
-            height: 430px;
-        }
-        h1 {
-            padding-top: 36px;
-            margin-bottom: 0;      
-            &:after {
-                display: none;
-            }
-        }
-        .container {
-            text-align: left;
-            h1 {
-                margin-left: 0;
-            }
-            p {
-                margin-left: 0;
-                max-width: 445px;
-            }
-        }
-    }
-    &--mediumheight {
-        height: 430px;
-        @include bp-tablet {
-            height: 600px;
-        }
-        h1 {
-            margin-bottom: 26px;
         }
     }
 }

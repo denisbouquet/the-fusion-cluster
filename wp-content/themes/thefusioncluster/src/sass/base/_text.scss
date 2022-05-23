@@ -1,8 +1,37 @@
 .base-text {
 	font-family: $font-copy;
-	line-height: 162.5%; 
+	line-height: 140%; 
+	letter-spacing: -2%;
 	@include font-size(16px);
+	font-weight: normal;
 }
+
+.small-copy {
+	font-family: $font-copy;
+	line-height: 140%; 
+	letter-spacing: 0%;
+	@include font-size(14px);
+	font-weight: normal;
+}
+
+.large-copy {
+	font-family: $font-copy;
+	line-height: 140%; 
+	letter-spacing: -2%;
+	@include font-size(24px);
+	font-weight: normal;
+}
+
+
+.tag {
+	font-family: $font-copy;
+	line-height: 100%; 
+	letter-spacing: 2%;
+	@include font-size(12px);
+	font-weight: normal;
+}
+
+
 
 
 .title-styles {
@@ -27,98 +56,57 @@
 
 .h1 {
 	font-family: $font-title;
-	@include font-size(48px);
-	line-height: 108%;
+	font-weight: $weight-bold;
+	letter-spacing: -4%;
+	line-height: 104%;
+	@include font-size(40px);
 	@include bp-tablet {
-		@include font-size(120px);
-	}
-	@include bp-xxl {
-		@include font-size(144px);
+		@include font-size(80px);
 	}
 }
 
 .h2 {
 	font-family: $font-title;
-	line-height: 1.5;
-	text-transform: uppercase;
-	// font-weight: $weight-bold;
-	color: $darkerblue;
-	@include font-size(22px);
-	letter-spacing: 2px;
+	font-weight: $weight-medium;
+	letter-spacing: -4%;
+	line-height: 104%;
+	@include font-size(30px);
 	@include bp-tablet {
-		letter-spacing: 4px;
-		@include font-size(24px);
-	}
-	@include bp-xl {
-		letter-spacing: 6px;
-		@include font-size(28px);
-	}
-
-	&--white {
-		color: $white;
-	}
-	&--silver {
-		color: $silver;
-	}
-	&--teal {
-		color: $teal;
-	}
-	&--darkblue {
-		color: $darkblue;
-	}
-	&--center {
-		text-align: center;
-		margin-bottom: 32px;
-	}
-	&--mb-l {
-		margin-bottom: 32px;
-		@include bp-desktop {
-			margin-bottom: 60px;
-		}
+		@include font-size(60px);
 	}
 }
 
 .h3 {
-	font-weight: $weight-extrabold;
-	font-size: 18px;
-	line-height: 1.25;
-	font-family: $font-copy;
-	margin-bottom: 18px;
+	font-family: $font-title;
+	font-weight: $weight-medium;
+	letter-spacing: -4%;
+	line-height: 112%;
+	@include font-size(30px);
 	@include bp-tablet {
-		font-size: 20px;
-	}
-	@include bp-xl {
-		font-size: 28px;
-	}
-	
-	&--white {
-		color: $white;
-	}
-	&--gold {
-		color: $gold;
-	}
-	&--darkerblue {
-		color: $darkerblue;
+		@include font-size(32px);
 	}
 }
 
 .h4 {
 	font-family: $font-title;
-	@include font-size(24px);
-	line-height: 130%;
+	font-weight: $weight-medium;
+	letter-spacing: -4%;
+	line-height: 112%;
+	@include font-size(22px);
 	@include bp-tablet {
-		@include font-size(36px);
-	}
-	@include bp-xxl {
-		@include font-size(48px);
+		@include font-size(24px);
 	}
 }
 
-.small-copy {
-	font-family: $font-reg;
-	line-height: 1.22;
-	font-size: 14px;
+.h5 {
+	font-family: $font-title;
+	font-weight: $weight-medium;
+	letter-spacing: -3%;
+	line-height: 112%;
+	@include font-size(18px);
 	@include bp-tablet {
-		font-size: 18px;
+		@include font-size(20px);
 	}
 }
+
+

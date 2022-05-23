@@ -10,43 +10,90 @@ header.main {
 	// transitions-delay: 0.2s;
 	// transition: background-color 0.3s ease;
 
-	padding-top: 24px;
-	height: 72px;
 	font-family: $font-reg;
 	font-weight: $weight-medium;
-	background-color: $darkerblue;
+	background-color: $black;
 
-	&.green {
-		background-color: $teal;
-	}
-	.logo {
-		width: 178px;
-	}
+	
 
 
 	nav {
-		padding-right: 30px;
+		padding-top: 21px;
 		position: relative;
-		text-align: left;
-		padding-left: 15px;
-		@include bp-xs {
+		display: flex;
+		justify-content: space-between;
+		height: 75px;
+		@include bp-s {
 			padding-left: 30px;
+			padding-right: 30px;
 		}
+
+		@include bp-xl {
+			padding-left: 63px;
+			padding-right: 63px;
+		}
+
+		&:before, &:after {
+			display: none;
+			content: "";
+			width: 1px;
+			top: 0;
+			bottom: 8px;
+			position: absolute;
+			background-color: $darkgrey;
+			@include bp-s {
+				display: block;
+			}
+		}
+		&:before {
+			left: 0;
+		}
+		&:after {
+			right: 0;
+		}
+
 		a {
 			color: $white;
 			text-decoration: none;
 			position: relative;
+			line-height: 33px;
 			&:hover {
-				&:after {
-					content: "";
-					display: block;
-					position: absolute;
-					left: 0;
-					width: calc(100% - 3px);
-					height: 1px;
-					background-color: #fff;
-					top: 100%;
+				color: $accent;
+			}
+		}
+
+		ul {
+			display: none;
+			@include bp-desktop {
+				display: flex;
+			}
+			li {
+				margin-right: 22px;
+				&:last-child {
+					margin-right: 0;
 				}
+			}
+		}
+
+		a.logo {
+			display: block;
+			position: absolute;
+			top: 50%;
+			width: 136px;
+			height: 31px;
+			left: 0px;
+			transform: translateY(-50%);
+			@include bp-s {
+				left: 20px;
+			}
+			@include bp-desktop {
+				left: 50%;
+				transform: translateX(-50%) translateY(-50%);
+			}
+			svg {
+				width: 100%;
+				height: auto;
+				display: block;
 			}
 		}
 		
@@ -62,8 +109,13 @@ header.main {
 		top: 10px;
 		outline: none;
 		right: 0px;
+		display: block;
+		@include bp-desktop {
+			display: none;
+		}
+
 		@include bp-xs {
-			right: 15px;
+			// right: 15px;
 		}
 		@include bp-tablet {
 			right: 20px;

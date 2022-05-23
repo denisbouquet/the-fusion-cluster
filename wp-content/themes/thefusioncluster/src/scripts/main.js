@@ -109,7 +109,7 @@ var isMobile = false; //initiate as false
 			var self = this; 
 
 			self.checkMobile();
-			self.headroomHeader();
+			// self.headroomHeader();
 			self.cookie_popup();
 			self.loazyloadImage();
 			self.sliders();
@@ -126,7 +126,6 @@ var isMobile = false; //initiate as false
 			self.downloadListMobileAccordion();
 			
             self.scrollSyncAnimation();
-            self.downloadInsights();
 
             
             $('.js-matchHeight').matchHeight();
@@ -142,165 +141,6 @@ var isMobile = false; //initiate as false
 			
 		},
 
-        downloadInsights: function (elt) {
-            if($('.block-download-form').length > 0) {
-
-                
-                $('.mod-document-downloads form, .mod-library-form form').on('submit', function(e){
-                    e.preventDefault();
-                    var error = 0;
-
-                    if($('#terms').is(":checked")) {
-                        // all good
-                        $('#terms').parent().removeClass('is-mandatory');
-                        // $('.mod-document-downloads form .download-submit button').removeAttr('disabled');
-                    }
-                    else {
-                        // $('.mod-document-downloads form .download-submit button').attr('disabled', true);
-                        $('#terms').parent().addClass('is-mandatory');
-                        error++;
-                    }
-
-                    if($('#rememberme').is(":checked")) {
-                        // all good
-                        Cookies.set('country', $("#country option:selected").index() );
-                        Cookies.set('audience', $("#audience option:selected").index() );
-                        Cookies.set('rememberme', 1);
-                        // $.cookie("country", $("#country").val(), {expires: 7});
-                        // $.cookie("audience", $("#audience").val(), {expires: 7});
-                    }
-                    else {
-                        // if cookie was set, then we erase data
-                        if(Cookies.get('rememberme') == 1) {
-                            Cookies.remove('country');
-                            Cookies.remove('audience');
-                            Cookies.remove('rememberme');
-                        }
-
-                    }
-
-                    if($('#country').val() != '') {
-                        // all good
-                    }
-                    else {
-                        $('#country').parent().addClass('is-mandatory');
-                        error++;
-                    }
-
-                    if($('#audience').val() != '') {
-                        // all good
-                    }
-                    else {
-                        $('#audience').parent().addClass('is-mandatory');
-                        error++;
-                    }
-
-// console.log('===  main.js [231] ===', error);
-                    if(error == 0) {
-                        $('.block-download').each(function(){
-                            var $list = $(this);
-                            $list.find('a').css('display','none');
-                            $list.find('a.global').css('display','block');
-                            $list.find('a.'+$('#audience').val()).css('display','block');
-
-                            $list.find('.form-result-reset').removeClass('is-visible');
-
-                            $list.find('.form-result').hide();
-
-                            if($('#country').val() == 'unrestricted') {
-                                $list.find('.show_tailored_copy').show();
-                                $('[data-restricted="true"]:visible').css('display','block');
-
-                                if($('.mod-fund-navigation').length > 0) {
-                                    // we are in fund page
-                                    if($list.find('a.'+$('#audience').val()).length == 0) {
-                                        $list.find('.form-result').hide();
-                                        $list.find('.form-result.restricted_copy').show();
-                                    }
-                                }
-                            }
-                            else {
-                                $('[data-restricted="true"]:visible').css('display','none');
-                                // $list.find('.form-result').removeClass('is-visible');
-                                $list.find('.form-result.restricted_copy').show();
-                            }
-
-
-                            // for each block (useful for library page)
-                            if($(this).find('a:visible').length == 0) {
-    // console.log('===  main.js [264] ===', $(this).find('a:visible').length);
-                                // message if zero visible
-                                // $list.find('.form-result').removeClass('is-visible');
-                                $list.find('.form-result').hide();
-                                $list.find('.form-result.restricted_copy_no_results').show();
-                            }
-                            else {
-                                $list.find('.form-result-reset').addClass('is-visible');
-                            }
-                        });
-                        
-
-
-                        if($(this).parents('.mod-library-form')) {
-                            $('.mod-library-form .form-result').removeClass('is-visible');
-                            
-                            if($('#country').val() == 'unrestricted') {
-                                $('.mod-library-form .show_tailored_copy_library').addClass('is-visible');
-                            }
-                            else {
-                                $('.mod-library-form .restricted_copy').addClass('is-visible');
-                                $('.block-download .form-result').removeClass('is-visible');
-                                $('.block-download .cta').hide();
-                            }
-
-                            
-                            // $('.mod-library-insights--searchresults').addClass('is-open');
-                        }
-                    }
-                    else {
-                        // dont do anything until all fields are filled
-                    }
-
-
-                });
-
-                // reset form
-                $('.form-result-reset').on('click', function(){
-                    var $list = $(this).parents('.block-download');
-
-                    $list.find('.form-result-reset').removeClass('is-visible');
-                    $list.find('.form-result').hide();
-                    $list.find('a').css('display','block');
-                    $('[data-restricted="true"]:visible').css('display','none');
-                });
-
-                $('#country').on('change', function(){
-                    $('#country').parent().removeClass('is-mandatory');
-                });
-                $('#audience').on('change', function(){
-                    $('#audience').parent().removeClass('is-mandatory');
-                });
-                $('#terms').on('change', function(){
-                    $('#terms').parent().removeClass('is-mandatory');
-                });
-                $('#rememberme').on('change', function(){
-                    $('#terms').parent().removeClass('is-mandatory');
-                });
-
-                if(Cookies.get('rememberme') == '1') {
-                    //https://github.com/js-cookie/js-cookie 
-                    $("#country option").eq( Cookies.get('country') ).attr('selected','selected');
-                    $("#audience option").eq( Cookies.get('audience') ).attr('selected','selected');
-                    $("#rememberme").attr('checked', 'checked').change();
-
-                }
-// console.log('===  main.js [292] ===', Cookies.get('rememberme'));
-// console.log('===  main.js [292] ===', Cookies.get('country'));
-// console.log('===  main.js [292] ===', Cookies.get('audience'));
-            }
-
-
-        },
         scrollSyncAnimation: function (elt) {
 
 
@@ -332,12 +172,12 @@ var isMobile = false; //initiate as false
 
 
             // HEROS all pages
-            ScrollTrigger.create({
-                trigger: $('.mod-hero'),
-                // markers: true,
-                pin: true,
-                pinSpacing: false
-            })
+            // ScrollTrigger.create({
+            //     trigger: $('.mod-hero'),
+            //     // markers: true,
+            //     pin: true,
+            //     pinSpacing: false
+            // })
 
             // INSIGHT BLOCK
             $('.mod-home-insights__articles, .mod-funds-insights__articles ').each(function(){

@@ -1,78 +1,62 @@
 // override bootstrap
-.cta {
-	// display: flex;
-	// flex: flex-wrap;
-	// justify-content: space-between;
-	a, button {
-		// border: 1px solid $gold;
-		// box-shadow: 0px 5px 8px -2px rgba(29, 38, 71, 0.15);
-		border-radius: 10px;
-		min-height: 31px;
-		display: inline-block;
-		padding: 5px 30px;
-		text-decoration: none;
-		margin-left: 15px;
-		margin-right: 15px;
-		margin-bottom: 5px;
-		color: $gold;
-		@extend .transi-fast;
-		&:hover {
-			text-decoration: none;
-			background-color: $darkerblue;
-		}
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
+
+.cta-pink {
+	background-color: $accent;
+	position: relative;
+	min-width: 104px;
+	display: block;
+	border-radius: 10px;
+	color: $black !important;
+	text-align: left;
+	padding: 0 10px;
+	line-height: 33px;
+	&:after {
+		position: absolute;
+		content: "";
+		width: 15px;
+		height: 15px;
+		top: 50%;
+		margin-top: -7px;
+		right: 10px;
+		background:transparent url('../media/images/icons/arrow-button.svg') left top no-repeat;
 	}
-	&--blue {
-		a, button {
-			border: none;
-			color: $white;
-			background-color: $darkblue;
-			&:hover {
-				background-color: $light-blue;
-			}
-		}
-	}
-	&--grey {
-		a {
-			color: $darkblue;
-			background-color: $silver;
-			&:hover {
-				background-color: $lilac;
-			}
-		}
-	}
-	&--lilac {
-		a {
-			background-color: $silver;
-			color: $silver;
-			&:hover {
-				background-color: $darkerblue;
-			}
-		}
-	}
-	&--lilac2 {
-		a {
-			&:hover {
-				background-color: #666e99;
-			}
-		}
-	}
-	&.alignright {
-		display: block;
-		float: none;
-		margin-left: 0;
-	}
-	&.alignleft {
-		display: block;
-		float: none;
-		margin-right: 0;
+
+	&:hover {
+		background-color: $pink50;
 	}
 }
+
+
+// .cta {
+// 	// display: flex;
+// 	// flex: flex-wrap;
+// 	// justify-content: space-between;
+// 	a, button {
+// 		// border: 1px solid $gold;
+// 		// box-shadow: 0px 5px 8px -2px rgba(29, 38, 71, 0.15);
+// 		border-radius: 10px;
+// 		min-height: 31px;
+// 		display: inline-block;
+// 		padding: 5px 30px;
+// 		text-decoration: none;
+// 		margin-left: 15px;
+// 		margin-right: 15px;
+// 		margin-bottom: 5px;
+// 		color: $gold;
+// 		@extend .transi-fast;
+// 		&:hover {
+// 			text-decoration: none;
+// 			background-color: $darkerblue;
+// 		}
+// 		&:first-child {
+// 			margin-left: 0;
+// 		}
+// 		&:last-child {
+// 			margin-right: 0;
+// 		}
+// 	}
+
+// }
 
 .link {
 	a, button {

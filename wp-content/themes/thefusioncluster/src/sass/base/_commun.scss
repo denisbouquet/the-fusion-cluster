@@ -19,6 +19,29 @@
     }
 }
 
+.lines {
+    position: relative;
+    &:before, &:after {
+        display: none;
+        content: "";
+        width: 1px;
+        top: 20px;
+        bottom: 20px;
+        position: absolute;
+        z-index: 5;
+        background-color: $darkgrey;
+        @include bp-s {
+            display: block;
+        }
+    }
+    &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
+}
+
 .lazyload {
 	position: relative;
 	background-color: $orange;
