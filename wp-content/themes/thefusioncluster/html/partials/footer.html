@@ -1,63 +1,103 @@
 <footer class="main @@class">
-	@@if (getintouch === 'true') {
-	<div class="getintouch cta">
-		<div class="container ivanim-slidefade">
-			<a href="mailto:ir@signetglobal.com">Get in touch</a>
+	@@if (newsletter === 'true') {
+	<section class="mod-newsletter">
+		<div class="container">
+			<div class="lines">
+				<h2 class="h1"><span>Unlimited power.</span><span>Unlimited potential.</span></h2>
+				<p>Keep up-to-date and get exclusive insight into the ever-evolving world of fusion and the cluster.</p>
+				
+
+
+				<i class="star star--2">
+					<svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M31.9958 32.042L31.9609 32.0864V32.0293H32.0307V32.0769L31.9958 32.042Z" fill="#FF8DF5"/>
+						<path d="M34.7568 38.6733V63.9916H29.2324V38.6607L31.9946 35.9111L34.7568 38.6733Z" fill="#FF8DF5"/>
+						<path d="M31.9958 31.9499L32.0307 31.915V31.9594H31.9609V31.915L31.9958 31.9499Z" fill="#FF8DF5"/>
+						<path d="M34.7568 0V25.3278L31.9946 28.09L29.2324 25.3278V0H34.7568Z" fill="#FF8DF5"/>
+						<path d="M25.3282 34.7568H29.2325V38.6612L11.3243 56.5726L7.41992 52.6682L25.3282 34.7568Z" fill="#FF8DF5"/>
+						<path d="M31.9604 32.0861V32.029H31.916L31.9509 31.9941L31.9604 32.0068L31.9858 32.029L31.9953 32.0417L31.9604 32.0861Z" fill="#FF8DF5"/>
+						<path d="M32.029 31.9594H32.0766L32.0417 31.9943L32.029 31.9848L32.0068 31.9594L31.9941 31.9499L32.029 31.915V31.9594Z" fill="#FF8DF5"/>
+						<path d="M56.5716 11.3238L38.6507 29.2447H34.7559V25.3277L52.6673 7.41943L56.5716 11.3238Z" fill="#FF8DF5"/>
+						<path d="M32.0417 31.9946L32.0766 32.0295H32.029V32.0771L31.9941 32.0422L32.0163 32.0295L32.029 32.0073L32.0417 31.9946Z" fill="#FF8DF5"/>
+						<path d="M56.5716 52.6777L52.6673 56.5821L34.7559 38.6739V34.7568H38.6602L56.5716 52.6777Z" fill="#FF8DF5"/>
+						<path d="M11.3243 7.41943L29.2325 25.3277V29.2447H25.3408L7.41992 11.3238L11.3243 7.41943Z" fill="#FF8DF5"/>
+						<path d="M31.9953 31.9499L31.9509 31.9943L31.916 31.9594H31.9604V31.915L31.9953 31.9499Z" fill="#FF8DF5"/>
+						<path d="M32.0769 31.9595L32.042 31.9943L32.0769 32.0292H32.0293V31.9595H32.0769Z" fill="#FF8DF5"/>
+						<path d="M64.0011 34.7568H38.6606L35.8984 31.9946L38.6511 29.2451H63.9916L64.0011 34.7568Z" fill="#FF8DF5"/>
+						<path d="M25.3405 29.2451L28.09 31.9946L25.3278 34.7568H0V29.2451H25.3405Z" fill="#FF8DF5"/>
+						<path d="M31.9584 31.9595V32.0292H31.9141L31.9489 31.9943L31.9141 31.9595H31.9584Z" fill="#FF8DF5"/>
+					</svg>
+				</i>
+
+				<i class="star star--2">
+					<svg width="65" height="64" viewBox="0 0 65 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M31.9958 32.042L31.9609 32.0864V32.0293H32.0307V32.0769L31.9958 32.042Z" fill="#FF8DF5"/>
+						<path d="M34.7568 38.6733V63.9916H29.2324V38.6607L31.9946 35.9111L34.7568 38.6733Z" fill="#FF8DF5"/>
+						<path d="M31.9958 31.9499L32.0307 31.915V31.9594H31.9609V31.915L31.9958 31.9499Z" fill="#FF8DF5"/>
+						<path d="M34.7568 0V25.3278L31.9946 28.09L29.2324 25.3278V0H34.7568Z" fill="#FF8DF5"/>
+						<path d="M25.3282 34.7568H29.2325V38.6612L11.3243 56.5726L7.41992 52.6682L25.3282 34.7568Z" fill="#FF8DF5"/>
+						<path d="M31.9604 32.0861V32.029H31.916L31.9509 31.9941L31.9604 32.0068L31.9858 32.029L31.9953 32.0417L31.9604 32.0861Z" fill="#FF8DF5"/>
+						<path d="M32.029 31.9594H32.0766L32.0417 31.9943L32.029 31.9848L32.0068 31.9594L31.9941 31.9499L32.029 31.915V31.9594Z" fill="#FF8DF5"/>
+						<path d="M56.5716 11.3238L38.6507 29.2447H34.7559V25.3277L52.6673 7.41943L56.5716 11.3238Z" fill="#FF8DF5"/>
+						<path d="M32.0417 31.9946L32.0766 32.0295H32.029V32.0771L31.9941 32.0422L32.0163 32.0295L32.029 32.0073L32.0417 31.9946Z" fill="#FF8DF5"/>
+						<path d="M56.5716 52.6777L52.6673 56.5821L34.7559 38.6739V34.7568H38.6602L56.5716 52.6777Z" fill="#FF8DF5"/>
+						<path d="M11.3243 7.41943L29.2325 25.3277V29.2447H25.3408L7.41992 11.3238L11.3243 7.41943Z" fill="#FF8DF5"/>
+						<path d="M31.9953 31.9499L31.9509 31.9943L31.916 31.9594H31.9604V31.915L31.9953 31.9499Z" fill="#FF8DF5"/>
+						<path d="M32.0769 31.9595L32.042 31.9943L32.0769 32.0292H32.0293V31.9595H32.0769Z" fill="#FF8DF5"/>
+						<path d="M64.0011 34.7568H38.6606L35.8984 31.9946L38.6511 29.2451H63.9916L64.0011 34.7568Z" fill="#FF8DF5"/>
+						<path d="M25.3405 29.2451L28.09 31.9946L25.3278 34.7568H0V29.2451H25.3405Z" fill="#FF8DF5"/>
+						<path d="M31.9584 31.9595V32.0292H31.9141L31.9489 31.9943L31.9141 31.9595H31.9584Z" fill="#FF8DF5"/>
+					</svg>
+				</i>
+			</div>
 		</div>
-	</div>
+	</section>
 	}
-	<section class="container-footer ivanim-slidefade">
-		<div class="col-footer col-footer--logo">
-			<a href="index.html">
-				<img src="assets/media/images/logo-signet-global-large-vertical.svg" alt="Logo">
-			</a>
-		</div>
+	<section class="container">
+		<div class="lines">	
+			<nav>
+				<div class="col-footer">
+					<div>
+						<h4>Learn</h4>
+						<ul>
+							<li><a href="about-us.html">About us</a></li>
+							<li><a href="what-is-fusion.html">What is fusion?</a></li>
+						</ul>
+					</div>
+				</div>
 
-		<div class="col-footer">
-			<div>
-				<h4>COMPANY</h4>
-				<ul>
-					<li><a href="about.html">About Signet FFF</a></li>
-					<li><a href="team.html">Teams</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
+				<div class="col-footer">
+					<div>
+						<h4>Listings</h4>
+						<ul>
+							<li><a href="join-us.html">Join us</a></li>
+							<li><a href="jobs.html">Jobs in fusion</a></li>
+							<li><a href="media-pr.html">Media & PR</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-footer">
+					<div>
+						<h4>Contact</h4>
+						<ul>
+							<li><a href="hello@thefusioncluster.com">hello@thefusioncluster.com</a></li>
+							<li><a href="hello@thefusioncluster.com">Linkedin</a></li>
+							<li><a href="hello@thefusioncluster.com">Twitter</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="lines lines--bottom">	
+			<div class="legal">
+				<div class="copyright">
+					The Fusion Cluster ®
+				</div>
+				<div class="policy">
+					<a href="">Privacy and Cookies</a>
+				</div>
 			</div>
-		</div>
-
-		<div class="col-footer">
-			<div>
-				<h4>Asset Management</h4>
-				<ul>
-					<li><a href="asset-management.html">Services</a></li>
-					<li><a href="global-leaders.html">Global Leaders</a></li>
-					<li><a href="health-trends.html">Health Trends</a></li>
-					<li><a href="absolute-return.html">Absolute Return</a></li>
-					<li><a href="real-estate.html">Real Estate</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="col-footer">
-			<div>
-				<h4>Wealth Advisory</h4>
-				<ul>
-					<li><a href="wealth-advisory.html">Services</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="col-footer col-footer--info">
-			<div class="">
-				<h4>Reference</h4>
-				<ul>
-					<li><a href="library.html">Library</a></li>
-					<li><a href="policies.html">Regulatory Disclosures</a></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="copyright">
-			©2022 SIGNET FFF
 		</div>
 	</section>
 </footer>

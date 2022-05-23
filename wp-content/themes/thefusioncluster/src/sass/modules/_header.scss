@@ -23,15 +23,8 @@ header.main {
 		display: flex;
 		justify-content: space-between;
 		height: 75px;
-		@include bp-s {
-			padding-left: 30px;
-			padding-right: 30px;
-		}
-
-		@include bp-xl {
-			padding-left: 63px;
-			padding-right: 63px;
-		}
+		
+		@extend .innerPadding;
 
 		&:before, &:after {
 			display: none;

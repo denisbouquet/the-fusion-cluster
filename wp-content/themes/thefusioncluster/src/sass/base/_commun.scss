@@ -40,6 +40,23 @@
     &:after {
         right: 0;
     }
+    &--bottom {
+        &:before, &:after {
+            bottom: 0;
+        }
+    }
+}
+
+.innerPadding {
+    @include bp-s {
+        padding-left: $padding-s;
+        padding-right: $padding-s;
+    }
+
+    @include bp-xl {
+        padding-left: $padding-xl;
+        padding-right: $padding-xl;
+    }
 }
 
 .lazyload {

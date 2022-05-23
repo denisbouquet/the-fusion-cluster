@@ -1,91 +1,6 @@
 
 
-// HELP
-.mod-home-help {
-    background: $darkblue;
-    color: $white;
-    overflow: hidden;
-    padding-top: 58px;
-    padding-bottom: 50px;
-    position: relative;
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 1;
-        background: transparent url('../media/images/pattern/white-transparent.svg') right top no-repeat;
-        background-size: auto 100%;
-        @include bp-tablet {
-            background-size: 100% auto;
-        }
-    }
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 2;
-        background: linear-gradient(to right, rgba(38,46,91,1) 0%,rgba(38,46,91,1) 71%,rgba(38,46,91,0) 100%);
-        @include bp-tablet {
-           background: linear-gradient(to right, rgba(38,46,91,1) 0%,rgba(38,46,91,1) 41%,rgba(38,46,91,0) 100%);
-       }
-    }
-    &--green {
-    	background: #CDEFD2;
-
-		&:before {
-			mix-blend-mode: multiply;
-		}
-		&:after {
-	        background: linear-gradient(to right, rgba(205,239,210,1) 0%,rgba(205,239,210,1) 71%,rgba(205,239,210,0) 100%);
-	        @include bp-tablet {
-	           background: linear-gradient(to right, rgba(205,239,210,1) 0%,rgba(205,239,210,1) 41%,rgba(205,239,210,0) 100%);
-	       }
-	    }
-	    .mod-home-help__title {
-	    	color: $teal;
-	    }
-	    .mod-home-help__copy {
-	    	color: $navy;
-	    }
-	    .mod-home-help__cta {
-	    	a {
-	    		background-color: $teal;
-	    		color: $silver;
-	    		&:hover {
-					background-color: $lightgreen;
-					color: $darkblue;
-				}
-	    	}
-	    }
-    }
-    &__inner {
-        position: relative;
-        z-index: 3;
-    }
-    &__title {
-        color: $white;
-        @extend .h2;
-        @include bp-xl {
-            margin-bottom: 32px;
-        }
-    }
-    &__copy {
-        margin-bottom: 36px;
-        max-width: 540px; 
-    }
-    &__cta {
-    }
-}
-
-
+// Newsletter
 
 
 
@@ -93,149 +8,60 @@
 
 footer.main {
 	width: 100%;
-	background-color: $darkerblue;
+	background-color: $black;
 	color: $white;
-	padding-bottom: 76px;
-	background-image: url(../media/images/bg-frame.svg);
 	background-repeat: repeat-x;
 	background-position: 0 bottom;
-	background-size: 1440px 36px;
+    background-size: 1440px 36px;
 
-	&.green {
-		background-color: $teal;
-		.container-footer {
-			a {
-				color: $silver;
-			}
-			.copyright { 
-				color: $silver;
-			}
-		}
-	}
+    .mod-newsletter {
+        @extend .innerPadding;
+        .lines {
+            text-align: center;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            border-top: 1px solid $darkgrey;
 
-	.container-footer {
-		@extend .container;
-		// max-width: $website-max-w;
-		margin-left: auto;
-		margin-right: auto;
-		padding-top: 62px;
-		text-align: left;
-		@include bp-xs {
-			padding-left: 30px;
-			padding-right: 30px;
-		}
-		@include bp-tablet {
-			display: flex;
-			flex-wrap: wrap;
-		}
-		a {
-			color: $lilac;
-			&:hover {
-				color: $gold;
-				text-decoration: none;
-			}
-		}
-		.col-footer {
-			width: 100%;
-			@include bp-tablet {
-				width: 50%;
-			}
-			@include bp-xl {
-				margin-left: 32px;
-				width: auto;
-			}
-			&--logo {
-				width: 100%;
-				text-align: center;
-				flex-shrink: 0;
-				margin-left: 0;
-				margin-bottom: 40px;
-				img {
-					width: 170px;
-					@include bp-tablet {
-						width: 190px;
-                        margin-left: 0;
-					}
-				}
-                a {
-                    display: block;
-                    @include bp-tablet {
-                        width: 190px;
-                        margin-left: 0;
-                    }   
-                }
-				@include bp-xl {
-					width: auto;
-					flex-shrink: 1;
-				}
-			}
-		}
-		h4 {
-			font-size: 16px;
-			line-height: 1.5;
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			margin-top: 30px;
-			font-weight: $weight-medium;
-			@include bp-xl {
-				margin-top: 0;
-			}
-		}
-		ul {
-			li {
-				display: block;
-				a {
-					font-family: $font-copy;
-					letter-spacing: 0;
-					text-transform: none;
-					color: $light-blue;
-					font-weight: $weight-medium;
-					padding: 5px 0;
-					display: inline-block;
-					&:hover {
-						color: $gold;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-		.copyright {
-			width: 100%;
-			padding-top: 30px;
-			color: $light-blue;
-			@include font-size(12px);
-			@include bp-xl {
-				width: 190px;
-				text-align: center;
-			}
-		}
-	}
-}
+        }
+    }
+    nav {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        display: flex;
+        border-top: 1px solid $darkgrey;
+        @extend .innerPadding;
+    	h4 {
+            @extend .small-copy;
+        }
+        .col-footer {
+    		width: 100%;
+    		@include bp-tablet {
+    			width: 50%;
+    		}
+    		@include bp-xl {
+    			margin-left: 32px;
+    			width: auto;
+    		}
+    	}
+    }
+    a {
+        color: $white;
+        &:hover {
+            color: $accent;
+            text-decoration: none;
+        }
+    }
 
-.getintouch {
-	background-color: $gold;
-	background-color: $darkblue;
-	padding: 27px;
-	text-align: center;
-	@include bp-desktop {
-		padding: 24px;
-	}
-	&.cta a {
-		margin-bottom: 0;
-		color: $white;
-		color: $gold;
-		// border-color: $gold;
-		// border-width: 2px;
-		// font-family: $font-title;
-		// font-weight: $weight-bold;
-		// line-height: 1.5;
-		// letter-spacing: 2px;
-		// text-transform: uppercase;
-		// display: inline-block;
-		// text-align: center;
-		// font-size: 24px;
-		// @include bp-desktop {
-			// font-size: 28px;
-		// }
-	}
+    .legal {
+        padding-top: 18px;
+        @extend .innerPadding;
+        display: flex;
+        justify-content: flex-end;
+        border-top: 1px solid $darkgrey;
+        padding-bottom: 20px;
+        .copyright {
+            margin-right: 30px;
+        }
+    }
+	
 }
