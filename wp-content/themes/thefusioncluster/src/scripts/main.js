@@ -136,9 +136,11 @@ var isMobile = false; //initiate as false
 			// $(window).resize($.debounce(250, function(){
 				// self.subnav();
 				// self.homepageCalc();
-			// } ));
+			// } )); 
 
-            $('.marquee').marquee({duration: 10000,});
+            if($('.marquee').length > 0) {
+                $('.marquee').marquee({duration: 10000,});
+            }
             // $('.marquee--2').marquee({duration: 10000,});
             // $('.marquee--3').marquee({duration: 10000,});
             
