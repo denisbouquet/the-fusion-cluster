@@ -136,7 +136,14 @@ var isMobile = false; //initiate as false
 				// self.subnav();
 				// self.homepageCalc();
 			// } ));
-
+            
+            $('.anim-title').bind('inview', function(event, isInView) {
+                if (isInView) {
+                    if (!$(this).hasClass('is-inview')) {
+                        $(this).addClass('is-inview');
+                    }
+                }
+            });
 
 			
 		},

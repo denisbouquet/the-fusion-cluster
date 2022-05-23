@@ -110,3 +110,65 @@
 }
 
 
+
+.anim-title {
+	h1, h2, h3 {
+		position: relative;
+		display: inline-block;
+		opacity: 1;
+		overflow: hidden;
+		span {
+			opacity: 0;
+			display: inline-block;
+		}
+		&:before {
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			content: "";
+			height: 100%;
+			width: 0;
+			background-color: $accent;
+			display: block;
+			transform: translateZ(0);
+		}
+		// &.c-white {
+		// 	&:before {
+		// 		background-color: $white;
+		// 	}
+		// 	span {
+		// 		&:after {
+		// 			background-color: $white;
+		// 		}
+		// 	}
+		// }
+		// &.bg-slide-dark {
+		// 	&:before {
+		// 		background-color: $black;
+		// 	}
+		// }
+	}
+	&.is-inview {
+		h1, h2, h3 {
+			&:before {
+				@include animation('title-reveal 1s 1 500ms');
+			}
+			span {
+				transition-delay: 1s;
+				opacity: 1;
+				// &:nth-child(2) {
+				// 	transition-delay: 2s;
+				// }
+			}
+		}
+	}
+}
+@include keyframes(title-reveal) {
+  0% { width: 0%; }
+  30% { width: 100%; }
+  70% { width: 100%; }
+  71% { width: 100%; left: 0; }
+  100% { width: 100%; left: 100%; }
+}

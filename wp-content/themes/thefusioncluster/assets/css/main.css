@@ -1028,7 +1028,14 @@ h2,h3{page-break-after:avoid}.navbar{display:none}.badge{border:1px solid #000}.
 }.h3{font-family:"Space Grotesk",sans-serif;font-weight:500;letter-spacing:-4%;line-height:112%;font-size:30px;font-size:1.875rem}
 @media only screen and (min-width:767px){.h3{font-size:32px;font-size:2rem}}.h4{font-family:"Space Grotesk",sans-serif;font-weight:500;letter-spacing:-4%;line-height:112%;font-size:22px;font-size:1.375rem}
 @media only screen and (min-width:767px){.h4{font-size:24px;font-size:1.5rem}}.h5{font-family:"Space Grotesk",sans-serif;font-weight:500;letter-spacing:-3%;line-height:112%;font-size:18px;font-size:1.125rem}
-@media only screen and (min-width:767px){.h5{font-size:20px;font-size:1.25rem}}@media print{header.main,footer.main{display:none !important}
+@media only screen and (min-width:767px){.h5{font-size:20px;font-size:1.25rem}}.anim-title h1,.anim-title h2,.anim-title h3{position:relative;display:inline-block;opacity:1;overflow:hidden}
+.anim-title h1 span,.anim-title h2 span,.anim-title h3 span{opacity:0;display:inline-block}
+.anim-title h1:before,.anim-title h2:before,.anim-title h3:before{position:absolute;z-index:1;left:0;top:0;bottom:0;content:"";height:100%;width:0;background-color:#ff8df5;display:block;-webkit-transform:translateZ(0);transform:translateZ(0)}
+.anim-title.is-inview h1:before,.anim-title.is-inview h2:before,.anim-title.is-inview h3:before{-webkit-animation:title-reveal 1s 1 500ms;animation:title-reveal 1s 1 500ms}
+.anim-title.is-inview h1 span,.anim-title.is-inview h2 span,.anim-title.is-inview h3 span{-webkit-transition-delay:1s;transition-delay:1s;opacity:1}
+@-webkit-keyframes title-reveal{0%{width:0}30%{width:100%}
+70%{width:100%}71%{width:100%;left:0}100%{width:100%;left:100%}}@keyframes title-reveal{0%{width:0}
+30%{width:100%}70%{width:100%}71%{width:100%;left:0}100%{width:100%;left:100%}}@media print{header.main,footer.main{display:none !important}
 .container,footer.main .container-footer,.mod-about-intro__bullets,.mod-wa-clients__copy{padding:0 !important}
 section,article{margin:0 !important;padding:0 !important}*{color:#000 !important}
 }.scrollbar ::-webkit-scrollbar,.mod-about-ceo__bio ::-webkit-scrollbar,.mod-document-downloads__links ::-webkit-scrollbar,.mod-team-popup ::-webkit-scrollbar,.mod-library-downloads__links ::-webkit-scrollbar{width:3px}
@@ -1373,9 +1380,9 @@ footer.main .container-footer ul li a:hover{color:#f1b942;text-decoration:none}f
 40%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}
 }@keyframes chevron-bounce{0%,20%,50%,80%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
 40%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}
-}.cta-pink{background-color:#ff8df5;position:relative;min-width:104px;display:block;border-radius:10px;color:#000 !important;text-align:left;padding:0 10px;line-height:33px}
-.cta-pink:after{position:absolute;content:"";width:15px;height:15px;top:50%;margin-top:-7px;right:10px;background:transparent url("../media/images/icons/arrow-button.svg") left top no-repeat}
-.cta-pink:hover{background-color:#ffc6fa}.link a,.link button{position:relative;display:inline-block;color:#fff;font-weight:700;padding-right:32px}
+}.cta-pink{background-color:#ff8df5;position:relative;min-width:104px;display:inline-block;border-radius:10px;color:#000 !important;text-align:left;padding:0 10px;padding-right:42px;line-height:33px}
+.cta-pink:after{position:absolute;content:"";width:15px;height:15px;top:50%;margin-top:-7px;right:5px;background:transparent url("../media/images/icons/arrow-button.svg") left top no-repeat}
+.cta-pink:hover{background-color:#ffc6fa;text-decoration:none}.link a,.link button{position:relative;display:inline-block;color:#fff;font-weight:700;padding-right:32px}
 .link a:hover,.link button:hover{text-decoration:none;padding-right:37px}.link a:before,.link button:before{content:"";bottom:1px;height:2px;position:absolute;right:0;top:50%;width:18px;background-color:#fff}
 .link a:after,.link button:after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);border-bottom-style:solid;border-bottom-width:2px;border-right-style:solid;border-right-width:2px;content:"";display:inline-block;height:10px;right:0;position:absolute;top:calc(25% + 2px);width:10px;border-color:#fff}
 .link--purple a{color:#71789d}.link--purple a:before{background-color:#71789d}.link--purple a:after{border-color:#71789d}
