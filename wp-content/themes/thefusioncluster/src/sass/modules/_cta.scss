@@ -28,6 +28,28 @@
 	}
 }
 
+.link {
+	position: relative;
+	padding-right: 26px;
+	&:hover {
+		color: $accent;
+		text-decoration: none;
+		&:after {
+			background-image: url('../media/images/icons/arrow-button-pink.svg');
+		}
+	}
+	&:after {
+		position: absolute;
+		content: "";
+		width: 15px;
+		height: 15px;
+		top: 50%;
+		margin-top: -7px;
+		right: 5px;
+		background:transparent url('../media/images/icons/arrow-button.svg') left top no-repeat;
+	}
+}
+
 
 // .cta {
 // 	// display: flex;

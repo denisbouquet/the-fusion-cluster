@@ -124,6 +124,49 @@
 	}
 }
 
+.wp-copy {
+	p {
+		margin-bottom: 1em;
+	}
+	a {
+        &:hover {
+            color: $accent;
+            text-decoration: none;
+            &[target="_blank"] {
+                &:after {
+                    background-image: url('../media/images/icons/new-window-pink.svg');
+                }
+            }
+        }
+        &[target="_blank"] {
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 12px;
+                height: 10px;
+                margin-left: 4px;
+                background: transparent url('../media/images/icons/new-window-black.svg') center no-repeat;
+            }
+        }
+        &.darkgrey {
+        	color: $darkgrey;
+        	&[target="_blank"] {
+        		&:after {
+        			background-image: url('../media/images/icons/new-window-darkgrey.svg');
+        		}
+        	}
+        	&:hover {
+        		color: $accent;
+	            text-decoration: none;
+	            &[target="_blank"] {
+	                &:after {
+	                    background-image: url('../media/images/icons/new-window-pink.svg');
+	                }
+	            }
+	        }
+        }
+    }
+}
 
 
 .anim-title {

@@ -19,6 +19,29 @@
     }
 }
 
+.inpage-hero {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    .h2 {
+        margin-bottom: 30px;
+    }
+    p {
+        margin-bottom: 1em;
+        &:last-child {
+            margin-bottom: 2em;
+        }
+    }
+    a {
+        display: inline-block;
+        width: auto;
+    }
+    &--center {
+        max-width: 577px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 
 .lines {
@@ -30,7 +53,7 @@
             height: 1px;
             position: absolute;
             z-index: 5;
-            background-color: $darkgrey;
+            background-color: $grey;
             top: 0;
             left: 0;
             right: 0;
@@ -55,7 +78,7 @@
         bottom: 20px;
         position: absolute;
         z-index: 5;
-        background-color: $darkgrey;
+        background-color: $grey;
         @include bp-s {
             display: block;
         }
@@ -73,12 +96,30 @@
     }
 }
 
+.bg-section--dark {
+    background-color: $black;
+    .lines, .top-line, .bottom-line {
+        &:before, &:after {
+            background-color: $darkgrey;
+        }
+    }
+}
+
 .bg-section--silver {
     background-color: $lightgrey;
     .lines, .top-line, .bottom-line {
         &:before, &:after {
             background-color: $grey;
         }
+    }
+}
+
+.innerPaddingVertical {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include bp-xl {
+        padding-top: 90px;
+        padding-bottom: 90px;
     }
 }
 

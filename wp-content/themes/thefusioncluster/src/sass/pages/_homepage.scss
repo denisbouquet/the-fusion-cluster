@@ -7,22 +7,7 @@
         justify-content: center;
         max-width: 50%;
         @extend .innerPadding;
-        .h4 {
-            
-        }
-        .h2 {
-            margin-bottom: 30px;
-        }
-        p {
-            margin-bottom: 1em;
-            &:last-child {
-                margin-bottom: 2em;
-            }
-        }
-        a {
-            display: inline-block;
-            width: auto;
-        }
+        
     }
 
     &__animation {
@@ -36,11 +21,7 @@
 
 .mod-home-join {
     &__inner {
-        padding: 90px 0;
-        text-align: center;
-        max-width: 577px;
-        margin-left: auto;
-        margin-right: auto;
+        
         @extend .innerPadding;
         p {
             margin-bottom: 1em;
@@ -73,6 +54,7 @@
         }
     }
 }
+
 
 .mod-home-involved {
     text-align: center;
@@ -116,14 +98,14 @@
         }
         .mod-home-involved__article {
             padding: 0 20px;
+            @include bp-tablet {
+                border-left: 1px solid $grey;
+                width: 33.33%;
+            }
             >div {
                 position: relative;
                 padding-bottom: 80px;
                 height: 100%;
-            }
-            @include bp-tablet {
-                border-left: 1px solid $grey;
-                width: 33.33%;
             }
 
             figure {
