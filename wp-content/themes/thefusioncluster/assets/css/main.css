@@ -1461,14 +1461,24 @@ form #mce-success-response{margin-bottom:38px}form div.mce_inline_error{color:#f
 .mod-home-involved__articleslist .mod-home-involved__article:first-child{border-left:0}
 .mod-about-hero{position:relative}@media only screen and (min-width:767px){.mod-about-hero__inner{min-height:653px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;max-width:50%}
 }@media only screen and (min-width:767px){.mod-about-hero__animation{position:absolute;right:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
-}.mod-company-list{padding-right:60px}.mod-company-list ul{margin:0}@media only screen and (min-width:767px){.mod-company-list ul{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px}
+}.mod-company-list{padding-right:60px}.mod-company-list ul{margin:0}@media only screen and (min-width:501px){.mod-company-list ul{padding:0 30px}
+}@media only screen and (min-width:767px){.mod-company-list ul{padding:0;-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px}
 }.mod-company-list li{display:block;margin-bottom:1em}@media only screen and (min-width:767px){.mod-our-board{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-}@media only screen and (min-width:767px){.mod-our-board--title{width:20%;padding:0 20px}
-}@media only screen and (min-width:767px){.mod-our-board--person{padding:0 20px;width:40%;border-left:1px solid #dbdbdb}
-}.mod-our-board--person figure{margin-bottom:20px}@media only screen and (min-width:767px){.mod-our-people{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-}@media only screen and (min-width:767px){.mod-our-people--title{width:25%;padding:0 20px}
-}.mod-our-people--person{margin-bottom:60px}@media only screen and (min-width:767px){.mod-our-people--person{padding:0 20px;width:25%;border-left:1px solid #dbdbdb}
-}.mod-our-people--person figure{margin-bottom:20px}.mod-contact-form{position:relative;padding-top:67px;padding-bottom:56px;color:#262e5b}
+}@media only screen and (min-width:501px){.mod-our-board--title{padding:0 30px}}@media only screen and (min-width:767px){.mod-our-board--title{width:33.33%}
+}@media only screen and (min-width:1200px){.mod-our-board--title{width:25%}}.mod-our-board--person{margin-bottom:60px}
+@media only screen and (min-width:501px){.mod-our-board--person{padding:0 30px}}@media only screen and (min-width:767px){.mod-our-board--person{margin-bottom:0;width:33.33%;border-left:1px solid #dbdbdb}
+}@media only screen and (min-width:1200px){.mod-our-board--person{width:37.5%}}.mod-our-board--person figure{margin-bottom:20px}
+.mod-our-board--person figure img{width:100%;display:block;height:auto}.mod-our-board--person>div{position:relative}
+@media only screen and (min-width:767px){.mod-our-board--person>div{padding-bottom:50px}
+}@media only screen and (min-width:767px){.mod-our-board--person a{position:absolute;bottom:0;left:0}
+}@media only screen and (min-width:767px){.mod-our-people{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
+}@media only screen and (min-width:501px){.mod-our-people--title{padding:0 30px}}
+@media only screen and (min-width:767px){.mod-our-people--title{width:33.33%}}@media only screen and (min-width:1200px){.mod-our-people--title{width:25%}
+}.mod-our-people--person{margin-bottom:60px}@media only screen and (min-width:501px){.mod-our-people--person{padding:0 30px}
+}@media only screen and (min-width:767px){.mod-our-people--person{width:33.33%;border-left:1px solid #dbdbdb}
+}@media only screen and (min-width:1200px){.mod-our-people--person{width:25%}}.mod-our-people--person>div{position:relative}
+@media only screen and (min-width:767px){.mod-our-people--person>div{padding-right:20px}
+}.mod-contact-form{position:relative;padding-top:67px;padding-bottom:56px;color:#262e5b}
 @media only screen and (min-width:767px){.mod-contact-form{padding-bottom:72px}}@media only screen and (min-width:1024px){.mod-contact-form{background-color:#efeef2}
 }@media only screen and (min-width:1200px){.mod-contact-form{padding-top:105px;padding-bottom:105px}
 }.mod-contact-form__title{color:#262e5b;font-weight:700;margin-bottom:15px}@media only screen and (min-width:767px){.mod-contact-form__title{text-align:left}
