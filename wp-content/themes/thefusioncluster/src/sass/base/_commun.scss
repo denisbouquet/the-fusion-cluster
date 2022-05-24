@@ -19,10 +19,12 @@
     }
 }
 
+
+
 .lines {
     position: relative;
     overflow: hidden;
-    .top-line {
+    .top-line, .bottom-line {
         &:before {
             content: "";
             height: 1px;
@@ -36,6 +38,12 @@
                 left: 20px;
                 right: 20px;
             }
+        }
+    }
+    .bottom-line {
+        &:before {
+            top: auto;
+            bottom: 0;
         }
     }
 
@@ -61,6 +69,15 @@
     &--bottom {
         &:before, &:after {
             bottom: 0;
+        }
+    }
+}
+
+.bg-section--silver {
+    background-color: $lightgrey;
+    .lines, .top-line, .bottom-line {
+        &:before, &:after {
+            background-color: $grey;
         }
     }
 }

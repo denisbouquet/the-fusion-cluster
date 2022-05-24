@@ -31,7 +31,20 @@
 	font-weight: normal;
 }
 
-
+.bullet {
+	&:before {
+		content: "";
+		display: inline-block;
+		margin-right: 5px;
+		height: 20px;
+		width: 20px;
+		position: relative;
+		top: 2px;
+		background-image: url('../media/images/icons/bullet.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
 
 
 .title-styles {
@@ -71,6 +84,7 @@
 	letter-spacing: -4%;
 	line-height: 104%;
 	@include font-size(30px);
+	margin-bottom: 30px;
 	@include bp-tablet {
 		@include font-size(60px);
 	}
@@ -93,6 +107,7 @@
 	letter-spacing: -4%;
 	line-height: 112%;
 	@include font-size(22px);
+	margin-bottom: 15px;
 	@include bp-tablet {
 		@include font-size(24px);
 	}
