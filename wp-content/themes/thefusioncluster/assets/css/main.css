@@ -1014,6 +1014,10 @@ h2,h3{page-break-after:avoid}.navbar{display:none}.badge{border:1px solid #000}.
 }.visuallyhidden{margin:-1px;padding:0;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip:rect(0,0,0,0);position:absolute}
 .container,.mod-about-intro__bullets{width:100%;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px;max-width:1440px}
 @media only screen and (min-width:375px){.container,.mod-about-intro__bullets{padding-left:20px;padding-right:20px}
+}@media only screen and (min-width:767px){.mod-columns{display:-webkit-box;display:-ms-flexbox;display:flex}
+}@media only screen and (min-width:767px){.mod-columns .mod-columns--column{width:50%}
+}.mod-columns .mod-columns--column>div{height:100%}@media only screen and (min-width:767px){.mod-columns .mod-columns--column.order-1{-webkit-box-ordinal-group:2;-ms-flex-order:1;order:1}
+}@media only screen and (min-width:767px){.mod-columns .mod-columns--column.order-2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}
 }.ie8 input,.ie8 select{padding:0}.ie button,.ie input,.ie textarea,.ie select,.ie hr{border:0}
 .base-text{font-family:"Inter",sans-serif;line-height:140%;letter-spacing:-2%;font-size:16px;font-size:1rem;font-weight:normal}
 .small-copy,footer.main nav h4,footer.main nav li,footer.main .legal,form .mf-label-animate label{font-family:"Inter",sans-serif;line-height:140%;letter-spacing:0;font-size:14px;font-size:.875rem;font-weight:normal}
@@ -1048,8 +1052,8 @@ h2,h3{page-break-after:avoid}.navbar{display:none}.badge{border:1px solid #000}.
 @media only screen and (min-width:501px){.lines:before,.lines:after{display:block}
 }.lines:before{left:0}.lines:after{right:0}.lines--bottom:before,.lines--bottom:after{bottom:0}
 .bg-section--silver{background-color:#f6f6f6}.bg-section--silver .lines:before,.bg-section--silver .lines:after,.bg-section--silver .top-line:before,.bg-section--silver .top-line:after,.bg-section--silver .bottom-line:before,.bg-section--silver .bottom-line:after{background-color:#dbdbdb}
-@media only screen and (min-width:501px){.innerPadding,header.main nav,footer.main .mod-newsletter,footer.main nav,footer.main .legal,.mod-home-what-is-the-cluster__inner,.mod-home-join__inner{padding-left:30px;padding-right:30px}
-}@media only screen and (min-width:1200px){.innerPadding,header.main nav,footer.main .mod-newsletter,footer.main nav,footer.main .legal,.mod-home-what-is-the-cluster__inner,.mod-home-join__inner{padding-left:62px;padding-right:62px}
+@media only screen and (min-width:501px){.innerPadding,header.main nav,footer.main .mod-newsletter,footer.main nav,footer.main .legal,.mod-home-what-is-the-cluster__inner,.mod-home-join__inner,.mod-home-join__perks{padding-left:30px;padding-right:30px}
+}@media only screen and (min-width:1200px){.innerPadding,header.main nav,footer.main .mod-newsletter,footer.main nav,footer.main .legal,.mod-home-what-is-the-cluster__inner,.mod-home-join__inner,.mod-home-join__perks{padding-left:62px;padding-right:62px}
 }.lazyload{position:relative;background-color:#ff4800;-webkit-transition:background-color .3s ease-in;transition:background-color .3s ease-in}
 .lazyload [data-src]{-webkit-transition:opacity .3s ease-in;transition:opacity .3s ease-in;opacity:0;will-change:opacity}
 .lazyload .content{position:absolute;top:0;left:0;right:0;bottom:0}.lazyload.loaded{background-color:transparent;-webkit-transition-delay:.3s;transition-delay:.3s}
@@ -1434,8 +1438,21 @@ form #mce-success-response{margin-bottom:38px}form div.mce_inline_error{color:#f
 .mod-home-what-is-the-cluster__inner p{margin-bottom:1em}.mod-home-what-is-the-cluster__inner p:last-child{margin-bottom:2em}
 .mod-home-what-is-the-cluster__inner a{display:inline-block;width:auto}.mod-home-what-is-the-cluster__animation{position:absolute;top:0;bottom:0;right:calc(50% - 1400px / 2)}
 .mod-home-join__inner{padding:90px 0;text-align:center;max-width:577px;margin-left:auto;margin-right:auto}
-.mod-home-join__inner p{margin-bottom:1em}.mod-home-involved{text-align:center;overflow:hidden;margin-bottom:100px}
-.mod-home-involved h2{margin-bottom:54px}.mod-home-involved .marquee{overflow:hidden;text-transform:uppercase;margin-bottom:20px;font-size:37px;line-height:1;font-family:"Space Grotesk",sans-serif;font-weight:400}
+.mod-home-join__inner p{margin-bottom:1em}.mod-home-join__perks{height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.mod-home-join__perks--perk{margin-bottom:60px}.mod-home-join .mod-columns--content{max-width:450px;margin-left:auto;margin-right:auto}
+.mod-home-join__media{padding:20px}.mod-home-join__media img{width:100%;display:block;height:auto}
+.mod-home-involved{text-align:center;overflow:hidden}.mod-home-involved h2{margin-bottom:54px}
+.mod-home-involved .marquee{overflow:hidden;text-transform:uppercase;margin-bottom:20px;font-size:37px;line-height:1;font-family:"Space Grotesk",sans-serif;font-weight:400}
+.mod-home-involved__inner{padding-top:90px}.mod-home-involved__list{padding-bottom:90px}
+.mod-home-involved__list a{margin-top:40px}.mod-home-involved__articles{text-align:left}
+.mod-home-involved__articlestitle{padding:20px;padding-top:60px}.mod-home-involved__articleslist{padding-bottom:160px}
+@media only screen and (min-width:767px){.mod-home-involved__articleslist{display:-webkit-box;display:-ms-flexbox;display:flex}
+}.mod-home-involved__articleslist .mod-home-involved__article{padding:0 20px}.mod-home-involved__articleslist .mod-home-involved__article>div{position:relative;padding-bottom:80px;height:100%}
+@media only screen and (min-width:767px){.mod-home-involved__articleslist .mod-home-involved__article{border-left:1px solid #dbdbdb;width:33.33%}
+}.mod-home-involved__articleslist .mod-home-involved__article figure{margin-bottom:20px}
+.mod-home-involved__articleslist .mod-home-involved__article figure img{width:100%;display:block;height:auto}
+.mod-home-involved__articleslist .mod-home-involved__article a{position:absolute;bottom:0;left:0}
+.mod-home-involved__articleslist .mod-home-involved__article:first-child{border-left:0}
 .mod-about-intro{position:relative;padding-top:67px;padding-bottom:56px}@media only screen and (min-width:767px){.mod-about-intro{padding-bottom:72px}
 }@media only screen and (min-width:1200px){.mod-about-intro{padding-bottom:150px}
 }.mod-about-intro__title{text-align:center;color:#262e5b}@media only screen and (min-width:1200px){.mod-about-intro__title{margin-bottom:32px}

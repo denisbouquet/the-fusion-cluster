@@ -17,6 +17,30 @@
 	}
 }
 
+.mod-columns {
+	@include bp-tablet {
+		display: flex;
+	}
+	.mod-columns--column {
+		@include bp-tablet {
+			width: 50%;
+		}
+		>div {
+			height: 100%;
+		}
+		&.order-1 {
+			@include bp-tablet {
+				order: 1;
+			}
+		}
+		&.order-2 {
+			@include bp-tablet {
+				order: 2;
+			}
+		}
+	}
+}
+
 // .container-from-tablet {
 // 	width: 100%;
 // 	margin-left: auto;

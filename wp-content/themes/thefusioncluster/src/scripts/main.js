@@ -139,7 +139,7 @@ var isMobile = false; //initiate as false
 			// } )); 
 
             if($('.marquee').length > 0) {
-                $('.marquee').marquee({duration: 10000,});
+                $('.marquee').marquee({duration: 20000,});
             }
             // $('.marquee--2').marquee({duration: 10000,});
             // $('.marquee--3').marquee({duration: 10000,});
