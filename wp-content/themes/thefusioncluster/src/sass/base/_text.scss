@@ -1,7 +1,7 @@
 .base-text {
 	font-family: $font-copy;
 	line-height: 140%; 
-	letter-spacing: -2%;
+	letter-spacing: -0.02em;
 	@include font-size(16px);
 	font-weight: normal;
 }
@@ -17,7 +17,7 @@
 .large-copy {
 	font-family: $font-copy;
 	line-height: 140%; 
-	letter-spacing: -2%;
+	letter-spacing: -0.02em;
 	@include font-size(24px);
 	font-weight: normal;
 }
@@ -26,7 +26,7 @@
 .tag {
 	font-family: $font-copy;
 	line-height: 100%; 
-	letter-spacing: 2%;
+	letter-spacing: 0.02em;
 	@include font-size(12px);
 	font-weight: normal;
 }
@@ -70,7 +70,7 @@
 .h1 {
 	font-family: $font-title;
 	font-weight: $weight-bold;
-	letter-spacing: -4%;
+	letter-spacing: -0.04em;
 	line-height: 104%;
 	@include font-size(40px);
 	@include bp-tablet {
@@ -81,7 +81,7 @@
 .h2 {
 	font-family: $font-title;
 	font-weight: $weight-medium;
-	letter-spacing: -4%;
+	letter-spacing: -0.04em;
 	line-height: 104%;
 	@include font-size(30px);
 	margin-bottom: 30px;
@@ -93,7 +93,7 @@
 .h3 {
 	font-family: $font-title;
 	font-weight: $weight-medium;
-	letter-spacing: -4%;
+	letter-spacing: -0.04em;
 	line-height: 112%;
 	@include font-size(30px);
 	@include bp-tablet {
@@ -104,7 +104,7 @@
 .h4 {
 	font-family: $font-title;
 	font-weight: $weight-medium;
-	letter-spacing: -4%;
+	letter-spacing: -0.04em;
 	line-height: 112%;
 	@include font-size(22px);
 	margin-bottom: 15px;
@@ -116,7 +116,7 @@
 .h5 {
 	font-family: $font-title;
 	font-weight: $weight-medium;
-	letter-spacing: -3%;
+	letter-spacing: -0.03em;
 	line-height: 112%;
 	@include font-size(18px);
 	@include bp-tablet {

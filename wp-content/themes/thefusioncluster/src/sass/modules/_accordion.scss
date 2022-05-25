@@ -20,11 +20,16 @@
 		}
 		svg {
 			.r1, .r2 {
-				transition:  0.3s ease;
+				transition: height 0.3s ease, transform 0.3s ease;
 			}
 		}
 		&:hover {
-			color: $accent;
+			// color: $accent;
+			svg {
+				.fill {
+					fill: $accent;
+				}
+			}
 		}
 
 	}

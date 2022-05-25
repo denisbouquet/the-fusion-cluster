@@ -99,20 +99,21 @@
         padding-top: 190px;
 
         h1 {
-            line-height: 1.26;
-            letter-spacing: 4px;
+            // line-height: 1.26;
+            // letter-spacing: 4px;
             text-transform: uppercase;
-            color: $silver;
+            // color: $silver;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 35px;
-            font-size: 5vw;
-            opacity: 0;
-            transform: translateY(50px);
-            @extend .h1;
-            span {
-                display: block;
-            }
+            max-width: 900px;
+            // margin-bottom: 35px;
+            // font-size: 5vw;
+            // opacity: 0;
+            // transform: translateY(50px);
+            // @extend .h1;
+            // span {
+            //     display: block;
+            // }
         }
         p {
             max-width: 600px;

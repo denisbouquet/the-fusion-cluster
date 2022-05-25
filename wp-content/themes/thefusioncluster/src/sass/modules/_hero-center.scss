@@ -1,0 +1,10 @@
+.mod-hero-center {
+    &__inner {
+        padding-top: 190px;
+        padding-bottom: 120px;
+        text-align: center;
+        .cta {
+            margin: 8px;
+        }
+    }
+}

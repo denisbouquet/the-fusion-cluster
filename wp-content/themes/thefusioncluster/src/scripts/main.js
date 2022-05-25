@@ -205,10 +205,9 @@ var isMobile = false; //initiate as false
             //     pinSpacing: false
             // })
 
-            // INSIGHT BLOCK
-            $('.mod-home-insights__articles, .mod-funds-insights__articles ').each(function(){
-                var elts = $(this).find('.block-insight');
-
+            // Homepage
+            $('.mod-home-involved__articleslist').each(function(){
+                var elts = $(this).find('.mod-home-involved__article');
                 gsap.set(elts, {y: 0, opacity: 0});
 
                 ScrollTrigger.batch(elts, {
@@ -218,17 +217,46 @@ var isMobile = false; //initiate as false
                 });
             })
 
-            // ABOUT PAGE
-            if($(".block-overview").length > 0) {   
-                gsap.set(".block-overview", {y: 30, opacity: 0});
-                ScrollTrigger.batch(".block-overview", {
-                  onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.2, overwrite: true})},
-                });
+            // TIMELINE
+            if($(".mod-accordions").length > 0) {   
+                $('.mod-accordions').each(function(){
+                    var elts = $(this).find('.mod-accordion');
+                    gsap.set(elts, {y: 30, opacity: 0});
+
+                    ScrollTrigger.batch(elts, {
+                      onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.2, overwrite: true})},
+                    });
+                })
             }
 
+            // PARTNERS
+            $('.mod-company-list').each(function(){
+                var elts = $(this).find('li');
+
+                gsap.set(elts, {y: 30, opacity: 0});
+
+                ScrollTrigger.batch(elts, {
+                    // markers: true,
+                    start: "top 90%",
+                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.05, overwrite: true})},
+                });
+            })
+
             // TEAM PAGE
-            $('.team-member-blocks__list').each(function(){
-                var elts = $(this).find('.team-member-block');
+            $('.mod-our-board').each(function(){
+                var elts = $(this).find('.mod-our-board--person');
+
+                gsap.set(elts, {y: 30, opacity: 0});
+
+                ScrollTrigger.batch(elts, {
+                    // markers: true,
+                    start: "top 90%",
+                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
+                });
+            })
+
+            $('.mod-our-people').each(function(){
+                var elts = $(this).find('.mod-our-people--person');
 
                 gsap.set(elts, {y: 30, opacity: 0});
 
