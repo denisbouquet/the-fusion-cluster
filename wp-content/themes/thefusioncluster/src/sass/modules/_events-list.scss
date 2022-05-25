@@ -1,6 +1,7 @@
 .mod-events {
     &--title {
-        padding-top: 20px;
+        padding-top: 30px;
+        padding-bottom: 40px;
         @include bp-s {
             // padding: 0 $padding-s;
             padding: 20px;
@@ -8,8 +9,12 @@
         }
     }
     &--articles {
+        padding-bottom: 30px;
         @include bp-s {
             padding: 0 20px;
+        }
+        @include bp-tablet {
+            padding-bottom: 60px;
         }
         .mod-events--article {
             display: block;
@@ -19,33 +24,37 @@
             border-top: 1px solid $black;
             display: flex;
             flex-wrap: wrap;
-        
+            p {
+                margin-bottom: 0;
+            }
             &--title {
                 width: 100%;
-                margin-bottom: 10px;
+                p {
+                    margin-bottom: 10px;
+                }
                 @include bp-tablet {
                     width: 45%;   
-                    margin-bottom: 0;
                 }
             }
             &--date {
-                width: 100%;   
+                width: 45%;   
                 @include bp-tablet {
-                    width: 15%;   
+                    width: 30%;   
                 }
+                
             }
             &--address {
-                width: 50%;   
+                width: 45%;   
                 @include bp-tablet {
                     width: 20%;   
                 }
             }
-            &--time {
-                width: 40%;   
-                @include bp-tablet {
-                    width: 15%;   
-                }
-            }
+            // &--time {
+            //     width: 40%;   
+            //     @include bp-tablet {
+            //         width: 15%;   
+            //     }
+            // }
             &--link {
                 width: 10%;   
                 text-align: right;
@@ -73,6 +82,12 @@
     }
     &--more {
         text-align: center;
-        padding-bottom: 160px;
+        padding-bottom: 60px;
+        @include bp-tablet {
+            padding-bottom: 90px;
+        }
+        @include bp-xl {
+            padding-bottom: 160px;
+        }
     }
 }

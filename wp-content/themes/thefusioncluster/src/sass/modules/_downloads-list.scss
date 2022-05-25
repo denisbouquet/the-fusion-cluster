@@ -86,6 +86,12 @@
     }
     &--more {
         text-align: center;
-        padding-bottom: 160px;
+        padding-bottom: 60px;
+        @include bp-tablet {
+            padding-bottom: 90px;
+        }
+        @include bp-xl {
+            padding-bottom: 160px;
+        }
     }
 }
