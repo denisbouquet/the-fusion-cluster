@@ -1,45 +1,30 @@
 .mod-accordion {
-	margin-bottom: 14px;
-	
+	margin-bottom: 80px;
+	border-top: 1px solid $black;
+
+
 	.mod-accordion__toggle {
 		cursor: pointer;
 		position: relative;
-		margin-left: 40px;
-		@include bp-tablet {
-			margin-left: 65px;
-		}
+		padding-top: 20px;
 
 		.icon {
 			position: absolute;
-			top: 0;
+			top: 25px;
 			width: 28px;
 			height: 28px;
-			transform: rotate(-90deg);		
+			// transform: rotate(-90deg);		
 			will-change: transform;
 			transition: transform 0.3s ease;
-			left: -40px;
-			@include bp-tablet {
-				left: -65px;
-			}
-		}
-		h3 {
-			font-size: 18px;
-			padding-bottom: 16px;
-			border-bottom: 2px solid $silver;
-			color: $darkblue;
+			right: 0;
 		}
 		svg {
-			path {
-				stroke: $darkblue;
+			.r1, .r2 {
+				transition:  0.3s ease;
 			}
 		}
 		&:hover {
-			color: $gold;
-			svg {
-				path {
-					stroke: $gold;
-				}
-			}
+			color: $accent;
 		}
 
 	}
@@ -48,10 +33,7 @@
 		transition: max-height 0.3s ease-in-out;
 		max-height: 0px;
 		overflow: hidden;
-		padding-left: 40px;
-		@include bp-tablet {
-			padding-left: 65px;
-		}
+		max-width: 90%;
 		> div {
 			padding: 15px 0;
 		}
@@ -68,19 +50,26 @@
 
 	}
 	&.is-open {
-		h3 {
-			border-color: $gold;
-			color: $gold;
+		
+		border-color: $accent;
+		.mod-accordion__toggle {
+			// color: $accent;
 		}
+		
 		.mod-accordion__content {
 			// max-height: 1000px;
 		}
-		.icon {
-			transform: rotate(0deg);		
+		.fill {
+			fill: $accent;
 		}
 		svg {
-			path {
-				stroke: $gold;
+			.r1 {
+				height: 2.60871px; 
+				transform: translateY(-2.60871px); 
+			}
+			.r2 {
+				height: 2.60871px; 
+				transform: translateY(8.60871px); 
 			}
 		}
 	}

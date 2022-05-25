@@ -94,6 +94,13 @@
             bottom: 0;
         }
     }
+    &--noright {
+        &:after {
+            @include bp-tablet {
+                display: none;
+            }
+        }
+    }
 }
 
 .bg-section--dark {

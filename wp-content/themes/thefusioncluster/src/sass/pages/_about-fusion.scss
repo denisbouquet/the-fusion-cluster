@@ -1,0 +1,11 @@
+.mod-timeline {
+    overflow: hidden;
+    .h2 {
+        margin-bottom: 10px;
+    }
+
+    &--title {
+        padding-right: 20px;
+        max-width: 400px;
+    }
+}
