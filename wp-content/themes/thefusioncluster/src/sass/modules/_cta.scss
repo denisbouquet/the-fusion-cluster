@@ -50,6 +50,22 @@
 	&:hover {
 		background-color: $pink50;
 		text-decoration: none;
+		&:after {
+			background-image: url('../media/images/icons/arrow-button.svg');
+		}
+	}
+}
+
+.cta-download {
+	@extend .cta-pink;
+	&:after {
+		background-image: url('../media/images/icons/download.svg');
+	}
+
+	&:hover {
+		&:after {
+			background-image: url('../media/images/icons/download.svg');
+		}
 	}
 }
 

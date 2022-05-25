@@ -16,10 +16,19 @@
             padding: 0 20px;
             margin-bottom: 60px;
             @include bp-tablet {
+                width: 33.33%;
+            }
+            @include bp-xl {
                 width: 25%;
             }
             &--featured {
-                width: 50%;
+                width: 100%;
+                @include bp-tablet {
+                    width: 66.66%;
+                }
+                @include bp-xl {
+                    width: 50%;
+                }
             }
             >a {
                 position: relative;

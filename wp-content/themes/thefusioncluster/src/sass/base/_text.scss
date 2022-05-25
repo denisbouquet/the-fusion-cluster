@@ -97,8 +97,11 @@
 	line-height: 112%;
 	@include font-size(30px);
 	@include bp-tablet {
-		@include font-size(32px);
+		// @include font-size(32px);
 	}
+    @include bp-xl {
+        @include font-size(32px);
+    }
 }
 
 .h4 {
@@ -127,6 +130,10 @@
 .wp-copy {
 	p {
 		margin-bottom: 1em;
+
+        b, strong {
+            font-weight: 500;
+        }
 	}
 	a {
         &:hover {

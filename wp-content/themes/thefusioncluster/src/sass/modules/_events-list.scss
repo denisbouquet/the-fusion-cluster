@@ -17,6 +17,42 @@
             padding-top: 20px;
             padding-bottom: 20px;
             border-top: 1px solid $black;
+            display: flex;
+            flex-wrap: wrap;
+        
+            &--title {
+                width: 100%;
+                margin-bottom: 10px;
+                @include bp-tablet {
+                    width: 45%;   
+                    margin-bottom: 0;
+                }
+            }
+            &--date {
+                width: 100%;   
+                @include bp-tablet {
+                    width: 15%;   
+                }
+            }
+            &--address {
+                width: 50%;   
+                @include bp-tablet {
+                    width: 20%;   
+                }
+            }
+            &--time {
+                width: 40%;   
+                @include bp-tablet {
+                    width: 15%;   
+                }
+            }
+            &--link {
+                width: 10%;   
+                text-align: right;
+                @include bp-tablet {
+                    width: 5%;   
+                }
+            }
             .fill {
                 fill: $black;
             }
@@ -31,26 +67,6 @@
                 }
                 .stroke {
                     stroke: $accent;
-                }
-            }
-            @include bp-tablet {
-                display: flex;
-                flex-wrap: wrap;
-                &--title {
-                    width: 50%;   
-                }
-                &--date {
-                    width: 10%;   
-                }
-                &--address {
-                    width: 25%;   
-                }
-                &--time {
-                    width: 10%;   
-                }
-                &--link {
-                    text-align: right;
-                    width: 5%;   
                 }
             }
         }

@@ -1,0 +1,23 @@
+.mod-join-perks {
+    @include bp-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 $padding-xl;
+    }
+    &--perk {
+        margin-bottom: 60px;
+        @include bp-s {
+            padding: 0 $padding-s;
+        }
+        @include bp-tablet {
+            width: 33.33%;
+            border-left: 1px solid $grey;
+        }
+        >div {
+            position: relative;
+            @include bp-tablet {
+                padding-right: 50px;
+            }
+        }
+    }
+}

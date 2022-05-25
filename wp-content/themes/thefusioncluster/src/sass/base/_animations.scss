@@ -8,6 +8,24 @@
     &.is-inview {
         opacity: 1;
     }
+
+    &.d1 {
+        transition-delay: 0.2s;
+    }
+    &.d2 {
+        transition-delay: 0.4s;
+    }
+    &.d3 {
+        transition-delay: 0.8s;
+    }
+    &.d4 {
+        transition-delay: 0.8s;
+    }
+    &.d5 {
+        transition-delay: 1s;
+    }
+
+   
 }
 
 .ivanim-slidefade, .ivanimr-slidefade {
@@ -22,35 +40,6 @@
 }
 
 
-.ivanim-fade, .ivanimr-fade, .ivanim-slidefade, .ivanimr-slidefade {
-
-    &.d1 {
-        &.is-inview {
-            transition-delay: 0.2s;
-        }
-    }
-    &.d2 {
-        &.is-inview {
-            transition-delay: 0.4s;
-        }
-    }
-    &.d3 {
-        &.is-inview {
-            transition-delay: 0.6s;
-        }
-    }
-    &.d4 {
-        &.is-inview {
-            transition-delay: 0.8s;
-        }
-    }
-    &.d5 {
-        &.is-inview {
-            transition-delay: 1s;
-        }
-    }
-}
-
 .anim-title {
     
     display: inline-block;
@@ -59,6 +48,7 @@
         display: inline-block;
         opacity: 1;
         overflow: hidden;
+        line-height: 1.1;
         &:before {
             position: absolute;
             z-index: 1;

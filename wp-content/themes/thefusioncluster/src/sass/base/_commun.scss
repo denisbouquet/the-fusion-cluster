@@ -99,6 +99,13 @@
             bottom: 0;
         }
     }
+    &--noleft {
+        &:before {
+            @include bp-tablet {
+                display: none;
+            }
+        }
+    }
     &--noright {
         &:after {
             @include bp-tablet {
