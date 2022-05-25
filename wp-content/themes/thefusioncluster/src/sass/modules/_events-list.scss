@@ -1,0 +1,62 @@
+.mod-events {
+    &--title {
+        padding-top: 20px;
+        @include bp-s {
+            // padding: 0 $padding-s;
+            padding: 20px;
+            padding-top: 30px;
+        }
+    }
+    &--articles {
+        @include bp-s {
+            padding: 0 20px;
+        }
+        .mod-events--article {
+            display: block;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-top: 1px solid $black;
+            .fill {
+                fill: $black;
+            }
+            .stroke {
+                stroke: $black;
+            }
+            &:hover {
+                text-decoration: none;
+                color: $accent;
+                .fill {
+                    fill: $accent;
+                }
+                .stroke {
+                    stroke: $accent;
+                }
+            }
+            @include bp-tablet {
+                display: flex;
+                flex-wrap: wrap;
+                &--title {
+                    width: 50%;   
+                }
+                &--date {
+                    width: 10%;   
+                }
+                &--address {
+                    width: 25%;   
+                }
+                &--time {
+                    width: 10%;   
+                }
+                &--link {
+                    text-align: right;
+                    width: 5%;   
+                }
+            }
+        }
+    }
+    &--more {
+        text-align: center;
+        padding-bottom: 160px;
+    }
+}

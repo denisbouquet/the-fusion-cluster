@@ -1,33 +1,4 @@
 // override bootstrap
-
-.cta-pink {
-	background-color: $accent;
-	position: relative;
-	min-width: 104px;
-	display: inline-block;
-	border-radius: 10px;
-	color: $black !important;
-	text-align: left;
-	padding: 0 10px;
-	padding-right: 42px;
-	line-height: 33px;
-	&:after {
-		position: absolute;
-		content: "";
-		width: 15px;
-		height: 15px;
-		top: 50%;
-		margin-top: -7px;
-		right: 5px;
-		background:transparent url('../media/images/icons/arrow-button.svg') left top no-repeat;
-	}
-
-	&:hover {
-		background-color: $pink50;
-		text-decoration: none;
-	}
-}
-
 .cta {
 	position: relative;
 	min-width: 104px;
@@ -58,6 +29,49 @@
 			background-image: url('../media/images/icons/arrow-button-white.svg');
 		}
 	}
+}
+
+.cta-pink {
+	@extend .cta;
+	border: 0;
+	background-color: $accent;
+	color: $black !important;
+	&:after {
+		position: absolute;
+		content: "";
+		width: 15px;
+		height: 15px;
+		top: 50%;
+		margin-top: -7px;
+		right: 5px;
+		background:transparent url('../media/images/icons/arrow-button.svg') left top no-repeat;
+	}
+
+	&:hover {
+		background-color: $pink50;
+		text-decoration: none;
+	}
+}
+
+.cta-more {
+	@extend .cta;
+	&:after {
+		background:transparent url('../media/images/icons/plus.svg') left top no-repeat;
+	}
+
+	&:hover {
+		&:after {
+			background-image: url('../media/images/icons/plus-white.svg');
+		}
+	}
+}
+
+
+.cta-tag {
+	background-color: $pink10;
+	padding: 5px 20px;
+	border-radius: 2px;
+	color: $accent;
 }
 
 .link {

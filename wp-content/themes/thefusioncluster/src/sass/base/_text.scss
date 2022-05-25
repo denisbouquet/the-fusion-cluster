@@ -27,8 +27,8 @@
 	font-family: $font-copy;
 	line-height: 100%; 
 	letter-spacing: 0.02em;
-	@include font-size(12px);
-	font-weight: normal;
+    @include font-size(12px);
+    font-weight: 500;
 }
 
 .bullet {

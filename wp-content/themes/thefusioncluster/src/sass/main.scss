@@ -37,6 +37,9 @@
 @import 'modules/accordion';
 @import 'modules/hero';
 @import 'modules/hero-center';
+@import 'modules/news-list';
+@import 'modules/events-list';
+@import 'modules/downloads-list';
 @import 'modules/card';
 
 // pages
@@ -52,6 +55,9 @@ html, body { height: 100%; margin: 0; padding: 0; text-align: center; }
 /* ==========================================================================
 	 Author's custom styles
 	 ========================================================================== */
+html {
+	scroll-behavior: smooth;
+}
 #page {
 	padding: 0;
 	margin: 0 auto;
