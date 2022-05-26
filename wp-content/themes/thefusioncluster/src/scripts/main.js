@@ -205,6 +205,28 @@ var isMobile = false; //initiate as false
             //     pinSpacing: false
             // })
 
+            // Generic
+            $('.js-anim-children--fade').each(function(){
+                var elts = $(this).find('>div');
+                gsap.set(elts, {y: 0, opacity: 0});
+
+                ScrollTrigger.batch(elts, {
+                    // markers: true,
+                    start: "top 90%",
+                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
+                });
+            })
+            $('.js-anim-children--slidefade').each(function(){
+                var elts = $(this).find('>div');
+                gsap.set(elts, {y: 30, opacity: 0});
+
+                ScrollTrigger.batch(elts, {
+                    // markers: true,
+                    start: "top 90%",
+                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
+                });
+            })
+
             // Homepage
             $('.mod-home-involved__articleslist').each(function(){
                 var elts = $(this).find('.mod-home-involved__article');

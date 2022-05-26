@@ -1,0 +1,233 @@
+.mod-join-form {
+    &__inner {
+
+        @include bp-tablet {
+            // display: flex;
+            // flex-wrap: wrap;
+            padding: $padding-xl;
+        }
+    }
+
+
+
+    .nf-form-title {
+        display: none;
+    }
+
+    .nf-form-layout {
+        position: relative;
+        // @include bp-desktop {
+        //     width: calc(50% - 20px);
+        // }
+
+        &:before {
+            content: "";
+            width: 1px;
+            position: absolute;
+            z-index: 5;
+            background-color: $grey;
+            top: 0;
+            left: 50%;
+            bottom: 0;
+            display: none;
+            @include bp-tablet {
+                display: block;
+            }
+        }
+        
+        .nf-form-content {
+            @include bp-tablet {
+                column-count: 2;
+                column-gap: 60px;
+            }
+        }
+
+
+        .nf-field {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            border: 1px solid $darkgrey;
+            border-radius: 5px;
+            width: 100%;
+            line-height: 46px;
+            max-width: 473px;
+            color: $black;
+            padding: 0 10px;
+            &:focus {
+                outline: 1px solid  $accent;
+            }
+        }
+        p {
+            max-width: 473px;
+
+        }
+    
+        .submit-wrap {
+            @extend .cta-pink;
+            padding-left: 0;
+            padding-right: 0px;
+            &:after {
+                pointer-events: none;
+            }
+            
+            input[type="button"] {
+                position: relative;
+                // width: auto;
+                border: 0;
+                cursor: pointer;
+                line-height: 41px;
+                padding-right: 40px;
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .textarea-wrap, .html-wrap {
+            .nf-field-label {
+                display: none;
+            }
+        }
+
+        .nf-form-fields-required {
+            display: none;
+        }
+        .nf-field-label {
+            @extend .small-copy;
+        }
+        
+        .form--field-name, .form--field-email {
+            input {
+                @include font-size(20px);
+                color: $darkblue;
+                font-weight: $weight-bold;
+                border-bottom: 1px solid $blue;
+                width: 100%;
+                @include bp-desktop {
+                    width: calc(100% - 60px);
+                }
+                &:focus {
+                    outline: none;
+                    border-color: $darkblue;
+                }
+                &[aria-invalid="true"] {
+                    border: 0;
+                    border-bottom: 1px solid red;
+                }
+            }
+        }
+        .form--field-interest {
+            .nf-field-element {   
+                li {
+                    display: inline-block;
+                }
+                input {
+                    display: none;
+                }
+                label {
+                    margin-left: 0;
+                    margin-right: 15px;
+                    text-align: center;
+                    border: 1px solid $blue;
+                    padding: 10px 18px;
+                    color: $darkblue;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    min-width: 180px;
+                    @include bp-tablet {
+                    }
+                    &.nf-checked-label {
+                        color: $white;
+                        background-color: $darkblue;
+                        border-color: $darkblue;
+                    }
+                    &#nf-label-class-field-5-1 {
+                        &.nf-checked-label {
+                            background-color: $teal;
+                            border-color: $teal;
+                        }
+                    }
+
+                }
+            }
+        }
+        .form--field-branch {
+            .nf-field-label {
+                width: 100%;
+            }
+            .nf-field-element {
+                padding: 10px 20px;
+                border:1px solid $blue;
+                border-radius: 10px;
+                overflow: hidden;
+                position:relative;
+                width: 100%;
+                @include bp-desktop {
+                    width: calc(100% - 60px);
+                }
+                select {
+                   background: transparent;
+                   border: none;
+                   color: $darkblue;
+                }
+                select:focus{ 
+                    outline: none;
+                }
+                &:after{
+                    content:"";
+                    display:table-cell;
+                    text-align:center;
+                    width:10px;
+                    height:10px;
+                    border-bottom: 2px solid $blue;
+                    border-left: 2px solid $blue;
+                    transform: rotate(-45deg);
+                    position:absolute;
+                    top: 50%;
+                    margin-top: -8px;
+                    right:20px;  
+                    pointer-events: none;
+                }
+            }
+
+        }
+        .form--field-message {
+            border-top: 1px solid $gold;
+            padding-top: 30px;
+            @include bp-desktop {
+                padding-top: 0;
+                border-top: 0;
+                margin-left: 60px;
+                width: calc(100% - 60px);
+                position: absolute;
+                top: 0;
+                left: 100%;
+            }
+            textarea {
+                width: 100%;
+                @include font-size(20px);
+                color: $darkblue;
+                @include bp-desktop {
+                    min-height: 380px;
+                }
+            }
+        }
+        .form--field-submit, .nf-after-form-content {
+            @include bp-desktop {
+                margin-left: calc(100% + 60px);
+                width: 100%;
+            }
+            input {
+                width: 156px;
+                padding: 10px 20px;
+                color: $white;
+                background-color: $darkblue;
+                border-radius: 10px;
+            }
+        }
+
+    }
+}
