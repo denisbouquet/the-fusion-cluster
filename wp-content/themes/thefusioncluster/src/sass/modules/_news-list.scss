@@ -1,8 +1,7 @@
 .mod-news {
     &--title {
-        padding-top: 20px;
+        padding: 20px 0;
         @include bp-s {
-            // padding: 0 $padding-s;
             padding: 20px;
             padding-top: 30px;
         }
@@ -13,10 +12,12 @@
             flex-wrap: wrap;
         }
         .mod-news--article {
-            padding: 0 20px;
             margin-bottom: 60px;
-            border-right: 1px solid $grey;
-            border-left: 1px solid $grey;
+            @include bp-s {
+                padding: 0 20px;
+                border-right: 1px solid $grey;
+                border-left: 1px solid $grey;
+            }
             @include bp-tablet {
                 border-right: 0;
                 width: 33.33%;

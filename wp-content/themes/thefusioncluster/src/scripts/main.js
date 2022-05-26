@@ -227,29 +227,7 @@ var isMobile = false; //initiate as false
                 });
             })
 
-            // Homepage
-            $('.mod-home-involved__articleslist').each(function(){
-                var elts = $(this).find('.mod-home-involved__article');
-                gsap.set(elts, {y: 0, opacity: 0});
 
-                ScrollTrigger.batch(elts, {
-                    // markers: true,
-                    start: "top 90%",
-                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
-                });
-            })
-
-            // TIMELINE
-            if($(".mod-accordions").length > 0) {   
-                $('.mod-accordions').each(function(){
-                    var elts = $(this).find('.mod-accordion');
-                    gsap.set(elts, {y: 30, opacity: 0});
-
-                    ScrollTrigger.batch(elts, {
-                      onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.2, overwrite: true})},
-                    });
-                })
-            }
 
             // PARTNERS
             $('.mod-company-list').each(function(){
@@ -264,66 +242,8 @@ var isMobile = false; //initiate as false
                 });
             })
 
-            // TEAM PAGE
-            $('.mod-our-board').each(function(){
-                var elts = $(this).find('.mod-our-board--person');
+            
 
-                gsap.set(elts, {y: 30, opacity: 0});
-
-                ScrollTrigger.batch(elts, {
-                    // markers: true,
-                    start: "top 90%",
-                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
-                });
-            })
-
-            $('.mod-our-people').each(function(){
-                var elts = $(this).find('.mod-our-people--person');
-
-                gsap.set(elts, {y: 30, opacity: 0});
-
-                ScrollTrigger.batch(elts, {
-                    // markers: true,
-                    start: "top 90%",
-                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
-                });
-            })
-
-
-            // CONTACT PAGE
-            $('.mod-contact-txt-locations').each(function(){
-                var elts = $(this).find('.block-location');
-                gsap.set(elts, {y: 30, opacity: 0});
-
-                ScrollTrigger.batch(elts, {
-                    // markers: true,
-                    start: "top 90%",
-                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
-                });
-            })
-
-            $('.mod-contact-map').each(function(){
-                var elts = $(this).find('.mod-contact-map__pin');
-                gsap.set(elts, {scale: 0});
-
-                ScrollTrigger.batch(elts, {
-                    // markers: true,
-                    start: "top 90%",
-                    onEnter: function(batch){  gsap.to(batch, {scale: 1, stagger: 0.4, overwrite: true})},
-                });
-            })
-
-
-            $('.block-download').each(function(){
-                var elts = $(this).find('.block-download__entry');
-                gsap.set(elts, {y: 20, opacity: 0});
-
-                ScrollTrigger.batch(elts, {
-                    // markers: true,
-                    start: "top 90%",
-                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.2, overwrite: true})},
-                });
-            })
         },
 
         teamPopup: function (elt) {

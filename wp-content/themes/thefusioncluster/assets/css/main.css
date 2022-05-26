@@ -1454,10 +1454,10 @@ footer.main form #mce-success-response{margin-bottom:38px}footer.main form div.m
 40%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}
 }.mod-hero-center__inner{padding-top:190px;padding-bottom:120px;text-align:center}
 .mod-hero-center__inner p.h3{margin-bottom:15px}.mod-hero-center__inner .cta,.mod-hero-center__inner .cta-pink,.mod-hero-center__inner .cta-download,.mod-hero-center__inner .mod-join-form .nf-form-layout .submit-wrap,.mod-join-form .nf-form-layout .mod-hero-center__inner .submit-wrap,.mod-hero-center__inner .cta-more,.mod-hero-center__inner .edit-link{margin:8px}
-.mod-news--title{padding-top:20px}@media only screen and (min-width:501px){.mod-news--title{padding:20px;padding-top:30px}
+.mod-news--title{padding:20px 0}@media only screen and (min-width:501px){.mod-news--title{padding:20px;padding-top:30px}
 }@media only screen and (min-width:767px){.mod-news--articles{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
-}.mod-news--articles .mod-news--article{padding:0 20px;margin-bottom:60px;border-right:1px solid #dbdbdb;border-left:1px solid #dbdbdb}
-@media only screen and (min-width:767px){.mod-news--articles .mod-news--article{border-right:0;width:33.33%}
+}.mod-news--articles .mod-news--article{margin-bottom:60px}@media only screen and (min-width:501px){.mod-news--articles .mod-news--article{padding:0 20px;border-right:1px solid #dbdbdb;border-left:1px solid #dbdbdb}
+}@media only screen and (min-width:767px){.mod-news--articles .mod-news--article{border-right:0;width:33.33%}
 }@media only screen and (min-width:1200px){.mod-news--articles .mod-news--article{width:25%}
 }.mod-news--articles .mod-news--article--featured{width:100%}@media only screen and (min-width:767px){.mod-news--articles .mod-news--article--featured{width:66.66%}
 }@media only screen and (min-width:1200px){.mod-news--articles .mod-news--article--featured{width:50%}
@@ -1503,13 +1503,15 @@ footer.main form #mce-success-response{margin-bottom:38px}footer.main form div.m
 @media only screen and (min-width:767px){.mod-join-perks--perk{width:33.33%}}.mod-join-perks--perk>div{position:relative}
 @media only screen and (min-width:767px){.mod-join-perks--perk>div{padding-right:50px}
 }@media only screen and (min-width:767px){.mod-join-form__inner{padding:62px}}.mod-join-form .nf-form-title{display:none}
-.mod-join-form .nf-form-layout{position:relative}.mod-join-form .nf-form-layout:before{content:"";width:1px;position:absolute;z-index:5;background-color:#dbdbdb;top:0;left:50%;bottom:0;display:none}
+.mod-join-form .h3{margin-bottom:20px}.mod-join-form .nf-form-layout{position:relative}
+.mod-join-form .nf-form-layout:before{content:"";width:1px;position:absolute;z-index:5;background-color:#dbdbdb;top:0;left:50%;bottom:19%;display:none}
 @media only screen and (min-width:767px){.mod-join-form .nf-form-layout:before{display:block}
 }@media only screen and (min-width:767px){.mod-join-form .nf-form-layout .nf-form-content{-webkit-column-count:2;-moz-column-count:2;column-count:2;-webkit-column-gap:60px;-moz-column-gap:60px;column-gap:60px}
 }.mod-join-form .nf-form-layout .nf-field{margin-bottom:20px}.mod-join-form .nf-form-layout input,.mod-join-form .nf-form-layout textarea{border:1px solid #767676;border-radius:5px;width:100%;line-height:46px;max-width:473px;color:#000;padding:0 10px}
-.mod-join-form .nf-form-layout input:focus,.mod-join-form .nf-form-layout textarea:focus{outline:1px solid #ff8df5}
-.mod-join-form .nf-form-layout p{max-width:473px}.mod-join-form .nf-form-layout .submit-wrap{padding-left:0;padding-right:0}
-.mod-join-form .nf-form-layout .submit-wrap:after{pointer-events:none}.mod-join-form .nf-form-layout .submit-wrap input[type="button"]{position:relative;border:0;cursor:pointer;line-height:41px;padding-right:40px}
+.mod-join-form .nf-form-layout input:focus,.mod-join-form .nf-form-layout textarea:focus{border-color:#ff8df5;outline:1px solid #ff8df5}
+.mod-join-form .nf-form-layout textarea{min-height:170px}.mod-join-form .nf-form-layout p{max-width:473px}
+.mod-join-form .nf-form-layout .submit-wrap{padding-left:0;padding-right:0}.mod-join-form .nf-form-layout .submit-wrap:after{pointer-events:none}
+.mod-join-form .nf-form-layout .submit-wrap input[type="button"]{position:relative;border:0;cursor:pointer;line-height:41px;padding-right:40px}
 .mod-join-form .nf-form-layout .submit-wrap input[type="button"]:focus{outline:0}
 .mod-join-form .nf-form-layout .textarea-wrap .nf-field-label,.mod-join-form .nf-form-layout .html-wrap .nf-field-label{display:none}
 .mod-join-form .nf-form-layout .nf-form-fields-required{display:none}.mod-join-form .nf-form-layout .form--field-name input,.mod-join-form .nf-form-layout .form--field-email input{font-size:20px;font-size:1.25rem;color:#262e5b;font-weight:700;border-bottom:1px solid #6f749b;width:100%}

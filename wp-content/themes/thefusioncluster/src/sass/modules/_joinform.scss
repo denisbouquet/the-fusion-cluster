@@ -13,6 +13,13 @@
     .nf-form-title {
         display: none;
     }
+    .h3 {
+        margin-bottom: 20px;
+    }
+
+    .phone-wrap {
+        // margin-bottom: 100px;
+    }
 
     .nf-form-layout {
         position: relative;
@@ -28,7 +35,7 @@
             background-color: $grey;
             top: 0;
             left: 50%;
-            bottom: 0;
+            bottom: 19%;
             display: none;
             @include bp-tablet {
                 display: block;
@@ -56,8 +63,12 @@
             color: $black;
             padding: 0 10px;
             &:focus {
-                outline: 1px solid  $accent;
+                border-color: $accent;
+                outline: 1px solid $accent;
             }
+        }
+        textarea {
+            min-height: 170px;
         }
         p {
             max-width: 473px;
