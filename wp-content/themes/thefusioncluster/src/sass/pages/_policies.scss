@@ -1,13 +1,15 @@
-.policy-section {
-    margin-bottom: 70px;
-    padding-top: 40px;
-    @include bp-tablet {
-        padding-top: 130px;
+.mod-policy-section {
+    
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+        @extend .h3;
+        margin-top: 35px;
     }
-    + .policy-section {
-        padding-top: 0;
-    }
-    .h2 {
-        margin-bottom: 35px;
+    h3 {
+        @extend .h4;
+        margin-top: 35px;
     }
 }

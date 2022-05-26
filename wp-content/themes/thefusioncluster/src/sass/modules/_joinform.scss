@@ -64,7 +64,7 @@
             padding: 0 10px;
             &:focus {
                 border-color: $accent;
-                outline: 1px solid $accent;
+                outline: none;
             }
         }
         textarea {

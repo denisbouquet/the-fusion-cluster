@@ -88,6 +88,15 @@ header.main {
 				height: auto;
 				display: block;
 			}
+			.spin {
+				transform-origin: 50%;
+			}
+			&:hover {
+				.spin {
+					fill: $accent;
+					// @include animation('rotating 2s linear infinite');
+				}
+			}
 		}
 		
 	}
@@ -115,6 +124,7 @@ header.main {
 		}
 	}
 }
+
 /**
  * Note: I have omitted any vendor-prefixes for clarity.
  * Adding them is left as an exercise for the reader.

@@ -147,6 +147,8 @@ footer.main {
                 &:focus {
                     color: $accent;
                     outline: none;
+                    // outline: 1px solid $accent;
+                    border-color: $accent;
                 }
                 &[data-empty="false"] + label,
                 &:focus + label {

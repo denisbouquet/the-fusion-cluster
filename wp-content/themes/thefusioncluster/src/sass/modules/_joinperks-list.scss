@@ -19,6 +19,9 @@
             @include bp-tablet {
                 padding-right: 50px;
             }
+            p{
+                margin-bottom: 0;
+            }
         }
     }
 }
