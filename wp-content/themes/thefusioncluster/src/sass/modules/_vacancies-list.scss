@@ -1,0 +1,74 @@
+.mod-vacancies {
+    &--title {
+        padding-top: 20px;
+        @include bp-s {
+            // padding: 0 $padding-s;
+            padding: 20px;
+            padding-top: 30px;
+        }
+        @include bp-xl {
+            padding-top: $padding-xl;
+        }
+    }
+    &--list {
+        @include bp-tablet {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &--vacancy {
+        margin-bottom: 40px;
+        @include bp-s {
+            padding: 0 20px;
+            border-left: 1px solid $grey;
+            border-right: 1px solid $grey; 
+        }
+        @include bp-tablet {
+            margin-bottom: 60px;
+            border-right: 0;
+            width: 50%;
+        }
+        @include bp-desktop {
+            width: 33.33%;
+        }
+        a {
+            display: block;
+            max-width: 350px;
+            &:hover {
+                text-decoration: none;
+                color: $black;
+                h3 {
+                    color: $accent;
+                }
+            }
+        }
+        &:nth-child(2n+0) {
+            @include bp-tablet {
+                border-right: 1px solid $grey; 
+            }
+            @include bp-desktop {
+                border-right: 0;
+            }
+        }
+        &:nth-child(3n+0) {
+            @include bp-desktop {
+                border-right: 1px solid $grey; 
+            }
+        }
+
+        .meta {
+            margin-bottom: 10px;
+            display: flex;
+            .tag {
+                color: $accent;
+                margin-right: 30px;
+            }
+        }
+        .mod-vacancies--vacancy--title {
+            margin-bottom: 10px;
+        }
+        p {
+            padding-right: 20px;
+        }
+    }
+}

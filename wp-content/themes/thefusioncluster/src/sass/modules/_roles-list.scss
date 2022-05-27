@@ -1,0 +1,63 @@
+.mod-roles {
+    &--title {
+        padding-top: 20px;
+        @include bp-s {
+            // padding: 0 $padding-s;
+            padding: 20px;
+            padding-top: 30px;
+        }
+        @include bp-xl {
+            padding-top: $padding-xl;
+        }
+    }
+    &__inner {
+        @include bp-xl {
+            padding-bottom: $padding-xl;
+        }
+    }
+    &--list {
+        @include bp-tablet {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &--role {
+        margin-bottom: 40px;
+        @include bp-s {
+            padding: 0 20px;
+        }
+        @include bp-tablet {
+            width: 50%;
+        }
+        @include bp-desktop {
+            width: 33.33%;
+        }
+        p {
+            padding-right: 20px;
+        }
+        &--featured {
+            width: 50%;
+        }
+        >div {
+            background-color: #fff;
+            display: block;
+            position: relative;
+            padding: 20px;
+            height: 100%;
+        }
+
+        .tag {
+            display: inline-block;
+            color: $accent;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        &--title {
+            margin-bottom: 10px;
+            min-height: 60px;
+            @include bp-xl {
+                min-height: 80px;
+            }
+        }
+    }
+}
