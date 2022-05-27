@@ -1,0 +1,41 @@
+.mod-about-hero {
+    position: relative;
+    margin-top: 75px;
+    &__inner {
+        padding-top: $padding-xl;
+        padding-bottom: $padding-xl;
+        @extend .innerPadding;
+        @include bp-tablet {
+            min-height: 653px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 500px;
+        }
+        @include bp-desktop {
+            max-width: 660px;
+        }
+        @include bp-xl {
+            max-width: 770px;
+        }
+    }
+    &__animation {
+        text-align: center;
+        padding-bottom: $padding-xl;
+        @extend .innerPadding;
+        @include bp-tablet {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 35%;
+        }
+        svg {
+            max-width: 100%;
+            display: block;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

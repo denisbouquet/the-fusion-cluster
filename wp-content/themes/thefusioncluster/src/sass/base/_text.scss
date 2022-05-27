@@ -69,11 +69,17 @@
 
 .h1 {
 	font-family: $font-title;
-	font-weight: $weight-bold;
-	letter-spacing: -0.04em;
-	line-height: 104%;
-	@include font-size(40px);
-	@include bp-tablet {
+    letter-spacing: -0.04em;
+    line-height: 104%;
+    font-weight: $weight-bold;
+    strong, span {
+	   font-weight: $weight-bold;
+    }
+    font-size: 7.5vw;
+    @include bp-tablet {
+        @include font-size(60px);
+    }
+	@include bp-xl {
 		@include font-size(80px);
 	}
 }
@@ -83,9 +89,12 @@
 	font-weight: $weight-medium;
 	letter-spacing: -0.04em;
 	line-height: 104%;
-	@include font-size(30px);
-	margin-bottom: 30px;
-	@include bp-tablet {
+    @include font-size(32px);
+    margin-bottom: 30px;
+    @include bp-tablet {
+	   @include font-size(42px);
+    }
+	@include bp-desktop {
 		@include font-size(60px);
 	}
 }
@@ -95,8 +104,8 @@
 	font-weight: $weight-medium;
 	letter-spacing: -0.04em;
 	line-height: 112%;
-	@include font-size(30px);
-	@include bp-tablet {
+	@include font-size(20px);
+	@include bp-desktop {
 		// @include font-size(32px);
 	}
     @include bp-xl {
@@ -111,7 +120,7 @@
 	line-height: 112%;
 	@include font-size(22px);
 	margin-bottom: 15px;
-	@include bp-tablet {
+	@include bp-desktop {
 		@include font-size(24px);
 	}
 }
@@ -122,7 +131,7 @@
 	letter-spacing: -0.03em;
 	line-height: 112%;
 	@include font-size(18px);
-	@include bp-tablet {
+	@include bp-desktop {
 		@include font-size(20px);
 	}
 }

@@ -1,6 +1,7 @@
 .mod-join-form {
     &__inner {
-
+        padding-top: $padding-xl;
+        padding-bottom: $padding-xl;
         @include bp-tablet {
             // display: flex;
             // flex-wrap: wrap;
@@ -227,17 +228,11 @@
             }
         }
         .form--field-submit, .nf-after-form-content {
-            @include bp-desktop {
-                margin-left: calc(100% + 60px);
-                width: 100%;
-            }
-            input {
-                width: 156px;
-                padding: 10px 20px;
-                color: $white;
-                background-color: $darkblue;
-                border-radius: 10px;
-            }
+
+        }
+
+        .nf-form-hp {
+            display: none;
         }
 
     }

@@ -1,20 +1,29 @@
 .mod-home-what-is-the-cluster {
     position: relative;
     &__inner {
-        min-height: 653px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 50%;
+        padding: 30px 0;
         @extend .innerPadding;
+        @include bp-s {
+            padding: 30px;
+        }
+        @include bp-xl {
+            min-height: 653px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 50%;
+        }
         
     }
 
     &__animation {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: calc(50% - 1400px / 2);
+        text-align: right;
+        @include bp-xl {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: calc(50% - 1400px / 2);
+        }
     }
 
 }
@@ -30,23 +39,30 @@
 
     &__perks {
         height: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
         @extend .innerPadding;
         display: flex;
         flex-direction: column;
         justify-content: center;
         &--perk {
-            margin-bottom: 60px;
+            margin-bottom: 30px;
+            @include bp-xl {
+                margin-bottom: 60px;
+            }
         }
     }
     .mod-columns--content {
-        
         max-width: 450px;
         margin-left: auto;
         margin-right: auto;
     }
 
     &__media {
-        padding: 20px;
+        padding: 20px 0;    
+        @include bp-s {
+            padding: 20px;
+        }
         img {
             width: 100%;
             display: block;
@@ -93,8 +109,9 @@
         padding-top: 60px;
     }
     &__articleslist {
-        padding-bottom: 160px;
+        padding-bottom: 60px;
         @include bp-tablet {
+            padding-bottom: 160px;
             display: flex;
         }
         .mod-home-involved__article {
@@ -120,9 +137,11 @@
             p {
             }
             a {
-                position: absolute;
-                bottom: 0;
-                left: 0;
+                @include bp-tablet {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
             }
             &:first-child {
                 border-left: 0;

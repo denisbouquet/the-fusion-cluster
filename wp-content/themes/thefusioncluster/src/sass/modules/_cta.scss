@@ -6,19 +6,20 @@
 	border-radius: 10px;
 	color: $black;
 	text-align: left;
-	padding: 0 10px;
-	padding-right: 42px;
-	line-height: 33px;
+	padding: 0 16px;
+	padding-right: 48px;
+	line-height: 41px;
 	border: 1px solid $black;
+	font-size: 18px;
 	&:after {
 		position: absolute;
 		content: "";
 		width: 15px;
-		height: 15px;
+		height: 16px;
 		top: 50%;
-		margin-top: -7px;
-		right: 5px;
-		background: transparent url('../media/images/icons/arrow-button.svg') left top no-repeat;
+		margin-top: -8px;
+		right: 12px;
+		background: transparent url('../media/images/icons/arrow-button-larger.svg') left top no-repeat;
 	}
 
 	&:hover {
@@ -37,21 +38,35 @@
 	background-color: $accent;
 	color: $black !important;
 	&:after {
-		position: absolute;
-		content: "";
-		width: 15px;
-		height: 15px;
-		top: 50%;
-		margin-top: -7px;
-		right: 5px;
-		background:transparent url('../media/images/icons/arrow-button.svg') left top no-repeat;
+		background:transparent url('../media/images/icons/arrow-button-larger.svg') left top no-repeat;
 	}
 
 	&:hover {
 		background-color: $pink50;
 		text-decoration: none;
 		&:after {
-			background-image: url('../media/images/icons/arrow-button.svg');
+			background-image: url('../media/images/icons/arrow-button-larger.svg');
+		}
+	}
+}
+
+header.main {
+	.cta-pink {
+		padding-right: 42px;
+		padding: 0 11px;
+		line-height: 33px;
+		font-size: 16px;
+		&:after {
+			margin-top: -7px;
+			width: 15px;
+			height: 15px;
+			right: 5px;
+			background-image: url('../media/images/icons/arrow-button.svg')
+		}
+		&:hover {
+			&:after {
+				background-image: url('../media/images/icons/arrow-button.svg');
+			}
 		}
 	}
 }
@@ -93,6 +108,7 @@
 .link {
 	position: relative;
 	padding-right: 26px;
+	font-size: 18px;
 	&:hover {
 		color: $accent;
 		text-decoration: none;

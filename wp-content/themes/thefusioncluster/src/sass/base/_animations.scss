@@ -78,9 +78,10 @@
             display: block;
             transform: translateZ(0);
         }
-        &:after {
-            content: attr(data-text);
-        }
+        // &:after {
+        //     content:"\a";
+        //     white-space: pre;
+        // }
     }
     span {
         opacity: 0;
