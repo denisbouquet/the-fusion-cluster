@@ -12,6 +12,9 @@
         @include bp-s {
         }
         @include bp-tablet {
+            width: 50%;
+        }
+        @include bp-xl {
             width: 33.33%;
         }
         >div {

@@ -36,7 +36,7 @@
             background-color: $grey;
             top: 0;
             left: 50%;
-            bottom: 19%;
+            bottom: 90px;
             display: none;
             @include bp-tablet {
                 display: block;
@@ -73,7 +73,10 @@
         }
         p {
             max-width: 473px;
+        }
 
+        .phone-wrap {
+            margin-bottom: 100px;
         }
     
         .submit-wrap {

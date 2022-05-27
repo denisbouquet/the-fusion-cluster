@@ -63,10 +63,17 @@
         @include bp-s {
             padding: 20px;
         }
+        height: 100%;
+        figure {
+            width: 100%;
+            height: 100%;
+        }
         img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;
             display: block;
-            height: auto;
+            // height: auto;
         }
     }
 }
@@ -111,14 +118,24 @@
     &__articleslist {
         padding-bottom: 60px;
         @include bp-tablet {
-            padding-bottom: 160px;
+            // padding-bottom: 90px;
             display: flex;
+            flex-wrap: wrap;
+        }
+        @include bp-xl {
+            padding-bottom: 90px;
         }
         .mod-home-involved__article {
             padding: 0 20px;
+            width: 100%;
+            margin-bottom: 60px;
             @include bp-tablet {
+                width: 50%;
                 border-left: 1px solid $grey;
+            }
+            @include bp-desktop {
                 width: 33.33%;
+                margin-bottom: 0;
             }
             >div {
                 position: relative;
