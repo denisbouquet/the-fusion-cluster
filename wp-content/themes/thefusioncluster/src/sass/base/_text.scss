@@ -104,7 +104,7 @@
 	font-weight: $weight-medium;
 	letter-spacing: -0.04em;
 	line-height: 112%;
-	@include font-size(20px);
+	@include font-size(24px);
 	@include bp-desktop {
 		// @include font-size(32px);
 	}

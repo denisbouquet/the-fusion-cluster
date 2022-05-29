@@ -1,0 +1,23 @@
+.mod-company-list {
+    padding-right: 60px;
+    @extend .innerPaddingVertical;
+    padding-top: 0;
+    @include bp-tablet {
+        padding-top: $padding-xl;
+    }
+    ul {
+        margin: 0;
+        @include bp-s {
+            padding: 0 $padding-s;
+        }
+        @include bp-desktop {
+            padding: 0;
+            column-count: 2;
+            column-gap: 40px;
+        }
+    }
+    li {
+        display: block;
+        margin-bottom: 1em;
+    }
+}

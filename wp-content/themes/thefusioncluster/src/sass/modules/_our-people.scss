@@ -1,0 +1,39 @@
+.mod-our-people {
+    @include bp-tablet {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &--title {
+        @extend .innerPaddingVertical;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        @include bp-s {
+            padding: 0 $padding-s;
+        }
+        @include bp-tablet {
+            width: 33.33%;
+        }
+        @include bp-xl {
+            width: 25%;
+        }
+    }
+    &--person {
+        margin-bottom: 60px;
+        @include bp-s {
+            padding: 0 $padding-s;
+        }
+        @include bp-tablet {
+            width: 33.33%;
+            border-left: 1px solid $grey;
+        }
+        @include bp-xl {
+            width: 25%;
+        }
+        >div {
+            position: relative;
+            @include bp-xl {
+                padding-right: 20px;
+            }
+        }
+    }
+}

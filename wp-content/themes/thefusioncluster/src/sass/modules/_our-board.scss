@@ -1,0 +1,55 @@
+.mod-our-board {
+    @include bp-tablet {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &--title {
+        @extend .innerPaddingVertical;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        @include bp-s {
+            padding: 0 $padding-s;
+        }
+        @include bp-tablet {
+            width: 33.33%;
+        }
+        @include bp-xl {
+            width: 25%;
+        }
+    }
+    &--person {
+        margin-bottom: 60px;
+        @include bp-s {
+            padding: 0 $padding-s;
+        }
+        @include bp-tablet {
+            margin-bottom: 0;
+            width: 33.33%;
+            border-left: 1px solid $grey;
+        }
+        @include bp-xl {
+            width: 37.5%;
+        }
+        figure {
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+        }
+        >div {
+            position: relative;
+            @include bp-tablet {
+                padding-bottom: 50px;
+            }
+        }
+        a {
+            @include bp-tablet {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
