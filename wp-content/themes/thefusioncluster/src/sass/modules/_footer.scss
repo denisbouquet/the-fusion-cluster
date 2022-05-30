@@ -4,6 +4,13 @@ footer.main {
 	color: $white;
 	background-repeat: repeat-x;
 
+    .lines:before, 
+    .lines:after, 
+    .lines .top-line:before, 
+    .lines .bottom-line:before {
+        background-color: $darkgrey;
+    }
+
     .mod-newsletter {
         width: 100%;
         text-align: center;
@@ -51,7 +58,7 @@ footer.main {
         }
         @extend .innerPadding;
     	h4 {
-            @extend .small-copy;
+            @extend .h5;
             color: $grey;
         }
         .col-footer {

@@ -164,6 +164,139 @@ var isMobile = false; //initiate as false
                 }
             });
 
+
+
+
+          
+
+            function turn() {
+                var tl = gsap.timeline();
+                
+                var wheel = $('.js-text-wheel');
+                tl.to(wheel, {
+                    rotation: '-='+18,
+                    transformOrigin: "50% 50%",
+                    ease: "expo.inOut",
+                    duration: 1
+                })
+                return tl;
+            }
+
+            var index = 1;
+            function slide() {
+                var tl = gsap.timeline();
+                var word_span = $('.js-text-wheel').find('.word').eq(index).find('span');
+                var word_i = $('.js-text-wheel').find('.word').eq(index).find('i');
+
+                tl.to(word_span, { x: '-50px', ease: "expo.inOut" } )
+                .to(word_i, { left: '110%', opacity: '1', ease: "expo.inOut" }, "-=0.5");
+
+                index++;
+                if(index == 21) {
+                    index = 1;
+                }
+
+                return tl;
+            }
+
+            function slideBack() {
+                var tl = gsap.timeline();
+                var word_span = $('.js-text-wheel').find('.word').eq(index-1).find('span');
+                var word_i = $('.js-text-wheel').find('.word').eq(index-1).find('i');
+
+                tl.to(word_span, { x: '0', ease: "expo.inOut" } )
+                .to(word_i, { left: '180%', opacity: '0', ease: "expo.inOut" }, "-=0.5");
+
+                // index++;
+
+                return tl;
+            }
+
+            var speed = "0.1";
+
+            // stitch them together in a master timeline...
+            var master = gsap.timeline({repeat: -1, repeatDelay: 0});
+            master.add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+            
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)  
+             
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)   
+             
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)   
+             
+            .add(turn())
+            .add(slide(), "+="+speed)  
+            .add(slideBack(), "+="+speed)   
+
+            // master.pause();
 			
 		},
 

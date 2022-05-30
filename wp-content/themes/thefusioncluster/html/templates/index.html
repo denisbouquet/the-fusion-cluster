@@ -40,7 +40,7 @@
 						<div class="top-line"></div>
 						<div class="mod-hero__inner">	
 							<div class="container">
-								<h1 class="h1 anim-title"><strong><span>The future of energy</span></strong><strong><span>starts here</span></strong></h1>
+								<h1 class="h1 ivanim-fade">The future of energy starts here</h1>
 							</div>
 						</div>
 						<div class="mod-hero__media">
@@ -49,9 +49,9 @@
 								<video id="intro_video" class="video-clip" data-src="assets/media/videos/home-hero-intro.mp4" muted playsinline loop></video>
 							</div>
 						</div>
-						<a href="#intro" class="mod-hero__scroll scrollTo">	
+						<!-- <a href="#intro" class="mod-hero__scroll scrollTo">	
 							<i><span class="screen-reader-text">Scroll</span></i>
-						</a>
+						</a> -->
 					</div>
 				</div>
 			</section>
@@ -72,9 +72,7 @@
 					</div>	
 				</div>
 				<div class="mod-home-what-is-the-cluster__animation ivanim-fade">
-					<figure class="bg">
-						<img src="assets/media/images/svg/fusion-1.svg" alt="">
-					</figure>
+					@@include('../partials/wheel.html')
 				</div>
 			</section>
 
@@ -82,7 +80,7 @@
 				<div class="container">	
 					<div class="mod-home-join__inner inpage-hero inpage-hero--center">	
 						<p class="h4 bullet ivanim-fade">Why should I join?</p>
-						<h2 class="h2 anim-title"><strong><span>Fusion at your</span></strong><br /><strong><span>fingertips</span></strong></h2>
+						<h2 class="h2 ivanim-fade d2">Fusion at your<br />fingertips</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					</div>
 				</div>
@@ -136,7 +134,7 @@
 				<div class="container">	
 					<div class="mod-home-join__inner inpage-hero inpage-hero--center">	
 						<p class="h4 bullet ivanim-fade">Why should I join?</p>
-						<h2 class="h2 anim-title"><strong><span>Be ahead of</span></strong><br /><strong><span>the curve</span></strong></h2>
+						<h2 class="h2 ivanim-fade d2">Be ahead of<br />the curve</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 					</div>
 				</div>
@@ -192,7 +190,7 @@
 				<div class="container">	
 					<div class="mod-home-involved__inner">
 						<p class="h4 bullet ivanim-fade">Who’s involved?</p>
-						<h2 class="h2 anim-title"><strong><span>Minds. Skills.</span></strong><br /><strong><span>Expertise. Fused.</span></strong></h2>
+						<h2 class="h2 ivanim-fade d2">Minds. Skills.<br />Expertise. Fused.</h2>
 					</div>
 				</div>
 				
@@ -209,30 +207,66 @@
 							</g>
 						</defs>
 					</svg>
-				
+
 					<div class="marquee marquee--1" data-duplicated='true' data-direction='right'>
-						Assystem <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Atkins <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Be4Fusion <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Energy Systems Catapult <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Environment Agency <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Environment Agency <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
+						<a href="https:www.assystem.com" target="_blank">Assystem</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://firstlightfusion.com/" target="_blank">First Light Fusion</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://www.fusionenergyinsights.com" target="_blank">Fusion Energy Insights</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://generalfusion.com/" target="_blank">General Fusion</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://www.harwellcampus.com/" target="_blank">Harwell Campus</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://jacobs.com/" target="_blank">Jacobs</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://oxfordscienceenterprises.com/" target="_blank">Oxford Science Enterprises </a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://www.prorsus.co.uk/" target="_blank">Prorsus</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://www.tokamakenergy.co.uk/" target="_blank">Tokamak Energy</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
 					</div>
 				
 					<div class="marquee marquee--2" data-duplicated='true' data-direction='left'>
-						FIRST LIGHT FUSION <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Frazer Nash Consultancy <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Fusion Energy Insights <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						FIRST LIGHT FUSION <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
+						<a href="https://www.gov.uk/government/organisations/uk-atomic-energy-authority" target="_blank">UKAEA</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://ukinnovationscienceseedfund.co.uk/" target="_blank">UKI2S</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.atkinsglobal.com" target="_blank">Atkins</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://be4fusion.com/" target="_blank">Be4Fusion</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.es.catapult.org.uk" target="_blank">Energy Systems Catapult</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://www.gov.uk/government/organisations/environment-agency" target="_blank">Environment Agency</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.fnc.co.uk" target="_blank">Frazer Nash Consultancy</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.johncaunt.com" target="_blank">JCS Nuclear Solutions</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
 					</div>
 				
 					<div class="marquee marquee--3" data-duplicated='true' data-direction='right'>
-						Assystem <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Atkins <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Be4Fusion <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Energy Systems Catapult <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Jacobs <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
-						Environment Agency <i><svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#plus" /></svg></i> 
+						<a href="https:www.Fusion-for-Future.de" target="_blank">KBHF GmbH</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://www.konecranes.com/industries/nuclear" target="_blank">Konecranes Demag</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.magdrive.space" target="_blank">Magdrive</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.mottmac.com" target="_blank">Mott MacDonald Ltd</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://namrc.co.uk/" target="_blank">Nuclear AMRC</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://www.nuvia.com" target="_blank">Nuvia</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.oxfordsigma.com" target="_blank">Oxford Sigma</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https://stellarator.energy/" target="_blank">Renaissance Fusion</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
+						<a href="https:www.twi-global.com" target="_blank">TWI</a> 
+						<i>@@include('../partials/plus-icon.html')</i>
 					</div>
 					
 					<div class="container">	

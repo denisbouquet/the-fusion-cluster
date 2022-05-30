@@ -8,7 +8,7 @@
         padding-top: 30px;
         padding-bottom: 20px;
         @include bp-s {
-            padding: 0 $padding-s;
+            padding: $padding-s;
         }
         @include bp-tablet {
             width: 33.33%;
@@ -20,7 +20,7 @@
     &--person {
         margin-bottom: 60px;
         @include bp-s {
-            padding: 0 $padding-s;
+            padding: $padding-s;
         }
         @include bp-tablet {
             width: 33.33%;

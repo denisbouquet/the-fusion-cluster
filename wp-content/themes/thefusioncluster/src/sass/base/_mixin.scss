@@ -126,7 +126,7 @@
   }
 }
 @mixin bp-xxl {
-  @media only screen and (min-width: 1800px) {
+  @media only screen and (min-width: 1400px) {
     @content;
   }
 }

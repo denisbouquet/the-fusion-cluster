@@ -6,23 +6,112 @@
         @include bp-s {
             padding: 30px;
         }
-        @include bp-xl {
-            min-height: 653px;
+        @include bp-desktop {
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            max-width: 50%;
+            max-width: 600px;
+        }
+        p {
+            max-width: 500px;
+        }
+        .cta-pink {
+            margin-top: 20px;
         }
         
     }
 
     &__animation {
-        text-align: right;
-        @include bp-xl {
+        height: auto;
+        @include bp-desktop {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             position: absolute;
             top: 0;
             bottom: 0;
+            right: 20px;
+        }
+        @include bp-xxl {
             right: calc(50% - 1400px / 2);
+        }
+        
+        .wheel {
+            min-height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            // margin-left: auto;
+            // margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            margin-right: 0;
+            margin-left: auto;
+            @include bp-tablet {
+                width: 450px;
+            }
+        }
+        .words {
+            position: relative;
+            width: 900px;
+            height: 900px;
+            display: block;
+            padding: 0;
+            margin: 0;
+            
+        }
+        .word {
+            margin-top: 50%;
+            display: block;
+            position: absolute;
+            text-align: right;
+            padding-right: 150px;
+            width: 450px;
+            @extend .wheel-copy;
+            display: flex;
+            justify-content: flex-end;
+            transform-origin: 100% 0;
+            line-height: 52px;
+            span {
+                text-align: right;
+                display: block;
+                position: relative;
+            }
+            i {
+                position: absolute;
+                top: 50%;
+                margin-top: -14px;
+                left: 150%;
+                opacity: 0;
+                background-color: $accent;
+                height: 28px;
+                width: 85px;
+                display: inline-block;
+            }
+
+            &--1 { transform: rotate(90deg); }
+            &--2 { transform: rotate(108deg); }
+            &--3 { transform: rotate(126deg); }
+            &--4 { transform: rotate(144deg); }
+            &--5 { transform: rotate(162deg); }
+            &--6 { transform: rotate(-180deg); }
+            &--7 { transform: rotate(-162deg); }
+            &--8 { transform: rotate(-144deg); }
+            &--9 { transform: rotate(-126deg); }
+            &--10 { transform: rotate(-108deg); }
+            &--11 { transform: rotate(-90deg); }
+            &--12 { transform: rotate(-72deg); }
+            &--13 { transform: rotate(-54deg); }
+            &--14 { transform: rotate(-36deg); }
+            &--15 { transform: rotate(-18deg); }
+            &--16 { transform: rotate(0deg); }
+            &--17 { transform: rotate(18deg); }
+            &--18 { transform: rotate(36deg); }
+            &--19 { transform: rotate(54deg); }
+            &--20 { transform: rotate(72deg); }
         }
     }
 
@@ -34,6 +123,9 @@
         @extend .innerPadding;
         p {
             margin-bottom: 1em;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -86,6 +178,8 @@
     h2 {
         margin-bottom: 54px;
         max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .marquee {
         overflow: hidden;
@@ -95,6 +189,13 @@
         line-height: 1;
         font-family: $font-title;
         font-weight: $weight-reg;
+
+        a {
+            &:hover {
+                color: $accent;
+                text-decoration: none;
+            }
+        }
     }
 
     &__inner {
