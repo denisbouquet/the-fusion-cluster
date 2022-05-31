@@ -7,6 +7,10 @@
             padding: 20px;
             padding-top: 30px;
         }
+        @include bp-xl {
+            padding-top: $padding-xl;
+            padding-bottom: $padding-xl;
+        }
     }
     &--articles {
         padding-bottom: 30px;

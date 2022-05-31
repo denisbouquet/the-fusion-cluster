@@ -119,6 +119,7 @@ var isMobile = false; //initiate as false
 			self.inviewAnimation();
 			self.scrollToAnchor();
 			self.mobileNav();
+            self.tabs();
 			self.accordions();
             self.videoLoad();
             self.blockfundsToggle();
@@ -165,6 +166,27 @@ var isMobile = false; //initiate as false
             });
 
 
+            var tl = gsap.timeline();
+            // mySplitText = new SplitText("#h1", { type: "words,chars" }),
+            // chars = mySplitText.chars; //an array of all the divs that wrap each character
+
+            var textWrapper = document.querySelector('#h1');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+
+            // gsap.set("#h1", { perspective: 400 });
+            var chars = $('#h1 .letter');
+            console.log(chars);
+
+            tl.from(chars, {
+                duration: 0.8,
+                opacity: 0,
+                scale: 0,
+                y: 80,
+                transformOrigin: "0% 50% -50",
+                ease: "back",
+                stagger: 0.01
+            });
 
 
           
@@ -215,7 +237,7 @@ var isMobile = false; //initiate as false
             var speed = "0.1";
 
             // stitch them together in a master timeline...
-            var master = gsap.timeline({repeat: -1, repeatDelay: 0});
+            var master = gsap.timeline({repeat: -1, repeatDelay: 0.5});
             master.add(turn())
             .add(slide(), "+="+speed)  
             .add(slideBack(), "+="+speed)  
@@ -294,7 +316,8 @@ var isMobile = false; //initiate as false
              
             .add(turn())
             .add(slide(), "+="+speed)  
-            .add(slideBack(), "+="+speed)   
+            .add(slideBack(), "+="+speed)
+
 
             // master.pause();
 			
@@ -359,22 +382,6 @@ var isMobile = false; //initiate as false
                     onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.1, overwrite: true})},
                 });
             })
-
-
-
-            // PARTNERS
-            $('.mod-company-list').each(function(){
-                var elts = $(this).find('li');
-
-                gsap.set(elts, {y: 30, opacity: 0});
-
-                ScrollTrigger.batch(elts, {
-                    // markers: true,
-                    start: "top 90%",
-                    onEnter: function(batch){  gsap.to(batch, {opacity: 1, y: 0, stagger: 0.05, overwrite: true})},
-                });
-            })
-
             
 
         },
@@ -703,11 +710,11 @@ var isMobile = false; //initiate as false
 		}, 
 		accordions: function (elt) {
 
-			if($('.mod-accordion').length > 0){
-				$('.mod-accordion__toggle').on('click', function(e){
-					e.stopPropagation();
+            if($('.mod-accordion').length > 0){
+                $('.mod-accordion__toggle').on('click', function(e){
+                    e.stopPropagation();
                     if($(this).parent().hasClass('mod-accordion--closeothers')){
-					   $(this).parent().parent().find('.mod-accordion').removeClass('is-open');
+                       $(this).parent().parent().find('.mod-accordion').removeClass('is-open');
                        $(this).parent().parent().find('.mod-accordion__content').css('max-height', 0);
                     }
                     // open / toggle current 
@@ -721,13 +728,13 @@ var isMobile = false; //initiate as false
                         $(this).parent().find('.mod-accordion__content').css('max-height', 0);
                     }
 
-				});
+                });
 
-				$('.mod-accordion.is-open').each(function(){
-					const maxH = $(this).find('.mod-accordion__content >div').height();
-					$(this).find('.mod-accordion__content').css('max-height', maxH);
-				});
-			}
+                $('.mod-accordion.is-open').each(function(){
+                    const maxH = $(this).find('.mod-accordion__content >div').height();
+                    $(this).find('.mod-accordion__content').css('max-height', maxH);
+                });
+            }
 
             if($('.mod-wa-accordion').length > 0) {
                 if($(window).width() > 768) {
@@ -735,6 +742,25 @@ var isMobile = false; //initiate as false
                 }
 
             }
+        },
+
+        tabs: function (elt) {
+
+			if($('.mod-tabs').length > 0){
+				$('.mod-tabs__toggle a').on('click', function(e){
+                    e.stopPropagation();
+					e.preventDefault();
+                    
+                    $(this).parents().find('a').removeClass('is-current');
+                    $(this).addClass('is-current');
+
+                    $(this).parents('.mod-tabs').find('.mod-tabs__content').removeClass('is-visible');
+                    const to_show = $(this).attr('href');
+                    $(to_show).addClass('is-visible');
+				});
+
+			}
+
 		},
 
 		/**

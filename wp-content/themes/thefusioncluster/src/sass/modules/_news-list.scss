@@ -5,6 +5,10 @@
             padding: 20px;
             padding-top: 30px;
         }
+        @include bp-xl {
+            padding-top: $padding-xl;
+            padding-bottom: $padding-xl;
+        }
     }
     &--articles {
         @include bp-tablet {
@@ -33,12 +37,21 @@
                 @include bp-xl {
                     width: 50%;
                 }
+                .h3 {
+                    max-width: 90%;
+                }
             }
             >a {
                 position: relative;
                 &:hover {
                     text-decoration: none;
                     color: $accent;
+
+                    figure {
+                        svg {
+                            opacity: 1;
+                        }
+                    }
                 }
                 // padding-bottom: 80px;
                 // height: 100%;
@@ -56,10 +69,18 @@
             figure {
                 background-image: url('../media/images/pattern/pattern.svg');
                 margin-bottom: 20px;
+                position: relative;
                 img {
                     width: 100%;
                     display: block;
                     height: auto;
+                }
+                svg {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    width: 29px;
+                    opacity: 0;
                 }
             }
             .date {

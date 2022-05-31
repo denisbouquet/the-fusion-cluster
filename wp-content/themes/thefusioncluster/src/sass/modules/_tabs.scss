@@ -1,0 +1,25 @@
+.mod-tabs {
+	&__toggle {
+		a {
+			color: $darkgrey;
+			&:hover {
+				color: $accent;
+				text-decoration: none;
+			}
+			&.is-current {
+				color: $black;
+				&:hover {
+					cursor: default;
+					color: inherit;
+				}
+			}
+		}	
+	}
+	&__content {
+		display: none;
+		&.is-visible {
+			display: block;
+		}
+	}
+
+}

@@ -1,7 +1,9 @@
 .mod-our-board {
+    padding-top: 30px;
     @include bp-tablet {
         display: flex;
         flex-wrap: wrap;
+        padding-top: 90px;
     }
     &--title {
         @extend .innerPaddingVertical;
@@ -23,32 +25,16 @@
             padding: $padding-s;
         }
         @include bp-tablet {
-            margin-bottom: 0;
             width: 33.33%;
             border-left: 1px solid $grey;
         }
         @include bp-xl {
-            width: 37.5%;
-        }
-        figure {
-            margin-bottom: 20px;
-            img {
-                width: 100%;
-                display: block;
-                height: auto;
-            }
+            width: 25%;
         }
         >div {
             position: relative;
-            @include bp-tablet {
-                padding-bottom: 50px;
-            }
-        }
-        a {
-            @include bp-tablet {
-                position: absolute;
-                bottom: 0;
-                left: 0;
+            @include bp-xl {
+                padding-right: 20px;
             }
         }
     }

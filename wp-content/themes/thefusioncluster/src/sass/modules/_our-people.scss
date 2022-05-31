@@ -1,16 +1,22 @@
 .mod-our-people {
     @include bp-tablet {
+        padding-top: 30px;
         display: flex;
         flex-wrap: wrap;
+        padding-top: $padding-xl;
+        padding-bottom: $padding-xl;
+    }
+    @include bp-xl {
+        padding-bottom: 90px;
     }
     &--title {
         @extend .innerPaddingVertical;
-        padding-top: 30px;
         padding-bottom: 20px;
         @include bp-s {
             padding: $padding-s;
         }
         @include bp-tablet {
+            padding-top: 0;
             width: 33.33%;
         }
         @include bp-xl {
@@ -20,19 +26,35 @@
     &--person {
         margin-bottom: 60px;
         @include bp-s {
-            padding: $padding-s;
+            padding: 0 $padding-s;
         }
         @include bp-tablet {
+            margin-bottom: 0;
             width: 33.33%;
             border-left: 1px solid $grey;
         }
         @include bp-xl {
-            width: 25%;
+            width: 37.5%;
+        }
+        figure {
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
         }
         >div {
             position: relative;
-            @include bp-xl {
-                padding-right: 20px;
+            @include bp-tablet {
+                padding-bottom: 50px;
+            }
+        }
+        a {
+            @include bp-tablet {
+                position: absolute;
+                bottom: 0;
+                left: 0;
             }
         }
     }

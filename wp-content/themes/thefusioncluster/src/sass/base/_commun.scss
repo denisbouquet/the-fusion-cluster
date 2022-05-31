@@ -5,17 +5,17 @@
 
     /* Track */
     ::-webkit-scrollbar-track {
-      background: $silver;
+      background: $grey;
     }
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-      background: $gold;
+      background: $accent;
     }
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-      background: $darkblue;
+      background: $black;
     }
 }
 
@@ -30,6 +30,9 @@
     .h2 {
         margin-bottom: 30px;
     }
+    .h4 {
+        margin-bottom: 10px;
+    }
     p {
         margin-bottom: 1em;
         &:last-child {
@@ -41,10 +44,13 @@
         width: auto;
     }
     &--center {
-        max-width: 577px;
+        max-width: 650px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+    }
+    .cta-pink {
+        margin-top: 40px;
     }
 }
 
@@ -156,7 +162,7 @@
 
 .lazyload {
 	position: relative;
-	background-color: $orange;
+	background-color: $accent;
 	transition: background-color .3s ease-in;
     [data-src] {
 		transition: opacity .3s ease-in;

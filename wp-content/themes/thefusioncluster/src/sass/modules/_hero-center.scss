@@ -8,9 +8,19 @@
         }
         p {
             padding: 0 20px;
+            font-size: 24px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .cta {
             margin: 8px;
+        }
+        a {
+            &:hover {
+                color: $accent;
+                text-decoration: none;
+            }
         }
     }
 }

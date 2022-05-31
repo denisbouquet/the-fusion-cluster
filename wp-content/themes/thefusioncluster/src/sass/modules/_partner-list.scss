@@ -1,0 +1,16 @@
+.mod-partner-list {
+    
+    .h2 {
+        padding-top: $padding-xl;
+        @extend .innerPadding;
+        max-width: 600px;
+    }
+
+    &__cta {
+        @extend .innerPadding;
+        @include bp-tablet {
+            padding-top: 62px;
+        }
+        margin-bottom: 40px;
+    }
+}

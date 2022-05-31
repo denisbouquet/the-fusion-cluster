@@ -3,13 +3,13 @@
     padding-bottom: 20px;
     @extend .cta;
     a {
-        background-color: $darkblue;
+        background-color: $accent;
     }
 }
 
 .entry-content {
     padding: 50px 0 100px;
-    color: $darkblue;
+    color: $black;
     
     h1,
     h2,
@@ -25,7 +25,7 @@
         line-height: 1.5;
         text-transform: uppercase;
         font-weight: $weight-bold;
-        color: $darkerblue;
+        color: $black;
         @include font-size(22px);
         padding-top: 40px;
         letter-spacing: 2px;
@@ -92,7 +92,7 @@
     
     a {
         text-decoration: underline;
-        color: $darkerblue;
+        color: $accent;
         &:hover {
             text-decoration: none;
             // color: $darkblue;

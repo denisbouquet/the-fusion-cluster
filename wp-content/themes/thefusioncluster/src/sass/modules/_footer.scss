@@ -164,9 +164,9 @@ footer.main {
                     font-size: 12px;
                 }
                 &:-webkit-autofill {
-                    -webkit-text-fill-color: $blue !important;
+                    -webkit-text-fill-color: $darkgrey !important;
                     background-color: $white !important;
-                    // -webkit-box-shadow: 0 0 0px 10px $c-blue inset;
+                    // -webkit-box-shadow: 0 0 0px 10px $c-darkgrey inset;
                     transition: background-color 5000s ease-in-out 0s;
                 }
             }
