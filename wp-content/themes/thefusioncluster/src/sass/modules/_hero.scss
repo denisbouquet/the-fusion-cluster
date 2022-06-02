@@ -99,9 +99,14 @@
             text-transform: uppercase;
             margin-left: auto;
             margin-right: auto;
-            max-width: 900px;
             @extend .h1;
             position: relative;
+            @include bp-tablet {
+                max-width: 650px;
+            }
+            @include bp-xl {
+                max-width: 880px;
+            }
             .letter {
                 display: inline-block;
             }

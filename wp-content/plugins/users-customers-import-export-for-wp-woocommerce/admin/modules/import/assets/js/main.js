@@ -787,14 +787,28 @@ var wt_iew_basic_import=(function( $ ) {
 			$('#user-required-field-message').show();
                     
                         $('.wt-ier-gopro-cta').hide();
-                        $('.wt-ier-'+this.to_import).show();                    
+                        $('.wt-ier-'+this.to_import).show();   
+                        
+                        $('.wt_iew_free_addon').hide();
+                        $('.wt_iew_import_action_btn').prop('disabled', false);
+                        if(!wt_iew_basic_params.pro_plugins[this.to_import]['is_active']){
+                            $('.wt_iew_type_'+this.to_import).show();
+                            $('.wt_iew_import_action_btn').prop('disabled', true);
+                        }
+                    
 		},
 		page_actions:function(step)
 		{
 			if(step=='post_type') /* post type page */
 			{
 				$('[name="wt_iew_import_post_type"]').unbind('change').change(function(){					
-					wt_iew_basic_import.to_import=$(this).val();
+					
+                                        if (!wt_iew_basic_params.pro_plugins[$(this).val()]['is_active']) {
+                                            $('.wt_iew_import_action_btn').prop('disabled', true);
+                                            $('.wt_iew_type_' + this.to_import).show();
+                                        }                                     
+                                    
+                                        wt_iew_basic_import.to_import=$(this).val();
 					wt_iew_basic_import.to_import_title='';
 					wt_iew_basic_import.reset_form_data();
 					$('.wt_iew_post_type_name').html('');

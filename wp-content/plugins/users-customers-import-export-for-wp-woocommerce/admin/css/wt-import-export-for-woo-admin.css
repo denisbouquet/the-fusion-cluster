@@ -181,6 +181,7 @@
 
 .wt_iew_warn_box{padding:20px; padding-bottom:0px;}
 .wt_iew_warn{ display:inline-block; width:100%; box-sizing:border-box; padding:10px; background-color:#fff8e5; border-left:solid 2px #ffb900; color:#333; }
+.wt_iew_free_addon_warn{ display:inline-block; width:100%; box-sizing:border-box; padding:10px; background-color:#fff8e5; border:solid 1px #ffb900; color:#333; text-align: center; }
 .wt_iew_rerun_warn{ width:95%; margin:30px 2.5%; }
 
 .wt_iew_info_box{padding:20px; padding-bottom:0px;}
@@ -975,7 +976,7 @@ ul.wt-ierpro-newfeat li {
 }
 .wt-ier-table tr td li{
     text-align: left;
-    list-style: inside;
+    list-style: none;
 }
 
 @media (min-width: 992px){

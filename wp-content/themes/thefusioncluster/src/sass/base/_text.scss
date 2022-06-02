@@ -80,7 +80,7 @@
     strong, span {
 	   font-weight: $weight-bold;
     }
-    font-size: 7.5vw;
+    font-size: 8vw;
     @include bp-tablet {
         @include font-size(60px);
     }

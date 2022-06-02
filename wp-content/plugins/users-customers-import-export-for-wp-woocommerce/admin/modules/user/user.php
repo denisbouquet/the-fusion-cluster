@@ -162,8 +162,18 @@ class Wt_Import_Export_For_Woo_basic_User {
      *
      */
     public function wt_iew_exporter_post_types($arr) {
-        $arr['user'] = __('User/Customer');
-        return $arr;
+		
+		$arr['user'] = __('Users');
+		if (class_exists('woocommerce')) {
+			$arr['order'] = __('Order');
+			$arr['coupon'] = __('Coupon');
+			$arr['product'] = __('Product');
+			$arr['product_review'] = __('Product Review');
+			$arr['product_categories'] = __('Product Categories');
+			$arr['product_tags'] = __('Product Tags');
+			$arr['user'] = __('User/Customer');
+		}
+		return $arr;
     }
     
     public static function get_user_sort_columns() {
