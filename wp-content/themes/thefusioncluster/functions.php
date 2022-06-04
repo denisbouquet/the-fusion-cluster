@@ -67,9 +67,10 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 
+
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Partners list',
-		'menu_title'	=> 'Partners list',
+		'page_title' 	=> 'Theme Header Nav Settings',
+		'menu_title'	=> 'Header Nav',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 
@@ -79,6 +80,11 @@ if( function_exists('acf_add_options_page') ) {
 		'parent_slug'	=> 'theme-general-settings',
 	));
 	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Partners list',
+		'menu_title'	=> 'Partners list',
+		'parent_slug'	=> 'theme-general-settings',
+	));
 }
 
 // access editor to Ninja form

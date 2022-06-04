@@ -69,6 +69,12 @@ header.main {
 			}
 		}
 
+		.cta-pink-child {
+			a {
+				@extend .cta-pink;
+			}
+		}
+
 		a.logo {
 			display: block;
 			position: absolute;
