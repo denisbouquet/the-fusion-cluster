@@ -127,7 +127,10 @@ var isMobile = false; //initiate as false
             self.teamListMobileAccordion();
 			self.downloadListMobileAccordion();
 			
+            self.showMoreSection();
+
             self.scrollSyncAnimation();
+            self.homeAnimation();
 
             
             $('.js-matchHeight').matchHeight();
@@ -164,6 +167,8 @@ var isMobile = false; //initiate as false
                     $('.trigger-submit').removeClass('is-visible');
                 }
             });
+        },
+        homeAnimation: function (elt) {
 
 
             var tl = gsap.timeline();
@@ -323,6 +328,42 @@ var isMobile = false; //initiate as false
 			
 		},
 
+        showMoreSection: function (elt) {
+
+            function loadMore($sectionContainer) {
+                var totalItems = $sectionContainer.find('.js-item.is-hidden').length;
+                var toShow = $sectionContainer.attr('data-show');
+
+                $sectionContainer.find('.js-item.is-hidden').slice(0, toShow).removeClass('is-hidden');
+
+
+                if($sectionContainer.find('.js-item.is-hidden').length == 0) {
+                    $sectionContainer.find('.js-more').remove();
+                }
+            }
+
+            $('.js-show-more-section').each(function(){
+                var $sectionContainer = $(this);
+
+                var totalItems = $sectionContainer.find('.js-item').length;
+                var toShow = parseInt($sectionContainer.attr('data-show'));
+
+                $sectionContainer.find('.js-item').slice(0, toShow).removeClass('is-hidden');
+                
+                $sectionContainer.find('.js-more').on('click', function(e){
+                    e.preventDefault();
+                    loadMore($sectionContainer);
+                });
+
+                if(toShow >= totalItems) {
+                    $sectionContainer.find('.js-more').remove();
+                }
+
+            });
+
+
+
+        },
         scrollSyncAnimation: function (elt) {
 
 

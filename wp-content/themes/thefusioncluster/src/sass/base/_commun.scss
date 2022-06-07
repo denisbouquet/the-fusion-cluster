@@ -55,6 +55,12 @@
 }
 
 
+.js-item {
+    &.is-hidden {
+        display: none;
+    }
+}
+
 .lines {
     position: relative;
     overflow: hidden;

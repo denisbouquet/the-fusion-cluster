@@ -1,13 +1,11 @@
 .mod-home-what-is-the-cluster {
     position: relative;
     &__inner {
-        padding: 30px 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
         @extend .innerPadding;
-        @include bp-s {
-            padding: 30px;
-        }
         @include bp-desktop {
-            min-height: 100vh;
+            min-height: 900px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -120,7 +118,7 @@
 .mod-home-join {
     &__inner {
         
-        @extend .innerPadding;
+        // @extend .innerPadding;
         p {
             margin-bottom: 1em;
             &:last-child {
@@ -145,7 +143,7 @@
         }
     }
     .mod-columns--content {
-        max-width: 450px;
+        // max-width: 450px;
         margin-left: auto;
         margin-right: auto;
     }

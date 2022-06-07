@@ -1,0 +1,139 @@
+{
+    "key": "group_629cc331ab48b",
+    "title": "Events",
+    "fields": [
+        {
+            "key": "field_629cc34a29573",
+            "label": "Events",
+            "name": "events",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_629cc35a29574",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "medium_editor",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "standard_buttons": "",
+                    "custom_buttons": "",
+                    "other_options": [
+                        "disableDoubleReturn",
+                        "disableExtraSpaces"
+                    ],
+                    "delay": 0
+                },
+                {
+                    "key": "field_629cc37529575",
+                    "label": "Event date and time",
+                    "name": "event_date",
+                    "type": "textarea",
+                    "instructions": "Free field.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_629cc38c29576",
+                    "label": "Location",
+                    "name": "location",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "wpautop"
+                },
+                {
+                    "key": "field_629cc45729577",
+                    "label": "Date",
+                    "name": "date",
+                    "type": "date_picker",
+                    "instructions": "Needed to order upcoming and past events",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "F j, Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_629de3b55e2c5",
+                    "label": "URL",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "229"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1654526493
+}

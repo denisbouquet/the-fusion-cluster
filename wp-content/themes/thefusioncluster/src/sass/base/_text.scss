@@ -80,7 +80,7 @@
     strong, span {
 	   font-weight: $weight-bold;
     }
-    font-size: 8vw;
+    font-size: 7.6vw;
     @include bp-tablet {
         @include font-size(60px);
     }
@@ -139,6 +139,34 @@
 	@include bp-desktop {
 		@include font-size(20px);
 	}
+}
+
+.wp-wysiwyg {
+    h1 {    @extend .h1;    }
+    h2 {    @extend .h2;    }
+    h3 {    @extend .h3;    }
+    h4 {    @extend .h4;    }
+    h5 {    @extend .h5;    }
+    
+    p {
+        margin-bottom: 1em;
+
+        b, strong {
+            font-weight: 500;
+        }
+    }
+
+    a {
+        &:hover {
+            color: $accent;
+            text-decoration: none;
+            &[target="_blank"] {
+                &:after {
+                    background-image: url('../media/images/icons/new-window-pink.svg');
+                }
+            }
+        }
+    }
 }
 
 .wp-copy {

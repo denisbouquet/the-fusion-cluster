@@ -3,6 +3,22 @@
     "title": "Footer",
     "fields": [
         {
+            "key": "field_629f23f1cb482",
+            "label": "Newsletter",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_629b20bada9dd",
             "label": "Newsletter",
             "name": "newsletter",
@@ -21,7 +37,7 @@
                     "key": "field_629b20ca1dfc1",
                     "label": "Title",
                     "name": "title",
-                    "type": "text",
+                    "type": "medium_editor",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -32,9 +48,13 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "standard_buttons": "",
+                    "custom_buttons": "",
+                    "other_options": [
+                        "disableDoubleReturn",
+                        "disableExtraSpaces"
+                    ],
+                    "delay": 0
                 },
                 {
                     "key": "field_629b20d01dfc2",
@@ -56,6 +76,22 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_629f23f9cb483",
+            "label": "Footer links",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_6298a63494715",
@@ -325,5 +361,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1654334138
+    "show_in_rest": 0,
+    "modified": 1654596614
 }

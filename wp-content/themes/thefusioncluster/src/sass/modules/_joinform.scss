@@ -54,7 +54,9 @@
         .nf-field {
             margin-bottom: 20px;
         }
-
+        label {
+            font-weight: normal;
+        }
         input, textarea {
             border: 1px solid $darkgrey;
             border-radius: 5px;
@@ -69,7 +71,13 @@
             }
         }
         textarea {
-            min-height: 170px;
+            min-height: 90px;
+            height: 90px;
+        }
+        .textarea-wrap {
+            p {
+                margin-bottom: 0;
+            }
         }
         p {
             max-width: 473px;
@@ -86,6 +94,9 @@
             &:after {
                 pointer-events: none;
             }
+            .nf-field-label {
+                margin: 0;
+            }
             
             input[type="button"] {
                 position: relative;
@@ -100,7 +111,16 @@
             }
         }
 
-        .textarea-wrap, .html-wrap {
+        .html-wrap {
+            .nf-field-label {
+                display: none;
+            }
+        }
+        .no-label .textarea-wrap {
+            textarea {
+                min-height: 150px;
+                height: 150px;
+            }
             .nf-field-label {
                 display: none;
             }

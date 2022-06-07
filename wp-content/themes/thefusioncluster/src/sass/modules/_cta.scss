@@ -11,6 +11,7 @@
 	line-height: 41px;
 	border: 1px solid $black;
 	font-size: 16px;
+	cursor: pointer;
 	&:after {
 		position: absolute;
 		content: "";
@@ -27,8 +28,13 @@
 		color: $white;
 		text-decoration: none;
 		&:after {
-			background-image: url('../media/images/icons/arrow-button-white.svg');
+			background-image: url('../media/images/icons/arrow-button-larger-white.svg');
 		}
+	}
+}
+.cta-black {
+	&:hover {
+		color: $white !important;
 	}
 }
 

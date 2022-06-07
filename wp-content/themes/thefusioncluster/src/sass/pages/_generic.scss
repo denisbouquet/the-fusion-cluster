@@ -8,7 +8,10 @@
 }
 
 .entry-content {
-    padding: 50px 0 100px;
+    // padding: 50px 0 100px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     color: $black;
     
     h1,
@@ -21,43 +24,12 @@
     }
 
     h2 {
-        font-family: $font-title;
-        line-height: 1.5;
-        text-transform: uppercase;
-        font-weight: $weight-bold;
-        color: $black;
-        @include font-size(22px);
-        padding-top: 40px;
-        letter-spacing: 2px;
-        @include bp-tablet {
-            letter-spacing: 4px;
-            @include font-size(24px);
-        }
-        @include bp-xl {
-            // letter-spacing: 6px;
-            @include font-size(28px);
-        }
+        @extend .h3;
+        margin-top: 35px;
     }
-
     h3 {
-        padding-top: 20px;
-        font-weight: $weight-extrabold;
-        font-size: 18px;
-        line-height: 1.25;
-        font-family: $font-copy;
-        margin-bottom: 18px;
-        @include bp-tablet {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-family: $font-title;
-        @include font-size(18px);
-        line-height: 130%;
-        @include bp-tablet {
-            @include font-size(20px);
-        }
+        @extend .h4;
+        margin-top: 35px;
     }
 
     p {

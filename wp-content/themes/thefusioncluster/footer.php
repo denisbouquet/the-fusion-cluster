@@ -12,7 +12,7 @@
 ?>
 
 	<footer class="main">
-	<?php if ( !is_page_template( 'template/wealth-advisory.php' ) ) {
+	<?php if ( !get_field('hide_footer_newsletter') ) {
 	?>
 		
 		<?php
@@ -23,7 +23,7 @@
 					<div class="bottom-line"></div>
 					<div class="mod-newsletter">
 
-						<h2 class="h1 anim-title"><?php echo $newsletter['title']; ?></h2>
+						<h2 class="h1 anim-title"><?php echo strip_tags($newsletter['title'], '<br>' ); ?></h2>
 						
 						<div class="ivanim-fade d4">
 							<p><?php echo $newsletter['caption']; ?></p>

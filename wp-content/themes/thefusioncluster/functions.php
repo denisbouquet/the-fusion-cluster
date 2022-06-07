@@ -28,6 +28,19 @@ function add_upload_mimes( $types ) {
 add_filter( 'upload_mimes', 'add_upload_mimes' );
 
 
+// add_action('init', function() {
+
+//   // remove duotone support for Gutenberg blocks
+//   remove_filter('render_block', 'wp_render_duotone_support');
+// });
+
+remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+
+
+
+// add 612 x 410px size 
+add_image_size( 'article', 612, 410, true );
+
 /*
 * my_acf_json_save_point
 */
@@ -64,14 +77,7 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Theme Settings',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
-
-
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Header Nav Settings',
-		'menu_title'	=> 'Header Nav',
-		'parent_slug'	=> 'theme-general-settings',
+		'redirect'		=> true
 	));
 
 	acf_add_options_sub_page(array(
@@ -79,12 +85,7 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> 'Footer',
 		'parent_slug'	=> 'theme-general-settings',
 	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Partners list',
-		'menu_title'	=> 'Partners list',
-		'parent_slug'	=> 'theme-general-settings',
-	));
+
 }
 
 // access editor to Ninja form
