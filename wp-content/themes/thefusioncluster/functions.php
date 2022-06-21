@@ -248,7 +248,7 @@ add_action( 'widgets_init', 'thefusioncluster_widgets_init' );
  * Enqueue scripts and styles.
  */
 function thefusioncluster_scripts() {
-	wp_enqueue_style( 'thefusioncluster-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'thefusioncluster-style', get_stylesheet_uri(), array(), filemtime(), 'all' );
 	wp_style_add_data( 'thefusioncluster-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', array(), '20151215', true );

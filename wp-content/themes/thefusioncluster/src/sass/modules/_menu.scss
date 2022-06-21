@@ -72,22 +72,9 @@
         @include bp-tablet {
             font-size: 20px;
         }
-        &:before {
-            position: absolute;
-            top: 0;
-            left: -32px;
-            content: url(../media/images/logo-symbol.svg);
-            width: 20px;
-            height: 20px;
-            display: block;
-            opacity: 0;
-        }
         &:hover {
             text-decoration: none;
             color: $accent;
-            &:before {
-                opacity: 1;
-            }
         }
     }
 }

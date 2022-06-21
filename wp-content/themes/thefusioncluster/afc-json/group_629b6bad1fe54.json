@@ -107,7 +107,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "library": "all",
                     "min_size": "",
                     "max_size": "",
@@ -564,5 +564,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1654595729
+    "modified": 1655753309
 }

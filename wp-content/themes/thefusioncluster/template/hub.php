@@ -32,6 +32,10 @@ get_header();
                                     } 
                                     if($hero['downloads_label']) { ?>
                                         <a href="#downloads" class="cta cta-black"><?php echo $hero['downloads_label']; ?></a>
+                                    <?php } 
+
+                                    if($hero['jobs_label']) { ?>
+                                        <a href="#jobs" class="cta cta-black"><?php echo $hero['jobs_label']; ?></a>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -269,6 +273,35 @@ get_header();
                             <button class="cta-more js-more">Load more</button>
                         </div>
                     </div>
+                </div>
+            </section>
+            <?php endif ?>
+
+            <?php
+            $section_jobs = get_field('section_jobs');
+            if( $section_jobs ): ?>
+            <section class="bg-section--silver">
+                <div class="page-anchor" id="jobs"></div>
+                <div class="container">
+                    <div class="lines"> 
+                        <div class="inpage-hero inpage-hero--center">   
+                            <div>
+                                <p class="h4 bullet"><?php echo $section_jobs['jobs_in_fusion_head']; ?></p>
+                                <h2 class="h2"><?php echo strip_tags( $section_jobs['jobs_in_fusion_title'], '<br>' ); ?></h2>
+                                <?php echo $section_jobs['jobs_in_fusion_copy']; ?>
+
+                                <?php 
+                                $link = $section_jobs['cta'];
+                                if( $link ): 
+                                    $link_url = $link['url'];
+                                    $link_title = $link['title'];
+                                    $link_target = $link['target'] ? $link['target'] : '_self';
+                                    ?>
+                                <p><a href="<?php echo esc_url( $link_url ); ?>" class="cta-pink" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></p>
+                                <?php endif; ?>
+                            </div>
+                        </div>  
+                    </div>  
                 </div>
             </section>
             <?php endif ?>

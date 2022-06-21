@@ -25,7 +25,12 @@ get_header();
                                 <?php echo $hero['copy']; ?>
                             </div>
                         </div>
-                        <div class="mod-about-hero__animation ivanim-fade d3">
+                        <div class="mod-about-hero__animation js-play-lottie">
+                            <?php if($hero['lottie']) {
+                                ?>
+                                <lottie-player mode="normal" loop src="<?php echo $hero['lottie']; ?>"></lottie-player>
+                                <?php
+                            } else { ?>
                             <svg width="374" height="374" viewBox="0 0 374 374" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M186.969 187.241L186.766 187.5V187.167H187.173V187.445L186.969 187.241Z" fill="#FF8DF5"/>
                             <path d="M203.105 225.995V373.946H170.822V225.921L186.963 209.854L203.105 225.995Z" fill="#FF8DF5"/>
@@ -44,6 +49,7 @@ get_header();
                             <path d="M148.08 170.896L164.148 186.964L148.006 203.105H0V170.896H148.08Z" fill="#FF8DF5"/>
                             <path d="M186.752 186.76V187.168H186.492L186.696 186.964L186.492 186.76H186.752Z" fill="#FF8DF5"/>
                             </svg>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -72,6 +78,7 @@ get_header();
             $section_2 = get_field('section_2');
             if( $section_2 ): ?>
             <section class="mod-partner-list bg-section--silver">
+                <div class="page-anchor" id="partners"></div>
                 <div class="container"> 
                     <div class="lines"> 
                         <div class="top-line"></div>
@@ -137,6 +144,7 @@ get_header();
             $section_3 = get_field('section_3');
             if( $section_3 ): ?>
             <section class="bg-section--silver">    
+                <div class="page-anchor" id="people"></div>
                 <div class="container"> 
                     <div class="lines"> 
                         <div class="top-line"></div>
@@ -163,15 +171,13 @@ get_header();
                                             </figure>
                                             <?php endif; ?>
                                             <h4 class="h5"><?php echo strip_tags( $name, '<br>' ); ?></h4>
-                                            <?php echo $bio; ?>
-                                            
-                                            <?php
+                                            <?php echo $bio; 
+
                                             if( $link ): 
                                                 $link_url = $link['url'];
                                                 $link_title = $link['title'];
                                                 $link_target = $link['target'] ? $link['target'] : '_self';
                                                 ?>
-                                                
                                                 <a href="<?php echo esc_url( $link_url ); ?>" class="darkgrey" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                                             <?php endif; ?>
                                         </div>
@@ -209,15 +215,13 @@ get_header();
                                     <div class="mod-our-board--person">
                                         <div class="wp-copy">
                                             <h4 class="h5"><?php echo strip_tags( $name, '<br>' ); ?></h4>
-                                            <?php echo $bio; ?>
-                                            
-                                            <?php
+                                            <?php echo $bio; 
+
                                             if( $link ): 
                                                 $link_url = $link['url'];
                                                 $link_title = $link['title'];
                                                 $link_target = $link['target'] ? $link['target'] : '_self';
                                                 ?>
-                                                
                                                 <a href="<?php echo esc_url( $link_url ); ?>" class="darkgrey" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
                                             <?php endif; ?>
                                         </div>
@@ -231,9 +235,7 @@ get_header();
                 </div>
             </section>
             <?php endif ?>
-    
         </main>
-
     <?php endwhile;endif; ?>
 
 <?php get_footer(); ?>

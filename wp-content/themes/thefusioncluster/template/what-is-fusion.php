@@ -23,14 +23,20 @@ get_header();
                                 <?php echo $hero['copy']; ?>
                             </div>
                         </div>
-                        <div class="mod-about-hero__animation ivanim-fade d3">
-                            <svg width="252" height="373" viewBox="0 0 252 373" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="62" cy="31" r="31" fill="#FF8DF5"/>
-                            <circle cx="221" cy="158" r="31" fill="#FF8DF5"/>
-                            <circle cx="132" cy="214" r="31" fill="#FF8DF5"/>
-                            <circle cx="198" cy="304" r="31" fill="#FF8DF5"/>
-                            <circle cx="31" cy="342" r="31" fill="#FF8DF5"/>
-                            </svg>
+                        <div class="mod-about-hero__animation js-play-lottie">
+                            <?php if($hero['lottie']) {
+                                ?>
+                                <lottie-player mode="normal" loop src="<?php echo $hero['lottie']; ?>"></lottie-player>
+                                <?php
+                            } else { ?>
+                                <svg width="252" height="373" viewBox="0 0 252 373" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="62" cy="31" r="31" fill="#FF8DF5"/>
+                                <circle cx="221" cy="158" r="31" fill="#FF8DF5"/>
+                                <circle cx="132" cy="214" r="31" fill="#FF8DF5"/>
+                                <circle cx="198" cy="304" r="31" fill="#FF8DF5"/>
+                                <circle cx="31" cy="342" r="31" fill="#FF8DF5"/>
+                                </svg>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -132,7 +138,6 @@ get_header();
                                     $link_title = $link['title'];
                                     $link_target = $link['target'] ? $link['target'] : '_self';
                                     ?>
-                                
                                 <p><a href="<?php echo esc_url( $link_url ); ?>" class="cta-pink" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></p>
                                 <?php endif; ?>
                             </div>

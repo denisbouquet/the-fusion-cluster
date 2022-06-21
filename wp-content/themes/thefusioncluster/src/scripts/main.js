@@ -832,10 +832,10 @@ var isMobile = false; //initiate as false
                             }
                         }
                 });
-                $("lottie-player").on('mouseenter', function(){
-                    $(this).get(0).stop();
-                    $(this).get(0).play();
-                });
+                // $("lottie-player").on('mouseenter', function(){
+                //     $(this).get(0).stop();
+                //     $(this).get(0).play();
+                // });
 
 				// inview repeat
 				// $("[class*='ivanimr-']").on('inview', function(event, isInView) {
